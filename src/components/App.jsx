@@ -27,8 +27,8 @@ const theme = {
       heroBgLowOp: "rgb(36, 36, 36, 0.5)",
       inputBgColor: "#f7f7fb",
       inputBgColorHover: "#dedee2",
-      accentColor: "#3470ff",
-      accentColorHover: "#0b44cd",
+      accentColor: "#E44848",
+      accentColorHover: "#d84343",
       white: "#fff",
       lightWhiteColor: "#fafafa",
       green: "#37b24d",
@@ -55,8 +55,8 @@ const theme = {
       heroBgLowOp: "rgb(36, 36, 36, 0.5)",
       inputBgColor: "#f7f7fb",
       inputBgColorHover: "#dedee2",
-      accentColor: "#3470ff",
-      accentColorHover: "#0b44cd",
+      accentColor: "#E44848",
+      accentColorHover: "#d84343",
       white: "#fff",
       lightWhiteColor: "#fafafa",
       green: "#37b24d",
@@ -97,7 +97,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route
-        path="/camponwheels/"
+        path="/"
         element={
           <RootLayout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         }

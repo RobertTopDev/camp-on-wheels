@@ -6,7 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
 import { CarsMenu, CatalogContainer, NoMatchCar } from "./Catalog.styled";
 import Filter from "../../components/Filter/Filter";
-import LoadMore from "../../components/LoadMore/LoadMore";
+// import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
 
 function Catalog() {
@@ -66,6 +66,8 @@ function Catalog() {
 
   const visibleCars = filteredByCars();
 
+  console.log(visibleCars);
+
   return (
     <>
       <HelmetProvider>
@@ -100,12 +102,12 @@ function Catalog() {
             })
           )}
         </CarsMenu>
-        {filteredSearch && visibleCars.length > 12 && (
+        {/* {filteredSearch && visibleCars.length > 12 && (
           <LoadMore onLoadMoreClick={onLoadMoreClick} />
         )}
         {!filteredSearch && showLoadBtn && (
           <LoadMore onLoadMoreClick={onLoadMoreClick} />
-        )}
+        )} */}
       </CatalogContainer>
     </>
   );

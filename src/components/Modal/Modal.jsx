@@ -40,7 +40,7 @@ function ModalPopUp({ items }) {
       <CardBtn type="button" onClick={openModal}>
         Learn More
       </CardBtn>
-      <ModalDiv
+      {/* <ModalDiv
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={{
@@ -109,8 +109,8 @@ function ModalPopUp({ items }) {
                 </ModalDescrText>
                 <ModalConditionWrapper>
                   {items.rentalConditions
-                    .split("\n")
-                    .map((condition, index) => (
+                    ?.split("\n")
+                    ?.map((condition, index) => (
                       <ModalCondition key={index}>
                         {index === 0 ? (
                           <>
@@ -128,13 +128,6 @@ function ModalPopUp({ items }) {
                         )}
                       </ModalCondition>
                     ))}
-                  {/* {items.rentalConditions
-                    .split("\n")
-                    .map((condition, index) => (
-                      <ModalCondition key={index}>
-                        {condition.trim()}
-                      </ModalCondition>
-                    ))} */}
                   <ModalConditionAdd>
                     Mileage:{" "}
                     <ModalConditionAccentColor>
@@ -161,7 +154,7 @@ function ModalPopUp({ items }) {
             </div>
           </ModalTextContainer>
         </ModalWrapper>
-      </ModalDiv>
+      </ModalDiv> */}
     </>
   );
 }

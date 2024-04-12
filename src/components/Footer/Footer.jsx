@@ -35,9 +35,8 @@ function Footer() {
           <SocialIcons />
         </LogoWrapper>
         <FooterSloganText>
-          Explore with Confidence:{" "}
-          <FooterSloganTextAccent>Cruise Wheels</FooterSloganTextAccent> – Your
-          Gateway to Stylish and Comfortable Adventures.
+          Savor the Journey, Sleep Under the Stars with{" "}
+          <FooterSloganTextAccent>Camp On Wheels</FooterSloganTextAccent>
         </FooterSloganText>
       </FooterMainWrapper>
       <FooterContactBtnsWrapper>

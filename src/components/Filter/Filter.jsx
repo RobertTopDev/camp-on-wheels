@@ -131,7 +131,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <OptionWrapper>
+      {/* <OptionWrapper>
         <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
         <SelectInput onClick={() => setIsOpen(!isOpen)}>
           {selectedBrand || "Enter the text"}
@@ -139,7 +139,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
         </SelectInput>
         {isOpen && (
           <SelectedOption>
-            {makesData.map((option) => (
+            {makesData?.map((option) => (
               <SelectedOptionText
                 key={option}
                 onClick={() => handleOptionClick(option)}
@@ -180,7 +180,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
       <FormBtn type="submit">Search</FormBtn>
       <ResetBtn onClick={handleReset} type="button">
         Reset
-      </ResetBtn>
+      </ResetBtn> */}
     </FormWrapper>
   );
 }

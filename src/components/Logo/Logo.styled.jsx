@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
-import { FaCar } from "react-icons/fa6";
+import { TbCamper } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 export const LogoWrapper = styled(Link)`
@@ -12,7 +12,7 @@ export const LogoWrapper = styled(Link)`
   }
 `;
 
-export const LogoIcon = styled(FaCar)`
+export const LogoIcon = styled(TbCamper)`
   font-size: 2rem;
   color: ${(p) => p.theme.colors.mainTextColor};
 `;

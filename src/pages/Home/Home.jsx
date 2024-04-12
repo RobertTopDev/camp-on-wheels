@@ -16,7 +16,7 @@ function Home() {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Cruise Wheels - Home Page</title>
+          <title>Camp On Wheels - Home Page</title>
           <meta
             name="description"
             content="Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."
@@ -31,15 +31,16 @@ function Home() {
         <HeroWrapper>
           <HeroTextWrapper>
             <HeroTitle>
-              Drive Your Dreams: Explore the World with{" "}
-              <HeroTitleSpan>Cruise Wheels</HeroTitleSpan> Rental Cars
+              Discover the Freedom of Mobile Exploration with{" "}
+              <HeroTitleSpan>Camp On Wheels</HeroTitleSpan>
             </HeroTitle>
             <HeroText>
-              Welcome to Cruise Wheels, where every road leads to adventure.
-              CruiseWheels is more than just a rental – it's a gateway to
-              experiences beyond the ordinary. Cruise in style, comfort, and
-              confidence, making every mile a story. Your unforgettable
-              adventure begins with CruiseWheels – Your Drive, Your Experience.
+              Embark on unforgettable journeys with CampOnWheels, where every
+              road leads to new adventures. With our fleet of comfortable and
+              fully-equipped camping cars, you can roam wherever your wanderlust
+              takes you, and unwind amidst nature's embrace. Start your journey
+              today and experience the thrill of the open road, without
+              sacrificing the comforts of home.
             </HeroText>
             <div style={{ textAlign: "end" }}>
               <CatalogBtn to="catalog">View our Catalog</CatalogBtn>
