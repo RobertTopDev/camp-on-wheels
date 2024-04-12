@@ -1,4 +1,5 @@
-import makesData from "../../../makes.json";
+import locationData from "../../../location.json";
+// import makesData from "../../../makes.json";
 import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -21,9 +22,8 @@ import {
   SelectedOption,
   SelectedOptionText,
   FormInputMileageWrapper,
-  ArrowIconDown,
-  ArrowIconUp,
   ResetBtn,
+  LocationIcon,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
@@ -131,6 +131,25 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
+      <OptionWrapper>
+        <FormLabel htmlFor="carBrand">Location</FormLabel>
+        <SelectInput onClick={() => setIsOpen(!isOpen)}>
+          {selectedBrand || "Location"}
+          <LocationIcon />
+        </SelectInput>
+        {isOpen && (
+          <SelectedOption>
+            {locationData?.map((option) => (
+              <SelectedOptionText
+                key={option}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option}
+              </SelectedOptionText>
+            ))}
+          </SelectedOption>
+        )}
+      </OptionWrapper>
       {/* <OptionWrapper>
         <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
         <SelectInput onClick={() => setIsOpen(!isOpen)}>
@@ -139,7 +158,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
         </SelectInput>
         {isOpen && (
           <SelectedOption>
-            {makesData?.map((option) => (
+            {locationData?.map((option) => (
               <SelectedOptionText
                 key={option}
                 onClick={() => handleOptionClick(option)}

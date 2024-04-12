@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoLocationOutline } from "react-icons/io5";
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -275,7 +276,7 @@ export const ErrorMessage = styled.p`
   left: 0;
 `;
 
-export const ArrowIconDown = styled(IoIosArrowDown)`
+export const LocationIcon = styled(IoLocationOutline)`
   font-size: 1.8rem;
   color: ${(p) => p.theme.colors.black};
 
