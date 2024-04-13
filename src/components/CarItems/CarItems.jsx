@@ -4,9 +4,7 @@ import ModalPopUp from "../Modal/Modal";
 import {
   CarImg,
   CarItem,
-  CartItemTitleWrapper,
   CartItemTitle,
-  CartItemYear,
   CartItemTitleWrap,
   CardInfoWrapper,
   CardInfoContainer,
@@ -16,7 +14,25 @@ import {
   CarImgWrapper,
   HeartIconWrapper,
   CartItemTitleModel,
+  CartItemPrice,
+  CardItemRating,
+  CardItemRatingWrapper,
+  CardItemLocation,
+  CardItemLocationIcon,
+  CardItemLocationWrapper,
+  ReadMoreWrapper,
+  CardItemFeatures,
+  CardItemFeaturesWrapper,
+  CardItemFeaturesText,
+  CardItemFeaturesIcon,
 } from "./CarItems.styled";
+import { IoLocationOutline } from "react-icons/io5";
+import ReadMoreText from "../ReadMore/ReadMore";
+import { IoPeopleOutline } from "react-icons/io5";
+import { TbGasStation } from "react-icons/tb";
+import { LiaBedSolid } from "react-icons/lia";
+import { MdOutlineAir } from "react-icons/md";
+import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
 
 /* eslint-disable react/prop-types */
 function CarItems({ items }) {
@@ -48,18 +64,14 @@ function CarItems({ items }) {
     setFavorite((prevState) => !prevState);
   }
 
+  console.log(items);
+
   return (
     <CarItem>
       <CarImgWrapper>
         <CarImg
-          src={
-            items.img
-              ? items.img
-              : items.photoLink
-              ? items.photoLink
-              : defaultCar
-          }
-          alt={items.make}
+          src={items.gallery[0] ? items.gallery[0] : defaultCar}
+          alt={items.name}
         />
         <HeartIconWrapper onClick={() => handleFavoriteBtn(items.id)}>
           {favorite ? <FavoriteHeartIcon /> : <EmptyHeartIcon />}
@@ -67,30 +79,69 @@ function CarItems({ items }) {
       </CarImgWrapper>
       <CardInfoContainer>
         <CardInfoWrapper>
-          <CartItemTitleWrapper>
-            <CartItemTitleWrap>
-              <CartItemTitle>
-                {items.make}{" "}
-                <CartItemTitleModel>{items.model}</CartItemTitleModel>
-                <CartItemYear>, {items.year}</CartItemYear>
-              </CartItemTitle>
-            </CartItemTitleWrap>
-            <CartItemYear>{items.rentalPrice}</CartItemYear>
-          </CartItemTitleWrapper>
           <div>
-            <div>
-              <CardItemTextDescr>{items.address}</CardItemTextDescr>
-              <CardItemTextDescr> | {items.rentalCompany}</CardItemTextDescr>
-            </div>
-            <div>
-              <CardItemTextDescr>{items.type}</CardItemTextDescr>
-              <CardItemTextDescr> | {items.model}</CardItemTextDescr>
-              <CardItemTextDescr>
-                {" "}
-                | miles: {parseInt(items.mileage).toLocaleString()}
-              </CardItemTextDescr>
-            </div>
+            <CartItemTitleWrap>
+              <CartItemTitle>{items.name}</CartItemTitle>
+              <CartItemPrice>${items.price}</CartItemPrice>
+            </CartItemTitleWrap>
+            <CardItemRatingWrapper>
+              <div>
+                <CardItemRating>{items.rating}</CardItemRating>
+                <CardItemRating>
+                  ({items.reviews.length} Reviews)
+                </CardItemRating>
+              </div>
+              <CardItemLocationWrapper>
+                <CardItemLocationIcon>
+                  <IoLocationOutline />
+                </CardItemLocationIcon>
+                <CardItemLocation>{items.location}</CardItemLocation>
+              </CardItemLocationWrapper>
+            </CardItemRatingWrapper>
           </div>
+          <ReadMoreWrapper>
+            <CardItemTextDescr>{items.description}</CardItemTextDescr>
+          </ReadMoreWrapper>
+          <CardItemFeaturesWrapper>
+            <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <IoPeopleOutline />
+              </CardItemFeaturesIcon>
+              <CardItemFeaturesText>{items.adults} adults</CardItemFeaturesText>
+            </CardItemFeatures>
+            <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <TbAutomaticGearbox />
+              </CardItemFeaturesIcon>
+              <CardItemFeaturesText>{items.transmission}</CardItemFeaturesText>
+            </CardItemFeatures>
+            <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <TbGasStation />
+              </CardItemFeaturesIcon>
+              <CardItemFeaturesText>{items.engine}</CardItemFeaturesText>
+            </CardItemFeatures>
+            <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <TbToolsKitchen2 />
+              </CardItemFeaturesIcon>
+              <CardItemFeaturesText>Kitchen</CardItemFeaturesText>
+            </CardItemFeatures>
+            <CardItemFeatures>
+              <CardItemFeaturesText>
+                <CardItemFeaturesIcon>
+                  <LiaBedSolid />
+                </CardItemFeaturesIcon>
+                {items.details.beds} beds
+              </CardItemFeaturesText>
+            </CardItemFeatures>
+            <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <MdOutlineAir />
+              </CardItemFeaturesIcon>
+              <CardItemFeaturesText>AC</CardItemFeaturesText>
+            </CardItemFeatures>
+          </CardItemFeaturesWrapper>
         </CardInfoWrapper>
         <ModalPopUp items={items} />
       </CardInfoContainer>

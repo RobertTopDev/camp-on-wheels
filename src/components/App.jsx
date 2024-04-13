@@ -15,7 +15,8 @@ import {
 const theme = {
   light: {
     colors: {
-      mainTextColor: "#121417",
+      mainTextColor: "#101828",
+      secondaryTextColor: "#475467",
       mainTextColorReverse: "#fafafa",
       mainTextColorLowOp: "rgb(18, 20, 23,0.5)",
       mainTextColorLowOpReverse: "rgb(250, 250, 250, 0.5)",
@@ -39,11 +40,13 @@ const theme = {
       emptyHeart: "rgba(255, 255, 255, 0.8)",
       boxFocus: "rgba(100, 100, 111, 0.2)",
       burgerOverlay: "rgb(250, 250, 250,0.9)",
+      featuresBgColor: "#f2f4f7",
     },
   },
   dark: {
     colors: {
       mainTextColor: "#fafafa",
+      secondaryTextColor: "#475467",
       mainTextColorReverse: "#121417",
       mainTextColorLowOp: "rgb(250, 250, 250, 0.5)",
       mainTextColorVeryLowOp: "rgb(250, 250, 250, 0.2)",
@@ -67,6 +70,7 @@ const theme = {
       emptyHeart: "rgba(255, 255, 255, 0.8)",
       boxFocus: "rgba(237, 237, 245, 0.2)",
       burgerOverlay: "rgb(36, 36, 36,0.9)",
+      featuresBgColor: "#f2f4f7",
     },
   },
 };

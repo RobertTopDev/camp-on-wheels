@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primaryFont } from "../fonts";
+import { interFont, primaryFont } from "../fonts";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 
@@ -7,6 +7,7 @@ export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  width: 362px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -19,6 +20,19 @@ export const FormWrapper = styled.form`
     align-items: end;
     gap: 1.8rem;
   }
+`;
+
+export const FiltersWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+`;
+
+export const FiltersLine = styled.div`
+  background-color: rgba(16, 24, 40, 0.1);
+  width: 100%;
+  height: 2px;
+  margin: 1rem 0 1rem;
 `;
 
 export const OptionWrapper = styled.div`
@@ -93,6 +107,11 @@ export const SelectInput = styled.div`
   padding: 1.4rem 1.8rem;
   height: 4.8rem;
   width: 100%;
+  width: 360px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 
   font-family: ${primaryFont};
   font-weight: 500;
@@ -110,7 +129,7 @@ export const SelectInput = styled.div`
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     width: 14rem;
   }
 
@@ -120,7 +139,7 @@ export const SelectInput = styled.div`
 
   @media (min-width: 1000px) {
     width: 22.4rem;
-  }
+  } */
 `;
 
 export const SelectedOption = styled.div`
@@ -172,6 +191,69 @@ export const SelectedOptionText = styled.span`
   &:hover {
     cursor: pointer;
     color: ${(p) => p.theme.colors.mainTextColor};
+  }
+`;
+
+export const SelectedFilterEquipmentWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.8rem;
+  width: 362px;
+`;
+
+export const SelectedFilterEquipmentWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+`;
+
+export const SelectedFilterEquipmentTitle = styled.h3`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const SelectedFilterEquipmentSubTitle = styled.span`
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+`;
+
+export const SelectedFilterEquipmentText = styled.span`
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const SelectedFilterEquipmentIcon = styled.span`
+  font-size: 3.2rem;
+`;
+
+export const SelectedFilterEquipment = styled.div`
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 18px;
+  width: 114px;
+  height: 95px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all var(--primary-transition);
+
+  &:hover {
+    border: 1px solid ${(p) => p.theme.colors.accentColor};
+    cursor: pointer;
   }
 `;
 
@@ -279,31 +361,6 @@ export const ErrorMessage = styled.p`
 export const LocationIcon = styled(IoLocationOutline)`
   font-size: 1.8rem;
   color: ${(p) => p.theme.colors.black};
-
-  position: absolute;
-  top: 50%;
-  right: 1.2rem;
-
-  transform: translateY(-50%);
-
-  @media (min-width: 768px) {
-    right: 0;
-  }
-
-  @media (min-width: 1440px) {
-    right: 1.2rem;
-  }
-`;
-
-export const ArrowIconUp = styled(IoIosArrowUp)`
-  font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.black};
-
-  position: absolute;
-  top: 50%;
-  right: 1.2rem;
-
-  transform: translateY(-50%);
 
   @media (min-width: 768px) {
     right: 0;

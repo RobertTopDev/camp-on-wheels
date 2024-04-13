@@ -6,6 +6,11 @@ import { useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
+import { MdOutlineAir } from "react-icons/md";
+import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
+import { PiTelevisionSimple } from "react-icons/pi";
+import { LuShowerHead } from "react-icons/lu";
+import { TbCamper } from "react-icons/tb";
 import {
   setBrandFilter,
   setMileageRangeFilter,
@@ -24,6 +29,15 @@ import {
   FormInputMileageWrapper,
   ResetBtn,
   LocationIcon,
+  FiltersWrapper,
+  FiltersLine,
+  SelectedFilterEquipment,
+  SelectedFilterEquipmentWrapper,
+  SelectedFilterEquipmentIcon,
+  SelectedFilterEquipmentText,
+  SelectedFilterEquipmentTitle,
+  SelectedFilterEquipmentSubTitle,
+  SelectedFilterEquipmentWrap,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
@@ -131,75 +145,100 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
-      <OptionWrapper>
-        <FormLabel htmlFor="carBrand">Location</FormLabel>
-        <SelectInput onClick={() => setIsOpen(!isOpen)}>
-          {selectedBrand || "Location"}
-          <LocationIcon />
-        </SelectInput>
-        {isOpen && (
-          <SelectedOption>
-            {locationData?.map((option) => (
-              <SelectedOptionText
-                key={option}
-                onClick={() => handleOptionClick(option)}
-              >
-                {option}
-              </SelectedOptionText>
-            ))}
-          </SelectedOption>
-        )}
-      </OptionWrapper>
-      {/* <OptionWrapper>
-        <FormLabel htmlFor="carBrand">Car brand:</FormLabel>
-        <SelectInput onClick={() => setIsOpen(!isOpen)}>
-          {selectedBrand || "Enter the text"}
-          {isOpen ? <ArrowIconUp /> : <ArrowIconDown />}
-        </SelectInput>
-        {isOpen && (
-          <SelectedOption>
-            {locationData?.map((option) => (
-              <SelectedOptionText
-                key={option}
-                onClick={() => handleOptionClick(option)}
-              >
-                {option}
-              </SelectedOptionText>
-            ))}
-          </SelectedOption>
-        )}
-      </OptionWrapper>
-      <OptionWrapper>
-        <FormLabel htmlFor="price">Price / 1 hour</FormLabel>
-        <SelectInput onClick={() => setIsOpenPrice(!isOpenPrice)}>
-          {selectedPrice || "To $"}
-          {isOpenPrice ? <ArrowIconUp /> : <ArrowIconDown />}
-        </SelectInput>
-        {isOpenPrice && (
-          <SelectedOption>{generatePriceOptions()}</SelectedOption>
-        )}
-      </OptionWrapper>
-      <OptionWrapper>
-        <FormLabel htmlFor="mileage">Car mileage / km</FormLabel>
-        <FormInputMileageWrapper>
-          <FormInputLeft
-            type="text"
-            placeholder="From"
-            value={mileageFrom ? parseInt(mileageFrom).toLocaleString() : ""}
-            onChange={(e) => setMileageFrom(e.target.value)}
-          />
-          <FormInputRight
-            type="text"
-            placeholder="To"
-            value={mileageTo ? parseInt(mileageTo).toLocaleString() : ""}
-            onChange={(e) => setMileageTo(e.target.value)}
-          />
-        </FormInputMileageWrapper>
-      </OptionWrapper>
-      <FormBtn type="submit">Search</FormBtn>
-      <ResetBtn onClick={handleReset} type="button">
-        Reset
-      </ResetBtn> */}
+      <FiltersWrapper>
+        <OptionWrapper>
+          <FormLabel htmlFor="carBrand">Location</FormLabel>
+          <SelectInput onClick={() => setIsOpen(!isOpen)}>
+            <LocationIcon />
+            <span>{selectedBrand || "Location"}</span>
+          </SelectInput>
+          {isOpen && (
+            <SelectedOption>
+              {locationData?.map((option) => (
+                <SelectedOptionText
+                  key={option}
+                  onClick={() => handleOptionClick(option)}
+                >
+                  {option}
+                </SelectedOptionText>
+              ))}
+            </SelectedOption>
+          )}
+        </OptionWrapper>
+        <SelectedFilterEquipmentWrap>
+          <SelectedFilterEquipmentSubTitle>
+            Filters
+          </SelectedFilterEquipmentSubTitle>
+          <SelectedFilterEquipmentTitle>
+            Vehicle equipment
+          </SelectedFilterEquipmentTitle>
+          <FiltersLine></FiltersLine>
+          <SelectedFilterEquipmentWrapper>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <MdOutlineAir />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>AC</SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <TbAutomaticGearbox />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>
+                Automatic
+              </SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <TbToolsKitchen2 />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>Kitchen</SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <PiTelevisionSimple />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>TV</SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <LuShowerHead />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>
+                Shower/WC
+              </SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+          </SelectedFilterEquipmentWrapper>
+        </SelectedFilterEquipmentWrap>
+        <SelectedFilterEquipmentWrap>
+          <SelectedFilterEquipmentTitle>
+            Vehicle type
+          </SelectedFilterEquipmentTitle>
+          <FiltersLine></FiltersLine>
+          <SelectedFilterEquipmentWrapper>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <TbCamper />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>Van</SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <TbCamper />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>
+                Fully Integrated
+              </SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+            <SelectedFilterEquipment>
+              <SelectedFilterEquipmentIcon>
+                <TbCamper />
+              </SelectedFilterEquipmentIcon>
+              <SelectedFilterEquipmentText>Alcove</SelectedFilterEquipmentText>
+            </SelectedFilterEquipment>
+          </SelectedFilterEquipmentWrapper>
+        </SelectedFilterEquipmentWrap>
+      </FiltersWrapper>
     </FormWrapper>
   );
 }

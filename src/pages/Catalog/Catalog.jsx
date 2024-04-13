@@ -66,8 +66,6 @@ function Catalog() {
 
   const visibleCars = filteredByCars();
 
-  console.log(visibleCars);
-
   return (
     <>
       <HelmetProvider>

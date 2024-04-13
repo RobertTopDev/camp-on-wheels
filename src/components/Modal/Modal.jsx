@@ -38,7 +38,7 @@ function ModalPopUp({ items }) {
   return (
     <>
       <CardBtn type="button" onClick={openModal}>
-        Learn More
+        Show more
       </CardBtn>
       {/* <ModalDiv
         isOpen={modalIsOpen}

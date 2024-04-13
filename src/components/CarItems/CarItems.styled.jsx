@@ -1,64 +1,80 @@
 import styled from "styled-components";
-import { primaryFont } from "../fonts";
+import { interFont, primaryFont } from "../fonts";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 
 export const CarItem = styled.li`
   border-radius: 1.4rem;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  gap: 2.4rem;
   overflow: hidden;
-  max-width: 36.5rem;
+  height: 100%;
+
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  height: 358px;
   width: 100%;
 `;
 
 export const CarImgWrapper = styled.div`
   position: relative;
+  border-radius: 10px;
+  /* width: 290px; */
+  /* height: 310px; */
+  overflow: hidden;
 `;
 
 export const CarImg = styled.img`
   width: 100%;
-  height: auto;
-  border-top-right-radius: 1.4rem;
-  border-top-left-radius: 1.4rem;
+  height: 100%;
+  object-fit: contain;
+  object-position: 75%;
   object-fit: cover;
-  aspect-ratio: 3/2;
 `;
+
+// export const CarImgWrapper = styled.div`
+//   position: relative;
+//   border-radius: 10px;
+//   width: 290px;
+//   height: 310px;
+//   overflow: hidden;
+// `;
+
+// export const CarImg = styled.img`
+//   width: 100%;
+//   width: 290px;
+//   height: 310px;
+//   height: 100%;
+//   object-fit: contain;
+//   object-position: right;
+// `;
 
 export const CardInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   justify-content: space-between;
-  height: 100%;
-  padding: 1.2rem;
-  background-color: ${(p) => p.theme.colors.headerBgColor};
+  width: 100%;
 `;
 
 export const CardInfoWrapper = styled.div`
-  /* padding: 1.2rem; */
-`;
-
-export const CartItemTitleWrapper = styled.div`
   display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2.4rem;
 `;
 
 export const CartItemTitleWrap = styled.div`
   display: flex;
-  align-items: center;
-  /*  */
-  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 export const CartItemTitle = styled.h2`
   display: inline-block;
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
   color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
@@ -66,34 +82,116 @@ export const CartItemTitleModel = styled.span`
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const CartItemYear = styled.span`
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+export const CartItemPrice = styled.span`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
   color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
-export const CardItemTextDescr = styled.span`
+export const CardItemRatingWrapper = styled.div`
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+`;
+
+export const CardItemRating = styled.span`
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const CardItemLocationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
+
+export const CardItemLocationIcon = styled.span`
+  font-size: 1.8rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const CardItemLocation = styled.span`
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  padding: 0;
+  margin: 0;
+`;
+
+export const ReadMoreWrapper = styled.div`
+  max-height: 8rem;
+  height: 100%;
+  width: 560px;
+`;
+
+export const CardItemFeaturesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+`;
+
+export const CardItemFeatures = styled.div`
+  border-radius: 100px;
+  padding: 12px 18px;
+  width: 126px;
+  height: 44px;
+  background-color: ${(p) => p.theme.colors.featuresBgColor};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+`;
+
+export const CardItemFeaturesIcon = styled.span`
+  font-size: 2rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const CardItemFeaturesText = styled.span`
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const CardItemTextDescr = styled.p`
   font-family: ${primaryFont};
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.mainTextColorLowOp};
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const CardBtn = styled.button`
   border: none;
   outline: none;
   background: none;
-  border-radius: 1.4rem;
-  width: 100%;
-  padding: 1.2rem;
+  border-radius: 20rem;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
 
-  font-family: ${primaryFont};
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.42857;
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.white};
   transition: var(--primary-transition);
 

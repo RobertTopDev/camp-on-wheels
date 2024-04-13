@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { primaryFont } from "../../components/fonts";
 
 export const CatalogContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   gap: 6.4rem;
-  align-items: center;
+  align-items: start;
 
   padding: 10rem 6.4rem;
 
@@ -20,6 +19,7 @@ export const CarsMenu = styled.ul`
   align-items: center;
   gap: 3.2rem;
   height: 100%;
+  width: 100%;
 
   position: relative;
 

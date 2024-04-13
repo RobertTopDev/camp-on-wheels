@@ -10,8 +10,31 @@ import {
   HeroText,
   HeroTitleSpan,
 } from "./Home.styled";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    // Fetch all cars
+    fetch("https://65d7f3bd27d9a3bc1d7bed08.mockapi.io/api/cars")
+      .then((response) => response.json())
+      .then((data) => {
+        // Find the car by ID
+        const carIdToFind = 911582;
+        const foundCar = data.find((car) => car.id === carIdToFind);
+
+        if (foundCar) {
+          // Handle the retrieved car data here
+          console.log(foundCar);
+        } else {
+          console.log(`Car with ID ${carIdToFind} not found.`);
+        }
+      })
+      .catch((error) => {
+        // Handle any errors that occur during the fetch request
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <HelmetProvider>
