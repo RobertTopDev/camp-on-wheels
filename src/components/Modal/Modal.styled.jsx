@@ -176,22 +176,6 @@ export const ModalConditionAccentColor = styled.span`
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const ModalBtn = styled.a`
-  display: inline-block;
-  background-color: ${(p) => p.theme.colors.accentColor};
-  color: ${(p) => p.theme.colors.white};
-  padding: 1.2rem 5rem;
-  border-radius: 1.4rem;
-  min-width: 168px;
-
-  transition: all var(--primary-transition);
-
-  &:hover {
-    background-color: ${(p) => p.theme.colors.accentColorHover};
-    cursor: pointer;
-  }
-`;
-
 export const CloseModal = styled(IoClose)`
   font-size: 2.4rem;
   color: ${(p) => p.theme.colors.mainTextColor};
@@ -229,4 +213,128 @@ export const ModalFeaturesBtn = styled.button`
   font-size: 20px;
   line-height: 1.2;
   color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalFormWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+export const ModalForm = styled.form`
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+  border-radius: 10px;
+  padding: 24px;
+  width: 448px;
+  height: 532px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+`;
+
+export const ModalFormTitle = styled.h3`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalFormSubTitle = styled.p`
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+`;
+
+export const ModalFormInput = styled.input`
+  background: none;
+  outline: none;
+  border: none;
+  background-color: ${(p) => p.theme.colors.mainBgColor};
+  border-radius: 10px;
+  padding: 18px;
+  width: 400px;
+  height: 56px;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  &::placeholder {
+    font-family: ${interFont};
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: ${(p) => p.theme.colors.inputTextColor};
+  }
+`;
+
+export const ModalTextArea = styled.textarea`
+  background: none;
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: ${(p) => p.theme.colors.mainBgColor};
+  border-radius: 10px;
+  padding: 18px;
+  width: 400px;
+  height: 56px;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  &::placeholder {
+    font-family: ${interFont};
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: ${(p) => p.theme.colors.inputTextColor};
+  }
+`;
+
+export const ModalCalendar = styled.div`
+  background: none;
+  outline: none;
+  border: none;
+  background-color: ${(p) => p.theme.colors.mainBgColor};
+  border-radius: 10px;
+  padding: 18px;
+  width: 400px;
+  height: 56px;
+`;
+
+export const ModalCalendarText = styled.span`
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: ${(p) => p.theme.colors.inputTextColor};
+`;
+
+export const ModalFormBtn = styled.button`
+  background: none;
+  outline: none;
+  border: none;
+  background-color: ${(p) => p.theme.colors.accentColor};
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 160px;
+  height: 56px;
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: ${(p) => p.theme.colors.white};
+  transition: var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.accentColorHover};
+    cursor: pointer;
+  }
 `;

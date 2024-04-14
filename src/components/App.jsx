@@ -43,6 +43,7 @@ const theme = {
       burgerOverlay: "rgb(250, 250, 250,0.9)",
       featuresBgColor: "#f2f4f7",
       readMoreBtn: "#1f09cd",
+      inputTextColor: "rgba(16, 24, 40, 0.6)",
     },
   },
   dark: {
@@ -75,6 +76,7 @@ const theme = {
       burgerOverlay: "rgb(36, 36, 36,0.9)",
       featuresBgColor: "#f2f4f7",
       readMoreBtn: "#4dabf7",
+      inputTextColor: "rgba(239, 231, 215, 0.6)",
     },
   },
 };

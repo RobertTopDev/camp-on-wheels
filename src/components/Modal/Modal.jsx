@@ -25,7 +25,6 @@ import {
   ModalTitleContainer,
   ModalTitleDescrContainer,
   ModalTextContainer,
-  ModalBtn,
   ModalDescr,
   ModalDiv,
   ModalDescrText,
@@ -39,6 +38,15 @@ import {
   ModalImgContainer,
   ModalBtnWrapper,
   ModalFeaturesBtn,
+  ModalFormWrapper,
+  ModalForm,
+  ModalFormTitle,
+  ModalFormSubTitle,
+  ModalFormInput,
+  ModalTextArea,
+  ModalCalendar,
+  ModalCalendarText,
+  ModalFormBtn,
 } from "./Modal.styled";
 import { IoLocationOutline } from "react-icons/io5";
 import ReadMoreText from "../ReadMore/ReadMore";
@@ -115,13 +123,27 @@ function ModalPopUp({ items }) {
           </ModalBtnWrapper>
           <ModalBottomline />
 
-          <div>
+          <ModalFormWrapper>
             <div></div>
-            <form>
-              <h3>Book your campervan now</h3>
-              <p>Stay connected! We are always ready to help you.</p>
-            </form>
-          </div>
+            <ModalForm>
+              <ModalFormTitle>Book your campervan now</ModalFormTitle>
+              <ModalFormSubTitle>
+                Stay connected! We are always ready to help you.
+              </ModalFormSubTitle>
+              <ModalFormInput type="text" name="name" placeholder="Name" />
+              <ModalFormInput type="text" name="email" placeholder="Email" />
+              <ModalCalendar>
+                <ModalCalendarText>Booking date</ModalCalendarText>
+              </ModalCalendar>
+              <ModalTextArea
+                name="Message"
+                cols="30"
+                rows="10"
+                placeholder="Comment"
+              ></ModalTextArea>
+              <ModalFormBtn>Send</ModalFormBtn>
+            </ModalForm>
+          </ModalFormWrapper>
         </ModalWrapper>
       </ModalDiv>
     </>
