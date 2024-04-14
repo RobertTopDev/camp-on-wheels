@@ -18,3 +18,9 @@ export const BtnExpander = styled.button`
   color: ${(p) => p.theme.colors.readMoreBtn};
   margin-left: 0.4rem;
 `;
+
+export const ModalBottomline = styled.div`
+  background-color: rgba(16, 24, 40, 0.2);
+  width: 100%;
+  height: 1px;
+`;

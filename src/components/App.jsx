@@ -17,6 +17,7 @@ const theme = {
     colors: {
       mainTextColor: "#101828",
       secondaryTextColor: "#475467",
+      cardItemBgColor: "#e2e8f0",
       mainTextColorReverse: "#fafafa",
       mainTextColorLowOp: "rgb(18, 20, 23,0.5)",
       mainTextColorLowOpReverse: "rgb(250, 250, 250, 0.5)",
@@ -41,12 +42,14 @@ const theme = {
       boxFocus: "rgba(100, 100, 111, 0.2)",
       burgerOverlay: "rgb(250, 250, 250,0.9)",
       featuresBgColor: "#f2f4f7",
+      readMoreBtn: "#1f09cd",
     },
   },
   dark: {
     colors: {
       mainTextColor: "#fafafa",
-      secondaryTextColor: "#475467",
+      secondaryTextColor: "#d3d6da",
+      cardItemBgColor: "#e2e8f0",
       mainTextColorReverse: "#121417",
       mainTextColorLowOp: "rgb(250, 250, 250, 0.5)",
       mainTextColorVeryLowOp: "rgb(250, 250, 250, 0.2)",
@@ -71,6 +74,7 @@ const theme = {
       boxFocus: "rgba(237, 237, 245, 0.2)",
       burgerOverlay: "rgb(36, 36, 36,0.9)",
       featuresBgColor: "#f2f4f7",
+      readMoreBtn: "#4dabf7",
     },
   },
 };

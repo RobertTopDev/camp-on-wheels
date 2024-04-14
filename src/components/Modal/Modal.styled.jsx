@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primaryFont } from "../fonts";
+import { interFont, primaryFont } from "../fonts";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
 
@@ -9,10 +9,12 @@ export const ModalDiv = styled(Modal)`
   left: 50%;
   margin: 0 auto;
   transform: translate(-50%, -50%);
-  border-radius: 14px;
-  padding: 1.4rem;
-  max-width: 54rem;
-  width: 95%;
+  border-radius: 2rem;
+  padding: 4rem;
+  max-width: 982px;
+  width: 100%;
+  max-height: 720px;
+  height: 100%;
   background-color: ${(p) => p.theme.colors.mainBgColor};
 
   overflow-y: scroll;
@@ -27,16 +29,34 @@ export const ModalDiv = styled(Modal)`
   }
 `;
 
+export const ModalTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+`;
+
 export const ModalWrapper = styled.div`
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+`;
+
+export const ModalImgContainer = styled.div`
+  display: flex;
+  gap: 1.6rem;
 `;
 
 export const ModalImg = styled.img`
   /* max-width: 46rem; */
   width: 100%;
   height: auto;
-  border-top-right-radius: 1.4rem;
-  border-top-left-radius: 1.4rem;
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  object-fit: contain;
+  object-position: 75%;
+  object-fit: cover;
 `;
 
 export const ModalTextContainer = styled.div`
@@ -57,11 +77,6 @@ export const ModalTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-`;
-
-export const ModalTitleWrapper = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 export const ModalTitle = styled.h3`
@@ -95,11 +110,11 @@ export const ModalDescr = styled.span`
 `;
 
 export const ModalDescrText = styled.p`
-  font-family: ${primaryFont};
+  font-family: ${interFont};
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: ${(p) => p.theme.colors.mainTextColor};
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
 `;
 
 export const ModalConditionContainer = styled.div`
@@ -200,4 +215,18 @@ export const CloseModal = styled(IoClose)`
     right: 1rem;
     top: 4rem;
   }
+`;
+
+export const ModalBtnWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+`;
+
+export const ModalFeaturesBtn = styled.button`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;

@@ -10,7 +10,9 @@ export const CarItem = styled.li`
   overflow: hidden;
   height: 100%;
 
-  border: 1px solid rgba(16, 24, 40, 0.2);
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+
+  /* border: 1px solid rgba(16, 24, 40, 0.2); */
   border-radius: 20px;
   padding: 24px;
   height: 358px;
@@ -96,6 +98,22 @@ export const CardItemRatingWrapper = styled.div`
   align-items: center;
 `;
 
+export const CardItemRatingWrap = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const CardItemStarRatingWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
+
+export const CardItemStarIcon = styled.span`
+  font-size: 1.6rem;
+  color: #ffc531;
+`;
+
 export const CardItemRating = styled.span`
   font-family: ${interFont};
   font-weight: 400;
@@ -145,6 +163,7 @@ export const CardItemFeatures = styled.div`
   width: 126px;
   height: 44px;
   background-color: ${(p) => p.theme.colors.featuresBgColor};
+  background-color: ${(p) => p.theme.colors.mainBgColor};
 
   display: flex;
   align-items: center;
@@ -167,11 +186,13 @@ export const CardItemFeaturesText = styled.span`
 `;
 
 export const CardItemTextDescr = styled.p`
-  font-family: ${primaryFont};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
   color: ${(p) => p.theme.colors.mainTextColorLowOp};
+
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
 
   white-space: nowrap;
   overflow: hidden;

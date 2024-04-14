@@ -1,7 +1,21 @@
 /* eslint-disable react/prop-types */
-import { CardBtn } from "../CarItems/CarItems.styled";
+import {
+  CardBtn,
+  CardItemLocation,
+  CardItemLocationIcon,
+  CardItemLocationWrapper,
+  CardItemRating,
+  CardItemRatingWrap,
+  CardItemRatingWrapper,
+  CardItemStarIcon,
+  CardItemStarRatingWrap,
+  CartItemPrice,
+  CartItemTitle,
+  CartItemTitleWrap,
+} from "../CarItems/CarItems.styled";
 import { useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
+import { FaStar } from "react-icons/fa6";
 import {
   ModalImg,
   ModalTitle,
@@ -22,7 +36,13 @@ import {
   ModalConditionAccentColor,
   CloseModal,
   ModalTitleModel,
+  ModalImgContainer,
+  ModalBtnWrapper,
+  ModalFeaturesBtn,
 } from "./Modal.styled";
+import { IoLocationOutline } from "react-icons/io5";
+import ReadMoreText from "../ReadMore/ReadMore";
+import { ModalBottomline } from "../ReadMore/ReadMore.styled";
 
 function ModalPopUp({ items }) {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -40,7 +60,7 @@ function ModalPopUp({ items }) {
       <CardBtn type="button" onClick={openModal}>
         Show more
       </CardBtn>
-      {/* <ModalDiv
+      <ModalDiv
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={{
@@ -52,109 +72,58 @@ function ModalPopUp({ items }) {
       >
         <ModalWrapper>
           <CloseModal onClick={closeModal} />
-          <ModalImg
-            src={
-              items.img
-                ? items.img
-                : items.photoLink
-                ? items.photoLink
-                : defaultCar
-            }
-            alt={items.make}
-          />
-          <ModalTextContainer>
-            <ModalTitleDescrContainer>
-              <ModalTitleContainer>
-                <ModalTitleWrapper>
-                  <ModalTitle>
-                    {items.make}{" "}
-                    <ModalTitleModel>{items.model}</ModalTitleModel>
-                  </ModalTitle>
-                  <ModalTitleText>, {items.year}</ModalTitleText>
-                </ModalTitleWrapper>
-                <div>
-                  <div>
-                    <ModalDescr>{items.address}</ModalDescr>
-                    <ModalDescr> | Id: {items.id}</ModalDescr>
-                    <ModalDescr> | Year: {items.year}</ModalDescr>
-                    <ModalDescr> | Type: {items.type}</ModalDescr>
-                  </div>
-                  <div>
-                    <ModalDescr>
-                      Fuel Consumption: {items.fuelConsumption}
-                    </ModalDescr>
-                    <ModalDescr> | Engine Size: {items.engineSize}</ModalDescr>
-                  </div>
-                </div>
-              </ModalTitleContainer>
-              <ModalDescrText>{items.description}</ModalDescrText>
-            </ModalTitleDescrContainer>
-            <div>
-              <ModalDescrText style={{ fontFamily: "500" }}>
-                Accessories and functionalities:
-              </ModalDescrText>
-              <div>
-                {items.accessories.map((item, index) => (
-                  <ModalDescr key={item}>
-                    {item}
-                    {index !== items.accessories.length - 1 && <span> | </span>}
-                  </ModalDescr>
-                ))}
-              </div>
-            </div>
-            <div>
-              <ModalConditionContainer>
-                <ModalDescrText style={{ fontFamily: "500" }}>
-                  Rental Conditions:{" "}
-                </ModalDescrText>
-                <ModalConditionWrapper>
-                  {items.rentalConditions
-                    ?.split("\n")
-                    ?.map((condition, index) => (
-                      <ModalCondition key={index}>
-                        {index === 0 ? (
-                          <>
-                            {condition.split(":")[0]}:{" "}
-                            <span
-                              style={{
-                                color: "#3470ff",
-                              }}
-                            >
-                              {condition.split(":")[1]}
-                            </span>
-                          </>
-                        ) : (
-                          condition.trim()
-                        )}
-                      </ModalCondition>
-                    ))}
-                  <ModalConditionAdd>
-                    Mileage:{" "}
-                    <ModalConditionAccentColor>
-                      {parseInt(items.mileage).toLocaleString()}
-                    </ModalConditionAccentColor>
-                  </ModalConditionAdd>
-                  <ModalConditionAdd>
-                    Price:{" "}
-                    <ModalConditionAccentColor>
-                      {items.rentalPrice}
-                    </ModalConditionAccentColor>
-                  </ModalConditionAdd>
-                </ModalConditionWrapper>
-              </ModalConditionContainer>
-            </div>
-            <div>
-              <ModalBtn
-                href="tel:+17734141884"
-                aria-label="Call us to rent a car"
-                title="Call us to rent a car"
-              >
-                RENT A CAR
-              </ModalBtn>
-            </div>
-          </ModalTextContainer>
+          <ModalTitleWrapper>
+            <CartItemTitleWrap>
+              <CartItemTitle>{items.name}</CartItemTitle>
+            </CartItemTitleWrap>
+            <CardItemRatingWrapper>
+              <CardItemRatingWrap>
+                <CardItemStarRatingWrap>
+                  <CardItemStarIcon>
+                    <FaStar />
+                  </CardItemStarIcon>
+                  <CardItemRating>{items.rating}</CardItemRating>
+                </CardItemStarRatingWrap>
+                <CardItemRating>
+                  ({items.reviews.length} Reviews)
+                </CardItemRating>
+              </CardItemRatingWrap>
+              <CardItemLocationWrapper>
+                <CardItemLocationIcon>
+                  <IoLocationOutline />
+                </CardItemLocationIcon>
+                <CardItemLocation>{items.location}</CardItemLocation>
+              </CardItemLocationWrapper>
+            </CardItemRatingWrapper>
+            <CartItemPrice>${items.price}</CartItemPrice>
+          </ModalTitleWrapper>
+          <ModalImgContainer>
+            {items.gallery.map((img) => (
+              <ModalImg
+                key={items.name}
+                src={img ? img : defaultCar}
+                alt={items.name}
+              />
+            ))}
+          </ModalImgContainer>
+          <ReadMoreText collapsedNumWords={60}>
+            {items.description}
+          </ReadMoreText>
+          <ModalBtnWrapper>
+            <ModalFeaturesBtn>Features</ModalFeaturesBtn>
+            <ModalFeaturesBtn>Reviews</ModalFeaturesBtn>
+          </ModalBtnWrapper>
+          <ModalBottomline />
+
+          <div>
+            <div></div>
+            <form>
+              <h3>Book your campervan now</h3>
+              <p>Stay connected! We are always ready to help you.</p>
+            </form>
+          </div>
         </ModalWrapper>
-      </ModalDiv> */}
+      </ModalDiv>
     </>
   );
 }

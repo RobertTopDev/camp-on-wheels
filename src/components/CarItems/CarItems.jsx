@@ -25,6 +25,9 @@ import {
   CardItemFeaturesWrapper,
   CardItemFeaturesText,
   CardItemFeaturesIcon,
+  CardItemStarIcon,
+  CardItemStarRatingWrap,
+  CardItemRatingWrap,
 } from "./CarItems.styled";
 import { IoLocationOutline } from "react-icons/io5";
 import ReadMoreText from "../ReadMore/ReadMore";
@@ -33,6 +36,7 @@ import { TbGasStation } from "react-icons/tb";
 import { LiaBedSolid } from "react-icons/lia";
 import { MdOutlineAir } from "react-icons/md";
 import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
+import { FaStar } from "react-icons/fa6";
 
 /* eslint-disable react/prop-types */
 function CarItems({ items }) {
@@ -64,8 +68,6 @@ function CarItems({ items }) {
     setFavorite((prevState) => !prevState);
   }
 
-  console.log(items);
-
   return (
     <CarItem>
       <CarImgWrapper>
@@ -85,12 +87,17 @@ function CarItems({ items }) {
               <CartItemPrice>${items.price}</CartItemPrice>
             </CartItemTitleWrap>
             <CardItemRatingWrapper>
-              <div>
-                <CardItemRating>{items.rating}</CardItemRating>
+              <CardItemRatingWrap>
+                <CardItemStarRatingWrap>
+                  <CardItemStarIcon>
+                    <FaStar />
+                  </CardItemStarIcon>
+                  <CardItemRating>{items.rating}</CardItemRating>
+                </CardItemStarRatingWrap>
                 <CardItemRating>
                   ({items.reviews.length} Reviews)
                 </CardItemRating>
-              </div>
+              </CardItemRatingWrap>
               <CardItemLocationWrapper>
                 <CardItemLocationIcon>
                   <IoLocationOutline />
