@@ -205,6 +205,7 @@ export const ModalBtnWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 4rem;
+  position: relative;
 `;
 
 export const ModalFeaturesBtn = styled.button`
@@ -213,11 +214,88 @@ export const ModalFeaturesBtn = styled.button`
   font-size: 20px;
   line-height: 1.2;
   color: ${(p) => p.theme.colors.mainTextColor};
+
+  border: none;
+  outline: none;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ModalFeaturesBtnLine = styled.div`
+  position: absolute;
+  bottom: -2.4rem;
+  left: 0;
+  height: 5px;
+  width: 8.6rem;
+  background-color: #e44848;
+`;
+
+export const ModalItemFeaturesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4.4rem;
+`;
+
+export const ModalItemFeaturesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+`;
+
+export const ModalFeatures = styled.div`
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 44px;
+  background-color: ${(p) => p.theme.colors.headerBgColor};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+`;
+
+export const ModalDetailsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+`;
+
+export const ModalDetailsTitle = styled.h3`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalDetailsLine = styled.div`
+  background-color: rgba(16, 24, 40, 0.1);
+  width: 100%;
+  height: 1px;
+`;
+
+export const ModalDetailsFeatures = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ModalDetailsFeaturesText = styled.span`
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33333;
+  text-align: center;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const ModalFormWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
 `;
 
 export const ModalForm = styled.form`
@@ -281,7 +359,8 @@ export const ModalTextArea = styled.textarea`
   border-radius: 10px;
   padding: 18px;
   width: 400px;
-  height: 56px;
+
+  height: 114px;
   color: ${(p) => p.theme.colors.mainTextColor};
   font-family: ${interFont};
   font-weight: 400;
@@ -306,6 +385,19 @@ export const ModalCalendar = styled.div`
   padding: 18px;
   width: 400px;
   height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ModalCalendarIcon = styled.span`
+  font-size: 2.4rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ModalCalendarText = styled.span`
