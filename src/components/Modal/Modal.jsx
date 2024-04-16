@@ -15,7 +15,7 @@ import {
   CartItemTitle,
   CartItemTitleWrap,
 } from "../CarItems/CarItems.styled";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
 import defaultUser from "../../../public/images/default_user.jpg";
 import { FaStar } from "react-icons/fa6";
@@ -83,6 +83,7 @@ import { LuDisc3 } from "react-icons/lu";
 import { BiRadio } from "react-icons/bi";
 import { MdOutlineMicrowave } from "react-icons/md";
 import StarRating from "../StarRating/StarRating";
+import CustomDatePicker from "../Calendar/Calendar";
 
 function ModalPopUp({ items }) {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -90,6 +91,14 @@ function ModalPopUp({ items }) {
   const [featuresContent, setFeaturesContent] = useState("Features");
   const [featuresReviewsIsOpen, setFeaturesReviewsIsOpen] = useState(false);
   const [featuresDetailsIsOpen, setDetailsReviewsIsOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const datePickerRef = useRef(null);
+
+  const openDatePicker = () => {
+    if (datePickerRef.current) {
+      datePickerRef.current.setOpen(true);
+    }
+  };
 
   function openModal() {
     setIsOpen(true);
@@ -329,8 +338,12 @@ function ModalPopUp({ items }) {
                 <ModalFormInput type="text" name="name" placeholder="Name" />
                 <ModalFormInput type="text" name="email" placeholder="Email" />
                 <ModalCalendar>
-                  <ModalCalendarText>Booking date</ModalCalendarText>
-                  <ModalCalendarIcon>
+                  <CustomDatePicker
+                    setSelectedDate={setSelectedDate}
+                    openDatePicker={openDatePicker}
+                    datePickerRef={datePickerRef}
+                  />
+                  <ModalCalendarIcon onClick={openDatePicker}>
                     <FcCalendar />
                   </ModalCalendarIcon>
                 </ModalCalendar>
