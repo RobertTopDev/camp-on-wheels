@@ -195,6 +195,14 @@ export const SelectedFilterEquipmentWrapper = styled.div`
   width: 362px;
 `;
 
+export const SelectedFilterTypeWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.8rem;
+  width: 362px;
+`;
+
 export const SelectedFilterEquipmentWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -229,6 +237,7 @@ export const SelectedFilterEquipmentText = styled.span`
 export const SelectedFilterEquipmentIcon = styled.span`
   font-size: 3.2rem;
   color: ${(p) => p.theme.colors.mainTextColor};
+  pointer-events: none;
 `;
 
 export const SelectedFilterEquipment = styled.div`

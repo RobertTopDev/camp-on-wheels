@@ -2,7 +2,7 @@ import locationData from "../../../location.json";
 // import makesData from "../../../makes.json";
 import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
@@ -39,61 +39,63 @@ import {
   SelectedFilterEquipmentSubTitle,
   SelectedFilterEquipmentWrap,
   FormSearchBtn,
+  SelectedFilterTypeWrapper,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
 function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
-  const [selectedBrand, setSelectedBrand] = useState("");
-  const [selectedPrice, setSelectedPrice] = useState("");
-  const [mileageFrom, setMileageFrom] = useState("");
-  const [mileageTo, setMileageTo] = useState("");
+  // const [selectedBrand, setSelectedBrand] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  // const [selectedPrice, setSelectedPrice] = useState("");
+  // const [mileageFrom, setMileageFrom] = useState("");
+  // const [mileageTo, setMileageTo] = useState("");
+  const locationRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpenPrice, setIsOpenPrice] = useState(false);
+  // const [isOpenPrice, setIsOpenPrice] = useState(false);
+  const [selectedEquipment, setSelectedEquipment] = useState("");
+  const [selectedType, setSelectedType] = useState("");
 
   const dispatch = useDispatch();
 
-  const generatePriceOptions = () => {
-    const options = [];
-
-    for (let price = 10; price <= 250; price += 10) {
-      options.push(
-        <SelectedOptionText
-          key={uuid()}
-          onClick={() => handleOptionPriceClick(price)}
-        >
-          {price} $
-        </SelectedOptionText>
-      );
-    }
-
-    return options;
+  const handleEquipmentFilter = (e) => {
+    const equipment = e.target.innerText;
+    setSelectedEquipment(equipment);
   };
 
-  const handleOptionClick = (brand) => {
-    setSelectedBrand(brand);
+  const handleTypeFilter = (e) => {
+    const type = e.target.innerText;
+    setSelectedType(type);
+  };
+
+  const handleOptionClick = (location) => {
+    // setSelectedBrand(brand);
+    setSelectedLocation(location);
     setIsOpen(false);
   };
 
-  const handleOptionPriceClick = (price) => {
-    setSelectedPrice(price);
-    setIsOpenPrice(false);
-  };
+  // const handleOptionPriceClick = (price) => {
+  //   setSelectedPrice(price);
+  //   setIsOpenPrice(false);
+  // };
 
   const resetFilters = async () => {
-    setSelectedBrand("");
-    setSelectedPrice("");
-    setMileageFrom("");
-    setMileageTo("");
+    setSelectedEquipment("");
+    setSelectedType("");
+    setSelectedLocation("");
+    // setSelectedBrand("");
+    // setSelectedPrice("");
+    // setMileageFrom("");
+    // setMileageTo("");
 
-    const allCarsResponse = await dispatch(fetchAllCars());
-    setDisplayedCars(allCarsResponse.payload);
+    // const allCarsResponse = await dispatch(fetchAllCars());
+    // setDisplayedCars(allCarsResponse.payload);
 
-    dispatch(setBrandFilter(""));
-    dispatch(setPriceFilter(""));
-    dispatch(setMileageRangeFilter({ min: "", max: "" }));
+    // dispatch(setBrandFilter(""));
+    // dispatch(setPriceFilter(""));
+    // dispatch(setMileageRangeFilter({ min: "", max: "" }));
 
-    setFilteredSearch(false);
+    // setFilteredSearch(false);
   };
 
   const handleReset = () => {
@@ -104,56 +106,65 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(e);
+    const locationValue = locationRef.current.innerText;
 
-    if (
-      selectedBrand.length === 0 &&
-      !selectedPrice &&
-      mileageFrom.length === 0 &&
-      mileageTo.length === 0
-    ) {
-      toast.warning(
-        "Please choose a brand, price, or mileage range to refine your search.",
-        commonToastOptions
-      );
-
-      return;
-    }
-
-    const filters = {
-      brand: selectedBrand,
-      price: selectedPrice || "250",
-      mileage: {
-        from: mileageFrom || "0",
-        to: mileageTo || "15000",
-      },
+    const formData = {
+      selectedEquipment: selectedEquipment,
+      selectedType: selectedType,
     };
 
-    const allCarsResponse = await dispatch(fetchAllCars());
-    setDisplayedCars(allCarsResponse.payload);
+    console.log(locationValue);
+    console.log(formData);
 
-    setFilteredSearch(true);
+    // if (
+    //   selectedBrand.length === 0 &&
+    //   !selectedPrice &&
+    //   mileageFrom.length === 0 &&
+    //   mileageTo.length === 0
+    // ) {
+    //   toast.warning(
+    //     "Please choose a brand, price, or mileage range to refine your search.",
+    //     commonToastOptions
+    //   );
 
-    dispatch(setBrandFilter(filters.brand));
-    dispatch(setPriceFilter(filters.price));
-    dispatch(
-      setMileageRangeFilter({
-        min: filters.mileage.from,
-        max: filters.mileage.to,
-      })
-    );
+    //   return;
+    // }
 
-    handlePage();
+    // const filters = {
+    //   brand: selectedBrand,
+    //   price: selectedPrice || "250",
+    //   mileage: {
+    //     from: mileageFrom || "0",
+    //     to: mileageTo || "15000",
+    //   },
+    // };
+
+    // const allCarsResponse = await dispatch(fetchAllCars());
+    // setDisplayedCars(allCarsResponse.payload);
+
+    // setFilteredSearch(true);
+
+    // dispatch(setBrandFilter(filters.brand));
+    // dispatch(setPriceFilter(filters.price));
+    // dispatch(
+    //   setMileageRangeFilter({
+    //     min: filters.mileage.from,
+    //     max: filters.mileage.to,
+    //   })
+    // );
+
+    // handlePage();
+    handleReset();
   }
 
   return (
     <FormWrapper onSubmit={handleSubmit}>
       <FiltersWrapper>
         <OptionWrapper>
-          <FormLabel htmlFor="carBrand">Location</FormLabel>
-          <SelectInput onClick={() => setIsOpen(!isOpen)}>
+          <FormLabel htmlFor="location">Location</FormLabel>
+          <SelectInput ref={locationRef} onClick={() => setIsOpen(!isOpen)}>
             <LocationIcon />
-            <span>{selectedBrand || "Location"}</span>
+            <span>{selectedLocation || "Location"}</span>
           </SelectInput>
           {isOpen && (
             <SelectedOption>
@@ -176,7 +187,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
             Vehicle equipment
           </SelectedFilterEquipmentTitle>
           <FiltersLine></FiltersLine>
-          <SelectedFilterEquipmentWrapper>
+          <SelectedFilterEquipmentWrapper onClick={handleEquipmentFilter}>
             <SelectedFilterEquipment>
               <SelectedFilterEquipmentIcon>
                 <MdOutlineAir />
@@ -218,7 +229,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
             Vehicle type
           </SelectedFilterEquipmentTitle>
           <FiltersLine></FiltersLine>
-          <SelectedFilterEquipmentWrapper>
+          <SelectedFilterTypeWrapper onClick={handleTypeFilter}>
             <SelectedFilterEquipment>
               <SelectedFilterEquipmentIcon>
                 <TbCamper />
@@ -239,7 +250,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
               </SelectedFilterEquipmentIcon>
               <SelectedFilterEquipmentText>Alcove</SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-          </SelectedFilterEquipmentWrapper>
+          </SelectedFilterTypeWrapper>
         </SelectedFilterEquipmentWrap>
       </FiltersWrapper>
       <FormSearchBtn>Search</FormSearchBtn>
