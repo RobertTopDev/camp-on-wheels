@@ -1,37 +1,37 @@
 [
   {
-    "name": "Richard Newton",
-    "position": "entrepreneur",
-    "img_url": "https://randomuser.me/api/portraits/men/1.jpg",
+    "name": "Samantha Williams",
+    "position": "outdoor enthusiast",
+    "img_url": "https://randomuser.me/api/portraits/women/1.jpg",
     "stars": 5,
-    "rentalExperience": "Had an amazing experience renting a luxurious car for a business trip. The process was smooth, and the car was in top-notch condition. Definitely using the service again!"
+    "rentalExperience": "Had a fantastic time renting a camper from Camp On Wheels for a weekend getaway. The camper was well-equipped and comfortable. Will definitely rent again!"
   },
   {
-    "name": "John Michel",
-    "position": "designer",
-    "img_url": "https://randomuser.me/api/portraits/men/22.jpg",
+    "name": "Brian Clark",
+    "position": "nature photographer",
+    "img_url": "https://randomuser.me/api/portraits/men/52.jpg",
     "stars": 4,
-    "rentalExperience": "As a designer, I appreciate stylish rides. The car selection was fantastic, and the rental process was hassle-free. Had a great time exploring the city!"
+    "rentalExperience": "The camping car I rented was perfect for my photography trip. It had ample storage for my equipment and was easy to drive. Great service!"
   },
   {
-    "name": "Emma Thompson",
-    "position": "web developer",
-    "img_url": "https://randomuser.me/api/portraits/women/35.jpg",
+    "name": "Jessica Miller",
+    "position": "travel blogger",
+    "img_url": "https://randomuser.me/api/portraits/women/37.jpg",
     "stars": 5,
-    "rentalExperience": "Smooth and efficient! Renting a car for a road trip was a breeze. The website's user-friendly interface made the whole experience delightful."
+    "rentalExperience": "Absolutely loved the camper I rented from Camp On Wheels. It was clean, spacious, and had all the amenities I needed for my road trip. Highly recommend!"
   },
   {
-    "name": "Olivia Davis",
-    "position": "marketing specialist",
-    "img_url": "https://randomuser.me/api/portraits/women/44.jpg",
+    "name": "Lucas Brown",
+    "position": "adventure seeker",
+    "img_url": "https://randomuser.me/api/portraits/men/34.jpg",
     "stars": 5,
-    "rentalExperience": "Top-notch service! The car was delivered on time, and the customer support was excellent. Highly recommended Cruise Wheels for all your travel needs."
+    "rentalExperience": "Renting a camping car from Camp On Wheels was a breeze. The staff was friendly, and the camper was in excellent condition. Can't wait for my next adventure!"
   },
   {
-    "name": "Jack Johnson",
-    "position": "software engineer",
-    "img_url": "https://randomuser.me/api/portraits/men/44.jpg",
+    "name": "Megan Smith",
+    "position": "travel agent",
+    "img_url": "https://randomuser.me/api/portraits/women/34.jpg",
     "stars": 5,
-    "rentalExperience": "Renting a car couldn't have been easier. The selection is diverse, and the prices are competitive. Will definitely use the service again!"
+    "rentalExperience": "Impressed with the quality of service and the variety of camping cars available at Camp On Wheels. Made planning my clients' trips much easier. Highly recommended!"
   }
 ]

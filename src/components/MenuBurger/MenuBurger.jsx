@@ -36,7 +36,7 @@ export default function MenuBurger({ toggleTheme, isDarkTheme }) {
           <nav>
             <BurgerMenuItems>
               <li onClick={toggleMenu}>
-                <MenuText to="/rental-car/">Home</MenuText>
+                <MenuText to="/camp-on-wheels/">Home</MenuText>
               </li>
               <li onClick={toggleMenu}>
                 <MenuText to="catalog">Catalog</MenuText>

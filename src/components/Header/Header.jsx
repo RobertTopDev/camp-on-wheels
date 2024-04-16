@@ -19,19 +19,19 @@ function Header({ toggleTheme, isDarkTheme }) {
       <HeaderTextWrapper>
         <NavBar>
           <HeaderLink
-            $active={location.pathname === "/camponwheels/"}
-            to="/camponwheels/"
+            $active={location.pathname === "/camp-on-wheels/"}
+            to="/camp-on-wheels/"
           >
             Home
           </HeaderLink>
           <HeaderLink
-            $active={location.pathname === "/camponwheels/catalog"}
+            $active={location.pathname === "/camp-on-wheels/catalog"}
             to="catalog"
           >
             Catalog
           </HeaderLink>
           <HeaderLink
-            $active={location.pathname === "/camponwheels/favorites"}
+            $active={location.pathname === "/camp-on-wheels/favorites"}
             to="favorites"
           >
             Favorites

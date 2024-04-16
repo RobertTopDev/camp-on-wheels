@@ -103,8 +103,8 @@ function Footer() {
       </FooterContactBtnsWrapper>
       <FooterInfoWrapper>
         <FooterInfoText>
-          Alex Smagin &copy;Rental Car <span>{new Date().getFullYear()}</span>.
-          All rights reserved.
+          Alex Smagin &copy;Camp On Wheels{" "}
+          <span>{new Date().getFullYear()}</span>. All rights reserved.
         </FooterInfoText>
         <FooterLinkWrapper>
           <FooterInfoLink to="privacy">Privacy Policy</FooterInfoLink>

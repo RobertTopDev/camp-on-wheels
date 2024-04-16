@@ -4,7 +4,7 @@
     "name": "Road Bear C 23-25",
     "price": 10000,
     "rating": 4.5,
-    "location": "Ukraine, Kyiv",
+    "location": "Chicago, IL",
     "adults": 3,
     "children": 2,
     "engine": "petrol",
@@ -15,7 +15,7 @@
     "height": "3.65m",
     "tank": "208l",
     "consumption": "30l/100km",
-    "description": "Embark on an unforgettable journey with the Road Bear C 23-25, an epitome of comfort and convenience on wheels. This alcove-style motorhome is meticulously designed to cater to the needs of families and small groups, ensuring a seamless and enjoyable road trip experience. The sleek exterior houses a spacious and thoughtfully laid out interior, making it your home away from home. The Road Bear C 23-25 boasts a stylish and modern design, coupled with top-notch amenities to enhance your travel adventures. The interior is not only aesthetically pleasing but also functional, providing ample living and sleeping space. Whether you're cruising along scenic highways or parked in a picturesque campsite, this RV offers the perfect blend of functionality and comfort. Inside, you'll find a fully equipped kitchen, complete with a refrigerator, microwave, and a three-burner hob, allowing you to prepare delicious meals on the go. The bathroom is fitted with a shower and toilet, ensuring you have the convenience of home wherever your travels take you. The sleeping quarters are designed for relaxation, with three comfortable beds to accommodate both adults and children. Additional features include air conditioning, a TV, CD player, radio, and ample storage space for all your travel essentials. The Road Bear C 23-25 is equipped with a 35kg gas supply for cooking, and a water tank with a capacity of 151 liters to meet your daily needs. Fuelled by petrol and featuring an automatic transmission, this motorhome is not only easy to drive but also fuel-efficient, allowing you to focus on enjoying the journey rather than worrying about logistics. Create lasting memories with your loved ones as you navigate the roads in the Road Bear C 23-25. It's not just an RV; it's a mobile sanctuary for your adventures, promising comfort, style, and the freedom to explore at your own pace.",
+    "description": "Discover the Road Bear C 23-25, your ultimate travel companion for family road trips and group adventures. This sleek alcove-style motorhome offers a stylish and modern design, packed with top-notch amenities for a comfortable journey. Inside, you'll find a fully equipped kitchen, a bathroom with shower and toilet, and three cozy beds for restful nights on the road. With features like air conditioning, TV, CD player, and ample storage, the Road Bear C 23-25 ensures convenience and relaxation wherever you go. Fuelled by petrol and equipped with automatic transmission, it's easy to drive and fuel-efficient. Embark on unforgettable adventures with the Road Bear C 23-25 – your mobile sanctuary for exploring the open road in comfort and style.",
     "details": {
       "airConditioner": 1,
       "bathroom": 1,
@@ -55,7 +55,7 @@
     "name": "Cruise America C-21",
     "price": 8000,
     "rating": 4.3,
-    "location": "Ukraine, Poltava",
+    "location": "Aurora, IL",
     "adults": 2,
     "children": 2,
     "engine": "petrol",
@@ -90,12 +90,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Nicole",
         "reviewer_rating": 5,
         "comment": "The Cruise America C-21 exceeded our expectations! Compact yet spacious, it's perfect for a couple's getaway. The kitchen facilities were impressive, and the bathroom setup was convenient. Highly recommended for a cozy and memorable road trip."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Joe",
         "reviewer_rating": 3,
         "comment": "Decent motorhome for the price. The Cruise America C-21 provided a comfortable stay, but the lack of a TV and CD player was a downside for entertainment. Overall, a satisfactory experience for a short trip."
       }
@@ -106,7 +106,7 @@
     "name": "Britz 4 Berth",
     "price": 9000,
     "rating": 4.4,
-    "location": "Ukraine, Dnipro",
+    "location": "Rockford, IL",
     "adults": 2,
     "children": 2,
     "engine": "petrol",
@@ -141,12 +141,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Samantha",
         "reviewer_rating": 5,
         "comment": "The Britz 4 Berth is a fantastic choice for a comfortable and stylish road trip. The interior design is impressive, and the amenities provided a luxury touch. Highly recommended for couples seeking a premium RV experience."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "George",
         "reviewer_rating": 3,
         "comment": "Decent motorhome overall. The Britz 4 Berth provided a comfortable stay, but the lack of gas for cooking was a downside. The entertainment options were good, and the bed was comfortable. Worth considering for a short trip."
       }
@@ -157,7 +157,7 @@
     "name": "Mighty Class C Large [MT]",
     "price": 12000,
     "rating": 4.4,
-    "location": "Ukraine, Odesa",
+    "location": "Joliet, IL",
     "adults": 4,
     "children": 2,
     "engine": "petrol",
@@ -192,12 +192,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Emily",
         "reviewer_rating": 5,
         "comment": "The Mighty Class C Large [MT] provided an exceptional experience for our family road trip. Spacious interiors, well-equipped kitchen, and comfortable beds made our journey memorable. Highly recommended for larger groups looking for a premium RV."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "James",
         "reviewer_rating": 3,
         "comment": "Decent motorhome, but had some issues with functionality. The kitchen facilities were good, but the gas supply seemed insufficient. Overall, a satisfactory experience for our group."
       }
@@ -208,7 +208,7 @@
     "name": "El Monte Class C Small [C]",
     "price": 11000,
     "rating": 4.4,
-    "location": "Ukraine, Odesa",
+    "location": "Schaumburg, IL",
     "adults": 4,
     "children": 0,
     "engine": "petrol",
@@ -243,12 +243,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Sophia",
         "reviewer_rating": 5,
         "comment": "The El Monte Class C Small [C] was the perfect choice for our family of four. Compact yet surprisingly spacious, it provided all the amenities we needed. The kitchen facilities were excellent, and the overall experience was delightful."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "John",
         "reviewer_rating": 3,
         "comment": "A decent motorhome for a small family. The El Monte Class C Small [C] offered convenience, but the bed setup was a bit cramped. Good for short trips but might need more space for an extended journey."
       }
@@ -259,7 +259,7 @@
     "name": "Road Bear A 30-32",
     "price": 14000,
     "rating": 4.4,
-    "location": "Ukraine, Kharkiv",
+    "location": "Rosemont, IL",
     "adults": 4,
     "children": 2,
     "engine": "petrol",
@@ -294,12 +294,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Olivia",
         "reviewer_rating": 5,
         "comment": "The Road Bear A 30-32 exceeded our expectations! A spacious and well-designed motorhome with all the amenities one could ask for. The fully integrated features added a touch of luxury to our road trip. Highly recommended for families seeking a premium RV experience."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Robert",
         "reviewer_rating": 3,
         "comment": "The Road Bear A 30-32 is a decent option for a large group. However, we faced some minor issues with functionality during our trip. The overall experience was satisfactory, but improvements can be made for the price."
       }
@@ -310,7 +310,7 @@
     "name": "El Monte Class A Family Sleeper [AF]",
     "price": 15000,
     "rating": 4.4,
-    "location": "Ukraine, Sumy",
+    "location": "Oak Park, IL",
     "adults": 4,
     "children": 2,
     "engine": "petrol",
@@ -345,12 +345,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Isabella",
         "reviewer_rating": 5,
         "comment": "The El Monte Class A Family Sleeper [AF] provided an opulent experience for our family. The fully integrated features, spacious interiors, and top-notch amenities made our journey unforgettable. Highly recommended for those seeking a luxurious RV adventure."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Michael",
         "reviewer_rating": 3,
         "comment": "While the El Monte Class A Family Sleeper [AF] offered luxury, we faced some minor issues during our trip. The gas supply seemed insufficient, and a few amenities had issues. Overall, a good experience, but improvements are needed for the price."
       }
@@ -361,7 +361,7 @@
     "name": "Mavericks",
     "price": 8000,
     "rating": 4.4,
-    "location": "Ukraine, Lviv",
+    "location": "Bolingbrook, IL",
     "adults": 2,
     "children": 0,
     "engine": "petrol",
@@ -396,12 +396,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Ava",
         "reviewer_rating": 5,
         "comment": "The Mavericks panel truck was a perfect choice for my solo road trip. Compact, easy to drive, and had all the essentials. The kitchen facilities were sufficient, and the overall experience was fantastic."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "William",
         "reviewer_rating": 3,
         "comment": "A decent option for solo travel. The Mavericks provided a comfortable stay, but the lack of bathroom facilities was a drawback. Good for short trips where simplicity is preferred."
       }
@@ -412,7 +412,7 @@
     "name": "Santa Cruz",
     "price": 7500,
     "rating": 4.4,
-    "location": "Ukraine, Lviv",
+    "location": "Orland Park, IL",
     "adults": 2,
     "children": 0,
     "engine": "petrol",
@@ -447,12 +447,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Mia",
         "reviewer_rating": 5,
         "comment": "The Santa Cruz is perfect for a solo adventure. Compact, easy to maneuver, and with all the necessary amenities. The kitchen facilities were handy, and the overall experience was fantastic."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "David",
         "reviewer_rating": 3,
         "comment": "A good option for solo travel. The Santa Cruz provided a comfortable stay, but the lack of bathroom facilities may be a concern for some. Ideal for short trips where simplicity is the priority."
       }
@@ -463,7 +463,7 @@
     "name": "Mesa",
     "price": 7500,
     "rating": 4.4,
-    "location": "Ukraine, Kyiv",
+    "location": "Chicago, IL",
     "adults": 2,
     "children": 0,
     "engine": "petrol",
@@ -498,12 +498,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Charlotte",
         "reviewer_rating": 5,
         "comment": "The Mesa panel truck is perfect for solo travelers. Its compact size makes it easy to navigate, and the basic amenities provided a comfortable experience. Highly recommended for those looking for simplicity on their journeys."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Joseph",
         "reviewer_rating": 3,
         "comment": "The Mesa is a decent option for solo travel. While the amenities are basic, it offers a hassle-free experience for short trips. The compact design is an advantage for city travel."
       }
@@ -514,7 +514,7 @@
     "name": "Kuga Camper",
     "price": 8500,
     "rating": 4.4,
-    "location": "Ukraine, Kyiv",
+    "location": "Skokie, IL",
     "adults": 3,
     "children": 0,
     "engine": "petrol",
@@ -549,12 +549,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Amelia",
         "reviewer_rating": 5,
         "comment": "The Kuga Camper exceeded our expectations! Compact yet spacious enough for a small group, it provided all the necessary amenities for a comfortable journey. The kitchen facilities were a definite plus, making our road trip enjoyable."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Charles",
         "reviewer_rating": 3,
         "comment": "A decent option for a small group or couple. The Kuga Camper offered convenience, but the lack of a TV was a downside for entertainment. Overall, a comfortable camper for short trips."
       }
@@ -565,7 +565,7 @@
     "name": "HI-Top Camper",
     "price": 9000,
     "rating": 4.4,
-    "location": "Ukraine, Odesa",
+    "location": "Aurora, IL",
     "adults": 3,
     "children": 0,
     "engine": "petrol",
@@ -600,12 +600,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Harper",
         "reviewer_rating": 5,
         "comment": "The HI-Top Camper provided an exceptional experience for our small group. The interior space was surprisingly roomy, and the kitchen facilities were well-equipped. A fantastic choice for a comfortable and enjoyable road trip."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Richard",
         "reviewer_rating": 3,
         "comment": "The HI-Top Camper is a decent option for a small group or couple. While the amenities were satisfactory, the lack of a TV might be a drawback for those seeking entertainment. Overall, a comfortable camper for a short journey."
       }
@@ -616,7 +616,7 @@
     "name": "El Monte Class B Small [B]",
     "price": 10000,
     "rating": 4.4,
-    "location": "Ukraine, Odesa",
+    "location": "Peoria, IL",
     "adults": 2,
     "children": 2,
     "engine": "petrol",
@@ -651,12 +651,12 @@
     ],
     "reviews": [
       {
-        "reviewer_name": "Alice",
+        "reviewer_name": "Evelyn",
         "reviewer_rating": 5,
         "comment": "The El Monte Class B Small [B] exceeded our expectations! The spacious interior and well-equipped kitchen made our family road trip comfortable and enjoyable. Highly recommended for families seeking a stylish and convenient camper experience."
       },
       {
-        "reviewer_name": "Bob",
+        "reviewer_name": "Thomas",
         "reviewer_rating": 3,
         "comment": "A decent choice for a family trip. The El Monte Class B Small [B] provided a comfortable stay, but the absence of a TV might be a drawback for entertainment. Overall, a convenient option for a family road adventure."
       }

@@ -17,6 +17,7 @@ import {
 } from "../CarItems/CarItems.styled";
 import { useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
+import defaultUser from "../../../public/images/default_user.jpg";
 import { FaStar } from "react-icons/fa6";
 import {
   ModalImg,
@@ -301,8 +302,8 @@ function ModalPopUp({ items }) {
                     <ModalItemReviewsItems key={item?.reviewer_name}>
                       <ModalItemReviewsImgWrapper>
                         <ModalItemReviewsImg
-                          src="/images/default_user.jpg"
-                          alt=""
+                          src={defaultUser}
+                          alt="item?.reviewer_name"
                         />
                         <div>
                           <ModalItemReviewsTitle>
