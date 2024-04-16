@@ -1,6 +1,7 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import About from "../../components/About/About";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import { motion } from "framer-motion";
 import {
   HeroWrapper,
   HomeContainer,
@@ -29,23 +30,29 @@ function Home() {
       </HelmetProvider>
       <HomeContainer>
         <HeroWrapper>
-          <HeroTextWrapper>
-            <HeroTitle>
-              Discover the Freedom of Mobile Exploration with{" "}
-              <HeroTitleSpan>Camp On Wheels</HeroTitleSpan>
-            </HeroTitle>
-            <HeroText>
-              Embark on unforgettable journeys with CampOnWheels, where every
-              road leads to new adventures. With our fleet of comfortable and
-              fully-equipped camping cars, you can roam wherever your wanderlust
-              takes you, and unwind amidst nature's embrace. Start your journey
-              today and experience the thrill of the open road, without
-              sacrificing the comforts of home.
-            </HeroText>
-            <div style={{ textAlign: "end" }}>
-              <CatalogBtn to="catalog">View our Catalog</CatalogBtn>
-            </div>
-          </HeroTextWrapper>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+          >
+            <HeroTextWrapper>
+              <HeroTitle>
+                Discover the Freedom of Mobile Exploration with{" "}
+                <HeroTitleSpan>Camp On Wheels</HeroTitleSpan>
+              </HeroTitle>
+              <HeroText>
+                Embark on unforgettable journeys with CampOnWheels, where every
+                road leads to new adventures. With our fleet of comfortable and
+                fully-equipped camping cars, you can roam wherever your
+                wanderlust takes you, and unwind amidst nature's embrace. Start
+                your journey today and experience the thrill of the open road,
+                without sacrificing the comforts of home.
+              </HeroText>
+              <div style={{ textAlign: "end" }}>
+                <CatalogBtn to="catalog">View our Catalog</CatalogBtn>
+              </div>
+            </HeroTextWrapper>
+          </motion.div>
         </HeroWrapper>
         <About />
         <Testimonials />

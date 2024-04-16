@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4.8rem 2.4rem 2.4rem;
+  padding: 4.8rem 2.4rem 0;
   gap: 4.8rem;
   margin: 0 auto;
   background-color: ${(p) => p.theme.colors.headerBgColor};
