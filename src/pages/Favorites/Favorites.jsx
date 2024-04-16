@@ -35,7 +35,7 @@ function Favorites() {
         if (favoriteCarsList.length === 0) {
           localStorage.removeItem("favorites");
 
-          navigate("/");
+          // navigate("/");
         }
 
         setFavoriteCars(favoriteCarsList);
@@ -51,14 +51,14 @@ function Favorites() {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Cruise Wheels - Your Favorite Cars</title>
+          <title>Camp On Wheels - Your Favorite Cars</title>
           <meta
             name="description"
-            content="Discover and explore your favorite cars with Cruise Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."
+            content="Discover and explore your favorite camping cars with Camp On Wheels. View and rent stylish and comfortable vehicles that make every journey unforgettable."
           />
           <meta
             name="keywords"
-            content="favorite cars, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"
+            content="favorite carpers, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"
           />
         </Helmet>
       </HelmetProvider>
@@ -69,8 +69,8 @@ function Favorites() {
               <FavoritesEmptyTitle>No Favorite Cars Found!</FavoritesEmptyTitle>
               <FavoritesEmptyText>
                 It looks like you haven't added any cars to your favorites yet.
-                Explore Cruise Wheels' main page to find stylish and comfy rides
-                for your next journey!
+                Explore Camp On Wheels' main page to find stylish and comfy
+                rides for your next journey!
               </FavoritesEmptyText>
             </FavoritesEmptyTextWrapper>
           </FavoritesEmptyWrapper>
