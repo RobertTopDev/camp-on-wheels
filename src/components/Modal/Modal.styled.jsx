@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { interFont, primaryFont } from "../fonts";
+import { interFont } from "../fonts";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
 
@@ -50,7 +50,6 @@ export const ModalImgContainer = styled.div`
 `;
 
 export const ModalImg = styled.img`
-  /* max-width: 46rem; */
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -59,123 +58,6 @@ export const ModalImg = styled.img`
   object-fit: contain;
   object-position: 75%;
   object-fit: cover;
-`;
-
-export const ModalTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-
-  margin-top: 1.4rem;
-`;
-
-export const ModalTitleDescrContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-`;
-
-export const ModalTitleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-`;
-
-export const ModalTitle = styled.h3`
-  display: inline-block;
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 1.33333;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const ModalTitleModel = styled.span`
-  color: ${(p) => p.theme.colors.accentColor};
-`;
-
-export const ModalTitleText = styled.span`
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 1.33333;
-  color: #121417;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const ModalDescr = styled.span`
-  font-family: ${primaryFont};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  color: ${(p) => p.theme.colors.mainTextColorLowOp};
-`;
-
-export const ModalDescrText = styled.p`
-  font-family: ${interFont};
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: ${(p) => p.theme.colors.secondaryTextColor};
-`;
-
-export const ModalConditionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  position: relative;
-`;
-
-export const ModalConditionWrapper = styled.div`
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-`;
-
-export const ModalCondition = styled.div`
-  border-radius: 35px;
-  padding: 7px 14px;
-  background-color: ${(p) => p.theme.colors.headerBgColor};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  font-family: ${primaryFont};
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const ModalConditionAddWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 0.8rem;
-
-  position: absolute;
-  bottom: 0;
-  right: 0;
-`;
-
-export const ModalConditionAdd = styled.span`
-  border-radius: 35px;
-  padding: 7px 14px;
-  background-color: ${(p) => p.theme.colors.headerBgColor};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  font-family: ${primaryFont};
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const ModalConditionAccentColor = styled.span`
-  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const CloseModal = styled(IoClose)`
@@ -192,15 +74,6 @@ export const CloseModal = styled(IoClose)`
     color: ${(p) => p.theme.colors.accentColor};
     cursor: pointer;
   }
-
-  /* @media (min-width: 365px) {
-    right: 0rem;
-  }
-
-  @media (min-width: 768px) {
-    right: 1rem;
-    top: 4rem;
-  } */
 `;
 
 export const ModalBtnWrapper = styled.div`
@@ -449,14 +322,6 @@ export const ModalCalendarIcon = styled.span`
   &:hover {
     cursor: pointer;
   }
-`;
-
-export const ModalCalendarText = styled.span`
-  font-family: ${interFont};
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: ${(p) => p.theme.colors.inputTextColor};
 `;
 
 export const ModalFormBtn = styled.button`

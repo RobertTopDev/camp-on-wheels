@@ -1,4 +1,26 @@
 /* eslint-disable react/prop-types */
+import { toast } from "react-toastify";
+import { useRef, useState } from "react";
+import defaultCar from "../../../public/images/default-car.jpg";
+import defaultUser from "../../../public/images/default_user.jpg";
+import { FaStar } from "react-icons/fa6";
+import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
+import ReadMoreText from "../ReadMore/ReadMore";
+import { ModalBottomline } from "../ReadMore/ReadMore.styled";
+import { FcCalendar } from "react-icons/fc";
+import { LiaBedSolid } from "react-icons/lia";
+import { LuDisc3 } from "react-icons/lu";
+import { BiRadio } from "react-icons/bi";
+import { MdOutlineMicrowave, MdOutlineAir } from "react-icons/md";
+import StarRating from "../StarRating/StarRating";
+import CustomDatePicker from "../Calendar/Calendar";
+import emailRegex from "../../regex/emailRegex";
+import { commonToastOptions } from "../../helpers/toastOptions";
+import {
+  TbAutomaticGearbox,
+  TbGasStation,
+  TbToolsKitchen2,
+} from "react-icons/tb";
 import {
   CardBtn,
   CardItemFeaturesIcon,
@@ -15,29 +37,12 @@ import {
   CartItemTitle,
   CartItemTitleWrap,
 } from "../CarItems/CarItems.styled";
-import { useRef, useState } from "react";
-import defaultCar from "../../../public/images/default-car.jpg";
-import defaultUser from "../../../public/images/default_user.jpg";
-import { FaStar } from "react-icons/fa6";
 import {
   ModalImg,
-  ModalTitle,
-  ModalTitleText,
   ModalWrapper,
   ModalTitleWrapper,
-  ModalTitleContainer,
-  ModalTitleDescrContainer,
-  ModalTextContainer,
-  ModalDescr,
   ModalDiv,
-  ModalDescrText,
-  ModalCondition,
-  ModalConditionWrapper,
-  ModalConditionContainer,
-  ModalConditionAdd,
-  ModalConditionAccentColor,
   CloseModal,
-  ModalTitleModel,
   ModalImgContainer,
   ModalBtnWrapper,
   ModalFeaturesBtn,
@@ -48,7 +53,6 @@ import {
   ModalFormInput,
   ModalTextArea,
   ModalCalendar,
-  ModalCalendarText,
   ModalFormBtn,
   ModalFeaturesBtnLine,
   ModalCalendarIcon,
@@ -68,31 +72,90 @@ import {
   ModalItemReviewsImg,
   ModalItemReviewsImgWrapper,
 } from "./Modal.styled";
-import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
-import ReadMoreText from "../ReadMore/ReadMore";
-import { ModalBottomline } from "../ReadMore/ReadMore.styled";
-import { FcCalendar } from "react-icons/fc";
-import {
-  TbAutomaticGearbox,
-  TbGasStation,
-  TbToolsKitchen2,
-} from "react-icons/tb";
-import { MdOutlineAir } from "react-icons/md";
-import { LiaBedSolid } from "react-icons/lia";
-import { LuDisc3 } from "react-icons/lu";
-import { BiRadio } from "react-icons/bi";
-import { MdOutlineMicrowave } from "react-icons/md";
-import StarRating from "../StarRating/StarRating";
-import CustomDatePicker from "../Calendar/Calendar";
 
 function ModalPopUp({ items }) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [featuresIsOpen, setFeaturesIsOpen] = useState(false);
   const [featuresContent, setFeaturesContent] = useState("Features");
-  const [featuresReviewsIsOpen, setFeaturesReviewsIsOpen] = useState(false);
-  const [featuresDetailsIsOpen, setDetailsReviewsIsOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const datePickerRef = useRef(null);
+
+  const getDateFormat = (date) => {
+    const options = {
+      weekday: "short",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    };
+    const formattedDate = date.toLocaleDateString(undefined, options);
+
+    const [weekday, month, day, year] = formattedDate.split(" ");
+
+    return `${weekday} ${month} ${day} ${year}`;
+  };
+
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      date: getDateFormat(selectedDate),
+      // date: e.target.date.value,
+      message: e.target.message.value,
+    };
+
+    const validName = data.name.length > 0;
+    const validEmail = emailRegex.test(data.email);
+    const validMessage = data.message.length > 0;
+
+    if (!(validEmail && validMessage && validName)) {
+      if (!validMessage && data.email.length === 0) {
+        toast.warning(
+          "Please fill in all required fields!",
+          commonToastOptions
+        );
+      } else if (!validEmail) {
+        toast.warning(
+          "Please enter a valid email address!",
+          commonToastOptions
+        );
+      } else if (!validName) {
+        toast.warning("Please enter a name!", commonToastOptions);
+      } else {
+        toast.warning("Please enter a message!", commonToastOptions);
+      }
+      return;
+    }
+
+    try {
+      //   await fetchEmailDB(data);
+      //   await emailjs.sendForm(
+      //     VITE_EMAIL_ID,
+      //     VITE_EMAIL_TEMPLATE_ID,
+      //     form.current,
+      //     {
+      //       publicKey: VITE_EMAIL_API_KEY,
+      //     }
+      //   );
+
+      toast.success(
+        `Thank you for booking with us! Your reservation for ${data.date} has been received. Our team will be in touch with you shortly to confirm the details.`,
+        commonToastOptions
+      );
+      e.target.name.value = "";
+      e.target.email.value = "";
+      e.target.message.value = "";
+      setSelectedDate(null);
+
+      // setSendForm((prevState) => !prevState);
+    } catch (error) {
+      toast.error(
+        "Error submitting request. Please try again later.",
+        commonToastOptions
+      );
+    }
+  };
 
   const openDatePicker = () => {
     if (datePickerRef.current) {
@@ -114,11 +177,7 @@ function ModalPopUp({ items }) {
     setFeaturesIsOpen(true);
     const content = e.target.textContent;
     setFeaturesContent(content);
-    if (content === "Features") setFeaturesReviewsIsOpen(true);
-    if (content === "Reviews") setDetailsReviewsIsOpen(true);
   }
-
-  // console.log(items.reviews.map((item) => console.log(item.comment)));
 
   return (
     <>
@@ -328,7 +387,7 @@ function ModalPopUp({ items }) {
                   ))}
                 </ModalItemReviewsWrapper>
               )}
-              <ModalForm>
+              <ModalForm onSubmit={handleSubmitForm}>
                 <ModalFormTitleWrapper>
                   <ModalFormTitle>Book your campervan now</ModalFormTitle>
                   <ModalFormSubTitle>
@@ -342,18 +401,19 @@ function ModalPopUp({ items }) {
                     setSelectedDate={setSelectedDate}
                     openDatePicker={openDatePicker}
                     datePickerRef={datePickerRef}
+                    name="date"
                   />
                   <ModalCalendarIcon onClick={openDatePicker}>
                     <FcCalendar />
                   </ModalCalendarIcon>
                 </ModalCalendar>
                 <ModalTextArea
-                  name="Message"
+                  name="message"
                   cols="30"
                   rows="10"
                   placeholder="Comment"
                 ></ModalTextArea>
-                <ModalFormBtn>Send</ModalFormBtn>
+                <ModalFormBtn type="submit">Send</ModalFormBtn>
               </ModalForm>
             </ModalFormWrapper>
           )}
