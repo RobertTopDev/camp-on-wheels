@@ -19,40 +19,41 @@ function About() {
           <IconWrapper>
             <IconTime />
           </IconWrapper>
-          <AboutTitle>24/7 Customer Service</AboutTitle>
+          <AboutTitle>Explore Nature</AboutTitle>
           <AboutText>
-            Our customer service team is available around the clock to assist
-            you with your rental car needs.
+            Discover the great outdoors with our wide range of campers. Perfect
+            for adventurous souls seeking a unique getaway.
           </AboutText>
         </AboutItem>
         <AboutItem>
           <IconWrapper>
             <IconLocation />
           </IconWrapper>
-          <AboutTitle>Convenient Locations</AboutTitle>
+          <AboutTitle>Comfort on Wheels</AboutTitle>
           <AboutText>
-            We have rental car locations conveniently situated all around the US
-            for easy access.
+            Experience the convenience of a home away from home. Our campers are
+            equipped with all the amenities you need for a comfortable trip.
           </AboutText>
         </AboutItem>
         <AboutItem>
           <IconWrapper>
             <IconTrust />
           </IconWrapper>
-          <AboutTitle>Trusted Since 1980</AboutTitle>
+          <AboutTitle>Flexible Rentals</AboutTitle>
           <AboutText>
-            With a rich history dating back to 1980, we take pride in being a
-            trusted name in the rental car industry.
+            Whether you're planning a weekend escape or a month-long adventure,
+            we offer flexible rental options to suit your needs.
           </AboutText>
         </AboutItem>
         <AboutItem>
           <IconWrapper>
             <IconKey />
           </IconWrapper>
-          <AboutTitle>Flexible Rental Options</AboutTitle>
+          <AboutTitle>Expert Support</AboutTitle>
           <AboutText>
-            Choose from a variety of rental options to fit your needs, whether
-            it's a short trip or a long-term rental.
+            Our team is dedicated to ensuring you have a seamless and enjoyable
+            camping experience. From booking to drop-off, we're here to assist
+            you every step of the way.
           </AboutText>
         </AboutItem>
       </AboutMenu>

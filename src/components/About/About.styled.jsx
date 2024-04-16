@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Ri24HoursLine } from "react-icons/ri";
-import { MdLocationOn } from "react-icons/md";
-import { SiTrustpilot } from "react-icons/si";
-import { ImKey2 } from "react-icons/im";
+import { LuMountainSnow } from "react-icons/lu";
+import { LiaCampgroundSolid } from "react-icons/lia";
+import { GiFlexibleStar } from "react-icons/gi";
+import { BiSupport } from "react-icons/bi";
 import { primaryFont } from "../fonts";
 
 export const AboutContainer = styled.div`
@@ -90,22 +90,22 @@ export const IconWrapper = styled.div`
   transform: translateX(-50%);
 `;
 
-export const IconTime = styled(Ri24HoursLine)`
+export const IconTime = styled(LuMountainSnow)`
   font-size: 3.2rem;
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const IconLocation = styled(MdLocationOn)`
+export const IconLocation = styled(LiaCampgroundSolid)`
   font-size: 3.2rem;
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const IconTrust = styled(SiTrustpilot)`
+export const IconTrust = styled(GiFlexibleStar)`
   font-size: 3.2rem;
   color: ${(p) => p.theme.colors.accentColor};
 `;
 
-export const IconKey = styled(ImKey2)`
+export const IconKey = styled(BiSupport)`
   font-size: 3.2rem;
   color: ${(p) => p.theme.colors.accentColor};
 `;

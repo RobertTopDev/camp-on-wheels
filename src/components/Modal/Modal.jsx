@@ -303,7 +303,7 @@ function ModalPopUp({ items }) {
                       <ModalItemReviewsImgWrapper>
                         <ModalItemReviewsImg
                           src={defaultUser}
-                          alt="item?.reviewer_name"
+                          alt={item?.reviewer_name}
                         />
                         <div>
                           <ModalItemReviewsTitle>
