@@ -111,7 +111,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route
-        path="/"
+        path="/camp-on-wheels/"
         element={
           <RootLayout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         }
