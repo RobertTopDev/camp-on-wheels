@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { interFont, primaryFont } from "../fonts";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 
 export const FormWrapper = styled.form`
@@ -10,15 +9,10 @@ export const FormWrapper = styled.form`
   width: 362px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: end;
-    gap: 1.4rem;
   }
 
   @media (min-width: 1440px) {
-    flex-direction: row;
-    align-items: end;
-    gap: 1.8rem;
+    gap: 6.4rem;
   }
 `;
 
@@ -29,7 +23,7 @@ export const FiltersWrapper = styled.div`
 `;
 
 export const FiltersLine = styled.div`
-  background-color: rgba(16, 24, 40, 0.1);
+  background-color: ${(p) => p.theme.colors.filtersLine};
   width: 100%;
   height: 2px;
   margin: 1rem 0 1rem;
@@ -39,7 +33,6 @@ export const OptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-
   position: relative;
 `;
 
@@ -117,17 +110,17 @@ export const SelectInput = styled.div`
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.mainTextColor};
   transition: all var(--primary-transition);
 
   &:hover {
     background-color: ${(p) => p.theme.colors.inputBgColorHover};
   }
 
-  &:focus {
+  /* &:focus {
     outline: none;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
+  } */
 
   /* @media (min-width: 768px) {
     width: 14rem;
@@ -235,10 +228,11 @@ export const SelectedFilterEquipmentText = styled.span`
 
 export const SelectedFilterEquipmentIcon = styled.span`
   font-size: 3.2rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const SelectedFilterEquipment = styled.div`
-  border: 1px solid rgba(16, 24, 40, 0.2);
+  border: 1px solid ${(p) => p.theme.colors.borderFilterItem};
   border-radius: 10px;
   padding: 17px 18px;
   width: 114px;
@@ -360,7 +354,7 @@ export const ErrorMessage = styled.p`
 
 export const LocationIcon = styled(IoLocationOutline)`
   font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.mainTextColor};
 
   @media (min-width: 768px) {
     right: 0;
@@ -368,5 +362,30 @@ export const LocationIcon = styled(IoLocationOutline)`
 
   @media (min-width: 1440px) {
     right: 1.2rem;
+  }
+`;
+
+export const FormSearchBtn = styled.button`
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: ${(p) => p.theme.colors.white};
+  transition: var(--primary-transition);
+
+  background-color: ${(p) => p.theme.colors.accentColor};
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.accentColorHover};
+    cursor: pointer;
   }
 `;

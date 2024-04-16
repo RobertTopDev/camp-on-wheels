@@ -38,6 +38,7 @@ import {
   SelectedFilterEquipmentTitle,
   SelectedFilterEquipmentSubTitle,
   SelectedFilterEquipmentWrap,
+  FormSearchBtn,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
@@ -102,6 +103,8 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    console.log(e);
 
     if (
       selectedBrand.length === 0 &&
@@ -239,6 +242,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
           </SelectedFilterEquipmentWrapper>
         </SelectedFilterEquipmentWrap>
       </FiltersWrapper>
+      <FormSearchBtn>Search</FormSearchBtn>
     </FormWrapper>
   );
 }

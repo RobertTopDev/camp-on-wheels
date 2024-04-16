@@ -44,6 +44,8 @@ const theme = {
       featuresBgColor: "#f2f4f7",
       readMoreBtn: "#1f09cd",
       inputTextColor: "rgba(16, 24, 40, 0.6)",
+      borderFilterItem: "rgba(16, 24, 40, 0.2)",
+      filtersLine: "rgba(16, 24, 40, 0.2)",
     },
   },
   dark: {
@@ -60,8 +62,8 @@ const theme = {
       mainBgColorReverse: "#fdfcf8",
       mainBgColorLowOp: "rgb(36, 36, 36, 0.5)",
       heroBgLowOp: "rgb(36, 36, 36, 0.5)",
-      inputBgColor: "#f7f7fb",
-      inputBgColorHover: "#dedee2",
+      inputBgColor: "#161616",
+      inputBgColorHover: "#383838",
       accentColor: "#E44848",
       accentColorHover: "#d84343",
       white: "#fff",
@@ -77,6 +79,8 @@ const theme = {
       featuresBgColor: "#f2f4f7",
       readMoreBtn: "#4dabf7",
       inputTextColor: "rgba(239, 231, 215, 0.6)",
+      borderFilterItem: "rgba(239, 231, 215, 0.2)",
+      filtersLine: "rgba(239, 231, 215, 0.1)",
     },
   },
 };

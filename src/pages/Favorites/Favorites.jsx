@@ -29,13 +29,13 @@ function Favorites() {
           JSON.parse(localStorage.getItem("favorites")) || [];
 
         const favoriteCarsList = allCars.payload.filter((car) =>
-          favoritesFromStorage.includes(car.id)
+          favoritesFromStorage.includes(car._id)
         );
 
         if (favoriteCarsList.length === 0) {
           localStorage.removeItem("favorites");
 
-          // navigate("/rental-car/");
+          navigate("/");
         }
 
         setFavoriteCars(favoriteCarsList);

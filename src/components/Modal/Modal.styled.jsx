@@ -40,6 +40,8 @@ export const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+
+  position: relative;
 `;
 
 export const ModalImgContainer = styled.div`
@@ -177,11 +179,11 @@ export const ModalConditionAccentColor = styled.span`
 `;
 
 export const CloseModal = styled(IoClose)`
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   color: ${(p) => p.theme.colors.mainTextColor};
   position: absolute;
-  right: 2.4rem;
-  top: 2.4rem;
+  right: 0;
+  top: 0;
 
   transition: all var(--primary-transition);
 
@@ -191,14 +193,14 @@ export const CloseModal = styled(IoClose)`
     cursor: pointer;
   }
 
-  @media (min-width: 365px) {
+  /* @media (min-width: 365px) {
     right: 0rem;
   }
 
   @media (min-width: 768px) {
     right: 1rem;
     top: 4rem;
-  }
+  } */
 `;
 
 export const ModalBtnWrapper = styled.div`
@@ -227,7 +229,7 @@ export const ModalFeaturesBtn = styled.button`
 export const ModalFeaturesBtnLine = styled.div`
   position: absolute;
   bottom: -2.4rem;
-  left: 0;
+  left: ${(p) => (p?.$content === "Features" ? "0" : "12.2rem")};
   height: 5px;
   width: 8.6rem;
   background-color: #e44848;
@@ -237,6 +239,46 @@ export const ModalItemFeaturesContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4.4rem;
+`;
+
+export const ModalItemReviewsWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+`;
+
+export const ModalItemReviewsItems = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
+
+export const ModalItemReviewsImg = styled.img`
+  border-radius: 60rem;
+  width: 60px;
+  height: 60px;
+`;
+
+export const ModalItemReviewsImgWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+`;
+
+export const ModalItemReviewsTitle = styled.h4`
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33333;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalItemReviewsText = styled.p`
+  font-family: ${interFont};
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
 `;
 
 export const ModalItemFeaturesWrapper = styled.div`
@@ -308,6 +350,13 @@ export const ModalForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+`;
+
+export const ModalFormTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 `;
 
 export const ModalFormTitle = styled.h3`
@@ -412,6 +461,7 @@ export const ModalFormBtn = styled.button`
   background: none;
   outline: none;
   border: none;
+  margin-top: 1rem;
   background-color: ${(p) => p.theme.colors.accentColor};
   border-radius: 200px;
   padding: 16px 60px;

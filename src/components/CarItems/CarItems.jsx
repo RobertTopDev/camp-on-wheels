@@ -46,10 +46,10 @@ function CarItems({ items }) {
     const favoritesFromStorage =
       JSON.parse(localStorage.getItem("favorites")) || [];
 
-    const isFavorite = favoritesFromStorage.includes(items.id);
+    const isFavorite = favoritesFromStorage.includes(items._id);
 
     setFavorite(isFavorite);
-  }, [items.id]);
+  }, [items._id]);
 
   function handleFavoriteBtn(id) {
     const favoritesFromStorage =
@@ -75,7 +75,7 @@ function CarItems({ items }) {
           src={items.gallery[0] ? items.gallery[0] : defaultCar}
           alt={items.name}
         />
-        <HeartIconWrapper onClick={() => handleFavoriteBtn(items.id)}>
+        <HeartIconWrapper onClick={() => handleFavoriteBtn(items._id)}>
           {favorite ? <FavoriteHeartIcon /> : <EmptyHeartIcon />}
         </HeartIconWrapper>
       </CarImgWrapper>
