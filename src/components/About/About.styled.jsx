@@ -3,12 +3,17 @@ import { LuMountainSnow } from "react-icons/lu";
 import { LiaCampgroundSolid } from "react-icons/lia";
 import { GiFlexibleStar } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
-import { primaryFont } from "../fonts";
+import { interFont, primaryFont } from "../fonts";
 
 export const AboutContainer = styled.div`
   margin: 4.8rem auto;
   padding: 2.4rem;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.4rem;
 
   @media (min-width: 840px) {
     width: 80%;
@@ -17,6 +22,27 @@ export const AboutContainer = styled.div`
   @media (min-width: 1200px) {
     width: 100%;
   }
+`;
+export const AboutIcon = styled.span`
+  position: absolute;
+  top: 0;
+  right: -4.4rem;
+  font-size: 3.2rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const AboutHeadingTitle = styled.h2`
+  position: relative;
+  text-align: center;
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 1.33333;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const AboutHeadingTitleAccent = styled.strong`
+  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const AboutMenu = styled.ul`

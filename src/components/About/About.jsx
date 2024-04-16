@@ -1,3 +1,6 @@
+import { Fade, Slide } from "react-awesome-reveal";
+import { TbCamper } from "react-icons/tb";
+import { motion } from "framer-motion";
 import {
   AboutContainer,
   AboutMenu,
@@ -9,11 +12,23 @@ import {
   IconLocation,
   IconTrust,
   IconKey,
+  AboutHeadingTitle,
+  AboutHeadingTitleAccent,
+  AboutIcon,
 } from "./About.styled";
 
 function About() {
   return (
     <AboutContainer>
+      <AboutHeadingTitle>
+        <Fade direction="left" duration="2000">
+          <AboutIcon>
+            <TbCamper />
+          </AboutIcon>
+        </Fade>
+        Why Rent with{" "}
+        <AboutHeadingTitleAccent>Camp On Wheels?</AboutHeadingTitleAccent>
+      </AboutHeadingTitle>
       <AboutMenu>
         <AboutItem>
           <IconWrapper>

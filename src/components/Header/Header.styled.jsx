@@ -44,37 +44,9 @@ export const HeaderLink = styled(Link)`
   position: relative;
   text-decoration: none;
 
-  &:after {
-    content: "";
-    position: absolute;
-    background-color: ${(p) => p.theme.colors.mainTextColor};
-    height: 1px;
-    width: 0;
-    left: 0;
-    bottom: 0;
-    transition: 0.3s linear;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    background-color: ${(p) => p.theme.colors.mainTextColor};
-    height: 1px;
-    width: 0;
-    right: 0;
-    bottom: 0;
-    transition: 0.3s linear;
-  }
-
   &:hover {
+    color: ${(p) => p.theme.colors.accentColor};
     color: ${(p) => p.theme.colors.mainTextColor};
-  }
-
-  &:hover:after {
-    width: 50%;
-  }
-
-  &:hover:before {
-    width: 50%;
+    transform: scale(1.05);
   }
 `;
