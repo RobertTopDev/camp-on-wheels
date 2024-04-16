@@ -20,11 +20,11 @@ function Home() {
           <title>Camp On Wheels - Home Page</title>
           <meta
             name="description"
-            content="Unlock boundless journeys with Cruise Wheels. Rent a car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."
+            content="Unlock boundless journeys with Camp On Wheels. Rent a camping car in style, comfort, and confidence. Explore extraordinary adventures with our premium car rental services."
           />
           <meta
             name="keywords"
-            content="car rental, adventure travel, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"
+            content="camping car rental, adventure travel, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"
           />
         </Helmet>
       </HelmetProvider>
