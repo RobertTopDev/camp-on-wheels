@@ -1,4 +1,4 @@
-import{u as r,p as s,G as W,i as j,m as M,r as a,n as q,j as o,o as R,q as D,T as k,s as I,H as G,l as K,t as N}from"./index-C0GlBgbr.js";import{M as Z,C as z,v as B}from"./v4-I325STq1.js";import{b as J}from"./StarRating-eloG7IuR.js";const Q=e=>e.cars.cars.items,U=e=>e.cars.filter,X=r.div`
+import{u as r,p as s,G as W,i as j,m as M,r as a,n as q,j as o,o as R,q as D,T as k,s as I,H as G,l as K,t as N}from"./index-BlQY-z0c.js";import{M as Z,C as z,v as B}from"./v4-DUzN3kiC.js";import{b as J}from"./StarRating-3FBMmg6Q.js";const Q=e=>e.cars.cars.items,U=e=>e.cars.filter,X=r.div`
   display: flex;
   gap: 6.4rem;
   align-items: start;
@@ -419,7 +419,5 @@ import{u as r,p as s,G as W,i as j,m as M,r as a,n as q,j as o,o as R,q as D,T a
   &:hover {
     cursor: pointer;
     border: 1px solid ${e=>e.theme.colors.accentColorHover};
-    /* background-color: ${e=>e.theme.colors.accentColorHover}; */
-    /* color: ${e=>e.theme.colors.white}; */
   }
 `;function ge({onLoadMoreClick:e}){return o.jsx(ue,{onClick:e,children:"Load More"})}function je(){const e=q(),x=I(Q),[L,y]=a.useState(!1),[p,u]=a.useState(1),[C,g]=a.useState(!0),[h,f]=a.useState([]),i=I(U);function b(){u(t=>t+1)}function $(){u(1)}const w=Math.ceil(13/4);a.useEffect(()=>{async function t(){try{g(p<w),await e(N(p)).unwrap()}catch(l){console.log(l.message)}}t()},[e,p,w]);function v(){return h.filter(l=>{const A=!i.brand||l.make===i.brand,P=parseInt(l.rentalPrice.replace("$",""))<=i.price,V=!i.mileageRange||l.mileage>=i.mileageRange.min&&l.mileage<=i.mileageRange.max;return A&&P&&V})}const n=v();return o.jsxs(o.Fragment,{children:[o.jsx(G,{children:o.jsxs(K,{children:[o.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),o.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."}),o.jsx("meta",{name:"keywords",content:"car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),o.jsxs(X,{children:[o.jsx(xe,{handlePage:$,setDisplayedCars:f,setFilteredSearch:y}),o.jsxs(Y,{children:[o.jsx(_,{children:n&&(n==null?void 0:n.length)===0&&L?o.jsx(ee,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(t=>o.jsx(z,{items:t},B())):x==null?void 0:x.map(t=>o.jsx(z,{items:t},B()))}),x.length>4&&o.jsx(ge,{onLoadMoreClick:b})]})]})]})}export{je as default};
