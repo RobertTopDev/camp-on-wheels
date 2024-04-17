@@ -113,9 +113,6 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
       selectedType: selectedType,
     };
 
-    console.log(locationValue);
-    console.log(formData);
-
     // if (
     //   selectedBrand.length === 0 &&
     //   !selectedPrice &&
@@ -188,13 +185,15 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
           </SelectedFilterEquipmentTitle>
           <FiltersLine></FiltersLine>
           <SelectedFilterEquipmentWrapper onClick={handleEquipmentFilter}>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment $active={selectedEquipment === "AC"}>
               <SelectedFilterEquipmentIcon>
                 <MdOutlineAir />
               </SelectedFilterEquipmentIcon>
               <SelectedFilterEquipmentText>AC</SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment
+              $active={selectedEquipment === "Automatic"}
+            >
               <SelectedFilterEquipmentIcon>
                 <TbAutomaticGearbox />
               </SelectedFilterEquipmentIcon>
@@ -202,19 +201,21 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
                 Automatic
               </SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment $active={selectedEquipment === "Kitchen"}>
               <SelectedFilterEquipmentIcon>
                 <TbToolsKitchen2 />
               </SelectedFilterEquipmentIcon>
               <SelectedFilterEquipmentText>Kitchen</SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment $active={selectedEquipment === "TV"}>
               <SelectedFilterEquipmentIcon>
                 <PiTelevisionSimple />
               </SelectedFilterEquipmentIcon>
               <SelectedFilterEquipmentText>TV</SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment
+              $active={selectedEquipment === "Shower/WC"}
+            >
               <SelectedFilterEquipmentIcon>
                 <LuShowerHead />
               </SelectedFilterEquipmentIcon>
@@ -230,13 +231,15 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
           </SelectedFilterEquipmentTitle>
           <FiltersLine></FiltersLine>
           <SelectedFilterTypeWrapper onClick={handleTypeFilter}>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment $active={selectedType === "Van"}>
               <SelectedFilterEquipmentIcon>
                 <TbCamper />
               </SelectedFilterEquipmentIcon>
               <SelectedFilterEquipmentText>Van</SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment
+              $active={selectedType === "Fully Integrated"}
+            >
               <SelectedFilterEquipmentIcon>
                 <TbCamper />
               </SelectedFilterEquipmentIcon>
@@ -244,7 +247,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
                 Fully Integrated
               </SelectedFilterEquipmentText>
             </SelectedFilterEquipment>
-            <SelectedFilterEquipment>
+            <SelectedFilterEquipment $active={selectedType === "Alcove"}>
               <SelectedFilterEquipmentIcon>
                 <TbCamper />
               </SelectedFilterEquipmentIcon>

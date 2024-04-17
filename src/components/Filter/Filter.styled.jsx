@@ -241,7 +241,11 @@ export const SelectedFilterEquipmentIcon = styled.span`
 `;
 
 export const SelectedFilterEquipment = styled.div`
-  border: 1px solid ${(p) => p.theme.colors.borderFilterItem};
+  border: 1px solid
+    ${(p) =>
+      p?.$active
+        ? p.theme.colors.accentColor
+        : p.theme.colors.borderFilterItem};
   border-radius: 10px;
   padding: 17px 18px;
   width: 114px;
