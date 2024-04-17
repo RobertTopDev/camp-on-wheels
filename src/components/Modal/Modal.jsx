@@ -73,8 +73,14 @@ import {
   ModalItemReviewsImgWrapper,
 } from "./Modal.styled";
 import { formatPrice } from "../../helpers/formatPrice";
+import { fetchEmailDB } from "../../services/emailPost";
+import emailjs from "@emailjs/browser";
+
+const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
+  import.meta.env;
 
 function ModalPopUp({ items }) {
+  const form = useRef();
   const [modalIsOpen, setIsOpen] = useState(false);
   const [featuresIsOpen, setFeaturesIsOpen] = useState(false);
   const [featuresContent, setFeaturesContent] = useState("Features");
@@ -103,7 +109,6 @@ function ModalPopUp({ items }) {
       name: e.target.name.value,
       email: e.target.email.value,
       date: getDateFormat(selectedDate),
-      // date: e.target.date.value,
       message: e.target.message.value,
     };
 
@@ -123,7 +128,7 @@ function ModalPopUp({ items }) {
           commonToastOptions
         );
       } else if (!validName) {
-        toast.warning("Please enter a name!", commonToastOptions);
+        toast.warning("Please provide your name.", commonToastOptions);
       } else {
         toast.warning("Please enter a message!", commonToastOptions);
       }
@@ -131,15 +136,15 @@ function ModalPopUp({ items }) {
     }
 
     try {
-      //   await fetchEmailDB(data);
-      //   await emailjs.sendForm(
-      //     VITE_EMAIL_ID,
-      //     VITE_EMAIL_TEMPLATE_ID,
-      //     form.current,
-      //     {
-      //       publicKey: VITE_EMAIL_API_KEY,
-      //     }
-      //   );
+      await fetchEmailDB(data);
+      await emailjs.sendForm(
+        VITE_EMAIL_ID,
+        VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: VITE_EMAIL_API_KEY,
+        }
+      );
 
       toast.success(
         `Thank you for booking with us! Your reservation for ${data.date} has been received. Our team will be in touch with you shortly to confirm the details.`,
@@ -390,7 +395,7 @@ function ModalPopUp({ items }) {
                   ))}
                 </ModalItemReviewsWrapper>
               )}
-              <ModalForm onSubmit={handleSubmitForm}>
+              <ModalForm ref={form} onSubmit={handleSubmitForm}>
                 <ModalFormTitleWrapper>
                   <ModalFormTitle>Book your campervan now</ModalFormTitle>
                   <ModalFormSubTitle>
