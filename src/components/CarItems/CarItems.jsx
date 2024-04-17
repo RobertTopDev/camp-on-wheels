@@ -37,6 +37,7 @@ import { LiaBedSolid } from "react-icons/lia";
 import { MdOutlineAir } from "react-icons/md";
 import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
 import { FaStar } from "react-icons/fa6";
+import { formatPrice } from "../../helpers/formatPrice";
 
 /* eslint-disable react/prop-types */
 function CarItems({ items }) {
@@ -84,7 +85,7 @@ function CarItems({ items }) {
           <div>
             <CartItemTitleWrap>
               <CartItemTitle>{items.name}</CartItemTitle>
-              <CartItemPrice>${items.price}</CartItemPrice>
+              <CartItemPrice>${formatPrice(items.price)}</CartItemPrice>
             </CartItemTitleWrap>
             <CardItemRatingWrapper>
               <CardItemRatingWrap>

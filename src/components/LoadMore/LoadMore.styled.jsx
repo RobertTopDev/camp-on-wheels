@@ -23,7 +23,5 @@ export const LoadMoreBtn = styled.button`
   &:hover {
     cursor: pointer;
     border: 1px solid ${(p) => p.theme.colors.accentColorHover};
-    /* background-color: ${(p) => p.theme.colors.accentColorHover}; */
-    /* color: ${(p) => p.theme.colors.white}; */
   }
 `;

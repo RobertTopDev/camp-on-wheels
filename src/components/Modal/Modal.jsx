@@ -72,6 +72,7 @@ import {
   ModalItemReviewsImg,
   ModalItemReviewsImgWrapper,
 } from "./Modal.styled";
+import { formatPrice } from "../../helpers/formatPrice";
 
 function ModalPopUp({ items }) {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -79,6 +80,7 @@ function ModalPopUp({ items }) {
   const [featuresContent, setFeaturesContent] = useState("Features");
   const [selectedDate, setSelectedDate] = useState(new Date());
   const datePickerRef = useRef(null);
+  const [startDate, setStartDate] = useState(new Date());
 
   const getDateFormat = (date) => {
     const options = {
@@ -147,6 +149,7 @@ function ModalPopUp({ items }) {
       e.target.email.value = "";
       e.target.message.value = "";
       setSelectedDate(null);
+      setStartDate(new Date());
 
       // setSendForm((prevState) => !prevState);
     } catch (error) {
@@ -219,7 +222,7 @@ function ModalPopUp({ items }) {
                 <CardItemLocation>{items.location}</CardItemLocation>
               </CardItemLocationWrapper>
             </CardItemRatingWrapper>
-            <CartItemPrice>${items.price}</CartItemPrice>
+            <CartItemPrice>${formatPrice(items.price)}</CartItemPrice>
           </ModalTitleWrapper>
           <ModalImgContainer>
             {items.gallery.map((img) => (
@@ -401,6 +404,8 @@ function ModalPopUp({ items }) {
                     setSelectedDate={setSelectedDate}
                     openDatePicker={openDatePicker}
                     datePickerRef={datePickerRef}
+                    startDate={startDate}
+                    setStartDate={setStartDate}
                     name="date"
                   />
                   <ModalCalendarIcon onClick={openDatePicker}>

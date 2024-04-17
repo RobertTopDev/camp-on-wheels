@@ -8,8 +8,10 @@ const CustomDatePicker = ({
   setSelectedDate,
   openDatePicker,
   datePickerRef,
+  startDate,
+  setStartDate,
 }) => {
-  const [startDate, setStartDate] = useState(new Date());
+  // const [startDate, setStartDate] = useState(new Date());
 
   const handleDateChange = (date) => {
     setStartDate(date);
