@@ -71,6 +71,8 @@ function Catalog() {
 
   const visibleCars = filteredByCars();
 
+  console.log(cars.length);
+
   return (
     <>
       <HelmetProvider>
@@ -106,7 +108,9 @@ function Catalog() {
               })
             )}
           </CarsMenu>
-          {cars.length > 4 && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
+          {cars.length >= carsPerPage && (
+            <LoadMore onLoadMoreClick={onLoadMoreClick} />
+          )}
         </CarsMenuWrapper>
 
         {/* {filteredSearch && visibleCars.length > 4 && (
