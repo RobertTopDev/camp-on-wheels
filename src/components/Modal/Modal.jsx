@@ -16,6 +16,9 @@ import StarRating from "../StarRating/StarRating";
 import CustomDatePicker from "../Calendar/Calendar";
 import emailRegex from "../../regex/emailRegex";
 import { commonToastOptions } from "../../helpers/toastOptions";
+import { formatPrice } from "../../helpers/formatPrice";
+import { fetchEmailDB } from "../../services/emailPost";
+import emailjs from "@emailjs/browser";
 import {
   TbAutomaticGearbox,
   TbGasStation,
@@ -72,9 +75,6 @@ import {
   ModalItemReviewsImg,
   ModalItemReviewsImgWrapper,
 } from "./Modal.styled";
-import { formatPrice } from "../../helpers/formatPrice";
-import { fetchEmailDB } from "../../services/emailPost";
-import emailjs from "@emailjs/browser";
 
 const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
   import.meta.env;

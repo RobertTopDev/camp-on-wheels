@@ -1,5 +1,397 @@
 [
   {
+    "_id": "302",
+    "name": "Forest River Sunseeker",
+    "price": 11000,
+    "rating": 4.8,
+    "location": "Chicago, IL",
+    "adults": 4,
+    "children": 1,
+    "engine": "diesel",
+    "transmission": "automatic",
+    "form": "integrated",
+    "length": "8m",
+    "width": "2.5m",
+    "height": "3.2m",
+    "tank": "220l",
+    "consumption": "25l/100km",
+    "description": "Experience the ultimate road trip with the Forest River Sunseeker. This integrated-style motorhome offers a spacious and luxurious interior, designed to accommodate families and small groups. With a fully equipped kitchen, modern bathroom, and comfortable sleeping arrangements, the Sunseeker ensures a comfortable and enjoyable journey. Equipped with diesel engine and automatic transmission, it offers a smooth and fuel-efficient drive. Discover the beauty of Illinois and beyond with the Forest River Sunseeker.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 4,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 4,
+      "microwave": 1,
+      "gas": "40kg",
+      "water": "180l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/7-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/7-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/7-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Emma",
+        "reviewer_rating": 5,
+        "comment": "Fantastic RV! The Forest River Sunseeker was perfect for our family vacation. The amenities were top-notch, and the interior was spacious and comfortable. Highly recommended!"
+      },
+      {
+        "reviewer_name": "David",
+        "reviewer_rating": 4.5,
+        "comment": "Great camper! We had a wonderful time exploring Illinois in the Sunseeker. Everything was in excellent condition, and the layout was perfect for our family."
+      },
+      {
+        "reviewer_name": "Grace",
+        "reviewer_rating": 4,
+        "comment": "Comfortable RV for a road trip. The Sunseeker had everything we needed for a memorable journey. Minor issues with the TV reception, but overall a great experience."
+      }
+    ]
+  },
+  {
+    "_id": "303",
+    "name": "Winnebago Minnie Winnie",
+    "price": 10500,
+    "rating": 4.7,
+    "location": "Chicago, IL",
+    "adults": 2,
+    "children": 1,
+    "engine": "petrol",
+    "transmission": "automatic",
+    "form": "alcove",
+    "length": "7.5m",
+    "width": "2.6m",
+    "height": "3.5m",
+    "tank": "200l",
+    "consumption": "28l/100km",
+    "description": "Discover the Winnebago Minnie Winnie, a classic alcove-style motorhome perfect for couples or small families. This compact yet spacious camper offers all the comforts of home on the road, with a fully equipped kitchen, bathroom, and cozy sleeping area. The Minnie Winnie is easy to drive, fuel-efficient, and packed with features to enhance your travel experience. Explore Illinois and beyond in style with the Winnebago Minnie Winnie.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 2,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 2,
+      "microwave": 1,
+      "gas": "30kg",
+      "water": "160l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/9-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/9-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/9-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Sophia",
+        "reviewer_rating": 4.5,
+        "comment": "Lovely RV! The Minnie Winnie was perfect for our romantic getaway. The interior was cozy and well-designed, and the amenities were excellent. A great choice for couples!"
+      },
+      {
+        "reviewer_name": "James",
+        "reviewer_rating": 4,
+        "comment": "Good camper for two. We enjoyed our trip in the Minnie Winnie. It had everything we needed for a comfortable journey. Minor issue with the gas stove, but overall very satisfied."
+      },
+      {
+        "reviewer_name": "Olivia",
+        "reviewer_rating": 5,
+        "comment": "Excellent RV for a road trip. The Minnie Winnie was clean, comfortable, and well-equipped. We had a fantastic time exploring Illinois. Highly recommend!"
+      }
+    ]
+  },
+  {
+    "_id": "304",
+    "name": "Jayco Redhawk",
+    "price": 11500,
+    "rating": 4.6,
+    "location": "Chicago, IL",
+    "adults": 5,
+    "children": 2,
+    "engine": "diesel",
+    "transmission": "automatic",
+    "form": "integrated",
+    "length": "8.5m",
+    "width": "2.7m",
+    "height": "3.4m",
+    "tank": "230l",
+    "consumption": "26l/100km",
+    "description": "Embark on an unforgettable journey with the Jayco Redhawk, a spacious and luxurious integrated-style motorhome perfect for larger families or groups. With ample living space, modern amenities, and comfortable sleeping arrangements, the Redhawk offers everything you need for a comfortable and enjoyable road trip. Powered by a diesel engine and equipped with automatic transmission, it provides a smooth and efficient driving experience. Explore the beauty of Illinois and beyond with the Jayco Redhawk.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 5,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 5,
+      "microwave": 1,
+      "gas": "45kg",
+      "water": "200l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/2-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/2-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/2-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Liam",
+        "reviewer_rating": 5,
+        "comment": "Fantastic RV for large families! The Redhawk was spacious, comfortable, and well-equipped. The kids loved the bunk beds, and we enjoyed the modern amenities. Highly recommend!"
+      },
+      {
+        "reviewer_name": "Ava",
+        "reviewer_rating": 4.5,
+        "comment": "Great camper for group trips. We had a wonderful time exploring Illinois in the Redhawk. The interior was comfortable, and the amenities were excellent. Minor issue with the TV remote, but overall very satisfied."
+      },
+      {
+        "reviewer_name": "Noah",
+        "reviewer_rating": 4,
+        "comment": "Comfortable RV for a road trip. The Redhawk had everything we needed for a memorable journey. The layout was ideal for our group, and the amenities were top-notch. A few minor issues with the gas stove, but overall a great experience."
+      }
+    ]
+  },
+  {
+    "_id": "407",
+    "name": "Keystone Outback",
+    "price": 9500,
+    "rating": 4.3,
+    "location": "Chicago, IL",
+    "adults": 4,
+    "children": 2,
+    "engine": "petrol",
+    "transmission": "automatic",
+    "form": "travel trailer",
+    "length": "8m",
+    "width": "2.8m",
+    "height": "3.2m",
+    "tank": "190l",
+    "consumption": "32l/100km",
+    "description": "Discover the freedom of the open road with the Keystone Outback travel trailer, perfect for family adventures and group getaways. This spacious and comfortable camper offers a cozy interior, fully equipped kitchen, and modern bathroom facilities. With comfortable sleeping arrangements for up to six people, the Outback ensures a comfortable and enjoyable journey. Powered by a petrol engine and equipped with automatic transmission, it provides a smooth and fuel-efficient driving experience. Explore Illinois and beyond with the Keystone Outback.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 4,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 3,
+      "microwave": 1,
+      "gas": "30kg",
+      "water": "170l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/5-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/5-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/5-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Chloe",
+        "reviewer_rating": 4,
+        "comment": "Good camper for family trips. The Outback had everything we needed for a comfortable journey. The interior was cozy, and the amenities were sufficient. A minor issue with the TV, but overall very satisfied."
+      },
+      {
+        "reviewer_name": "Henry",
+        "reviewer_rating": 4.5,
+        "comment": "Comfortable travel trailer. We enjoyed our trip in the Outback. The sleeping arrangements were comfortable, and the kitchen was well-equipped. Minor issues with the gas stove, but overall a great experience."
+      },
+      {
+        "reviewer_name": "Victoria",
+        "reviewer_rating": 4,
+        "comment": "Nice camper for group trips. The Outback was spacious and comfortable. The amenities were good, and we had a great time exploring Illinois. A few minor issues with the bathroom setup, but overall very satisfied."
+      }
+    ]
+  },
+  {
+    "_id": "408",
+    "name": "Airstream Flying Cloud",
+    "price": 12500,
+    "rating": 4.9,
+    "location": "Chicago, IL",
+    "adults": 2,
+    "children": 0,
+    "engine": "n/a",
+    "transmission": "n/a",
+    "form": "travel trailer",
+    "length": "7.5m",
+    "width": "2.5m",
+    "height": "3m",
+    "tank": "n/a",
+    "consumption": "n/a",
+    "description": "Experience luxury camping with the Airstream Flying Cloud travel trailer, designed for couples or solo travelers seeking comfort and style on the road. This iconic camper offers a sleek and modern interior, fully equipped kitchen, and luxurious bathroom facilities. With a comfortable sleeping area and spacious living space, the Flying Cloud provides all the comforts of home in a compact and stylish package. Explore Illinois and beyond in ultimate style with the Airstream Flying Cloud.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 2,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 2,
+      "microwave": 1,
+      "gas": "n/a",
+      "water": "n/a"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/8-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/8-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/8-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Sophie",
+        "reviewer_rating": 5,
+        "comment": "Fantastic travel trailer! The Flying Cloud was luxurious, comfortable, and well-equipped. The interior design was beautiful, and the amenities were top-notch. Highly recommend for couples!"
+      },
+      {
+        "reviewer_name": "Daniel",
+        "reviewer_rating": 4.5,
+        "comment": "Great camper for couples. We had a wonderful time exploring Illinois in the Flying Cloud. The interior was stylish and comfortable, and the amenities were excellent. A minor issue with the TV antenna, but overall very satisfied."
+      },
+      {
+        "reviewer_name": "Sophia",
+        "reviewer_rating": 5,
+        "comment": "Excellent travel trailer. The Flying Cloud was clean, comfortable, and luxurious. We had a fantastic time exploring Illinois and beyond. Highly recommend for couples!"
+      }
+    ]
+  },
+  {
+    "_id": "305",
+    "name": "Coachmen Freelander",
+    "price": 10000,
+    "rating": 4.4,
+    "location": "Chicago, IL",
+    "adults": 3,
+    "children": 2,
+    "engine": "petrol",
+    "transmission": "automatic",
+    "form": "alcove",
+    "length": "7m",
+    "width": "2.6m",
+    "height": "3.6m",
+    "tank": "210l",
+    "consumption": "29l/100km",
+    "description": "Discover the freedom of the open road with the Coachmen Freelander, a comfortable and reliable alcove-style motorhome perfect for family adventures. With a spacious interior, fully equipped kitchen, modern bathroom, and comfortable sleeping areas, the Freelander offers all the comforts of home on the go. Powered by a petrol engine and equipped with automatic transmission, it provides a smooth and fuel-efficient driving experience. Explore Illinois and beyond with the Coachmen Freelander.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 3,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 3,
+      "microwave": 1,
+      "gas": "35kg",
+      "water": "155l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/11-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/11-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/11-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Isabella",
+        "reviewer_rating": 4.5,
+        "comment": "Lovely RV! The Freelander was perfect for our family vacation. The interior was spacious and comfortable, and the amenities were excellent. Highly recommend!"
+      },
+      {
+        "reviewer_name": "Mia",
+        "reviewer_rating": 4,
+        "comment": "Good camper for a family trip. We had a great time exploring Illinois in the Freelander. Everything was in good condition, and the layout was ideal for our family."
+      },
+      {
+        "reviewer_name": "Ethan",
+        "reviewer_rating": 4.5,
+        "comment": "Excellent RV for a road trip. The Freelander was clean, comfortable, and well-equipped. We had a fantastic time exploring Illinois. Highly recommend!"
+      }
+    ]
+  },
+  {
+    "_id": "306",
+    "name": "Tiffin Allegro",
+    "price": 12000,
+    "rating": 4.9,
+    "location": "Chicago, IL",
+    "adults": 2,
+    "children": 0,
+    "engine": "diesel",
+    "transmission": "automatic",
+    "form": "integrated",
+    "length": "9m",
+    "width": "2.8m",
+    "height": "3.3m",
+    "tank": "240l",
+    "consumption": "24l/100km",
+    "description": "Experience luxury on the open road with the Tiffin Allegro, a spacious and elegant integrated-style motorhome designed for couples or solo travelers. With a luxurious interior, gourmet kitchen, modern bathroom, and comfortable sleeping area, the Allegro offers a truly luxurious travel experience. Powered by a diesel engine and equipped with automatic transmission, it provides a smooth and efficient driving experience. Explore Illinois and beyond in ultimate style with the Tiffin Allegro.",
+    "details": {
+      "airConditioner": 1,
+      "bathroom": 1,
+      "kitchen": 1,
+      "beds": 2,
+      "TV": 1,
+      "CD": 1,
+      "radio": 1,
+      "shower": 1,
+      "toilet": 1,
+      "freezer": 1,
+      "hob": 2,
+      "microwave": 1,
+      "gas": "50kg",
+      "water": "220l"
+    },
+    "gallery": [
+      "https://ftp.goit.study/img/campers-test-task/12-1.webp",
+      "https://ftp.goit.study/img/campers-test-task/12-2.webp",
+      "https://ftp.goit.study/img/campers-test-task/12-3.webp"
+    ],
+    "reviews": [
+      {
+        "reviewer_name": "Michael",
+        "reviewer_rating": 5,
+        "comment": "Fantastic RV for couples! The Allegro was spacious, luxurious, and well-equipped. The interior was beautifully designed, and the amenities were top-notch. Highly recommend!"
+      },
+      {
+        "reviewer_name": "Abigail",
+        "reviewer_rating": 4.5,
+        "comment": "Great camper for solo travel. I had a wonderful time exploring Illinois in the Allegro. The interior was comfortable, and the amenities were excellent. A minor issue with the microwave, but overall very satisfied."
+      },
+      {
+        "reviewer_name": "William",
+        "reviewer_rating": 5,
+        "comment": "Excellent RV for a road trip. The Allegro was clean, comfortable, and luxurious. I had a fantastic time exploring Illinois and beyond. Highly recommend!"
+      }
+    ]
+  },
+  {
     "_id": "1",
     "name": "Road Bear C 23-25",
     "price": 10000,

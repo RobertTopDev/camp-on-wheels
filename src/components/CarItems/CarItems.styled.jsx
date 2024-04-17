@@ -22,16 +22,76 @@ export const CarItem = styled.li`
 export const CarImgWrapper = styled.div`
   position: relative;
   border-radius: 10px;
-  /* width: 290px; */
-  /* height: 310px; */
-  overflow: hidden;
+  width: 290px;
+  height: 310px;
+`;
+
+export const CarImgDotsWrapper = styled.div`
+  position: absolute;
+  bottom: 2.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+`;
+
+export const CarImgDots = styled.div`
+  border-radius: 20rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: ${(p) =>
+    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+  padding: 0.4rem;
+  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  cursor: pointer;
+  transition: var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.accentColorHover};
+  }
+`;
+
+export const CarImgDotsSecond = styled.div`
+  border-radius: 20rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: ${(p) =>
+    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+  padding: 0.4rem;
+  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  cursor: pointer;
+  transition: var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.accentColorHover};
+  }
+`;
+
+export const CarImgDotsThird = styled.div`
+  border-radius: 20rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: ${(p) =>
+    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+  padding: 0.4rem;
+  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  cursor: pointer;
+  transition: var(--primary-transition);
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.accentColorHover};
+  }
 `;
 
 export const CarImg = styled.img`
   width: 100%;
+  width: 290px;
   height: 100%;
-  object-fit: contain;
-  object-position: 75%;
+  height: 310px;
+  border-radius: 10px;
+  object-position: 65%;
   object-fit: cover;
 `;
 
@@ -57,7 +117,6 @@ export const CardInfoContainer = styled.div`
   flex-direction: column;
   gap: 1.2rem;
   justify-content: space-between;
-  width: 100%;
 `;
 
 export const CardInfoWrapper = styled.div`
@@ -148,7 +207,7 @@ export const CardItemLocation = styled.span`
 export const ReadMoreWrapper = styled.div`
   max-height: 8rem;
   height: 100%;
-  width: 560px;
+  width: 526px;
 `;
 
 export const CardItemFeaturesWrapper = styled.div`
@@ -160,8 +219,6 @@ export const CardItemFeaturesWrapper = styled.div`
 export const CardItemFeatures = styled.div`
   border-radius: 100px;
   padding: 12px 18px;
-  width: 126px;
-  height: 44px;
   background-color: ${(p) => p.theme.colors.featuresBgColor};
   background-color: ${(p) => p.theme.colors.mainBgColor};
 

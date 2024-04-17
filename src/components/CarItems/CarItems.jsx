@@ -28,6 +28,10 @@ import {
   CardItemStarIcon,
   CardItemStarRatingWrap,
   CardItemRatingWrap,
+  CarImgDots,
+  CarImgDotsWrapper,
+  CarImgDotsSecond,
+  CarImgDotsThird,
 } from "./CarItems.styled";
 import { IoLocationOutline } from "react-icons/io5";
 import ReadMoreText from "../ReadMore/ReadMore";
@@ -42,6 +46,8 @@ import { formatPrice } from "../../helpers/formatPrice";
 /* eslint-disable react/prop-types */
 function CarItems({ items }) {
   const [favorite, setFavorite] = useState(false);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  const [activeImg, setActiveImg] = useState(false);
 
   useEffect(() => {
     const favoritesFromStorage =
@@ -72,8 +78,26 @@ function CarItems({ items }) {
   return (
     <CarItem>
       <CarImgWrapper>
+        <CarImgDotsWrapper>
+          <CarImgDots
+            onClick={() => setGalleryIndex(0)}
+            $active={galleryIndex === 0 ? true : false}
+          />
+          <CarImgDotsSecond
+            onClick={() => setGalleryIndex(1)}
+            $active={galleryIndex === 1 ? true : false}
+          />
+          <CarImgDotsThird
+            onClick={() => setGalleryIndex(2)}
+            $active={galleryIndex === 2 ? true : false}
+          />
+        </CarImgDotsWrapper>
         <CarImg
-          src={items.gallery[0] ? items.gallery[0] : defaultCar}
+          src={
+            items.gallery[galleryIndex]
+              ? items.gallery[galleryIndex]
+              : defaultCar
+          }
           alt={items.name}
         />
         <HeartIconWrapper onClick={() => handleFavoriteBtn(items._id)}>

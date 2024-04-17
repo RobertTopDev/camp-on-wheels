@@ -5,7 +5,6 @@ export const CatalogContainer = styled.div`
   display: flex;
   gap: 6.4rem;
   align-items: start;
-
   padding: 10rem 6.4rem;
 
   /* @media (min-width: 1440px) {
