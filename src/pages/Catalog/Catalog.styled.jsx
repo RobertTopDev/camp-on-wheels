@@ -13,6 +13,13 @@ export const CatalogContainer = styled.div`
   } */
 `;
 
+export const CarsMenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+`;
+
 export const CarsMenu = styled.ul`
   display: flex;
   flex-direction: column;

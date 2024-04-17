@@ -4,9 +4,14 @@ import { useEffect, useState } from "react";
 import { fetchCars } from "../../redux/cars/operations";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
-import { CarsMenu, CatalogContainer, NoMatchCar } from "./Catalog.styled";
+import {
+  CarsMenu,
+  CarsMenuWrapper,
+  CatalogContainer,
+  NoMatchCar,
+} from "./Catalog.styled";
 import Filter from "../../components/Filter/Filter";
-// import LoadMore from "../../components/LoadMore/LoadMore";
+import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
 
 function Catalog() {
@@ -28,9 +33,9 @@ function Catalog() {
     setPage(1);
   }
 
-  const carsPerPage = 12;
+  const carsPerPage = 4;
 
-  const totalCarsOnServer = 52;
+  const totalCarsOnServer = 13;
 
   const totalCars = Math.ceil(totalCarsOnServer / carsPerPage);
 
@@ -87,20 +92,24 @@ function Catalog() {
           setDisplayedCars={setDisplayedCars}
           setFilteredSearch={setFilteredSearch}
         />
-        <CarsMenu>
-          {visibleCars && visibleCars?.length === 0 && filteredSearch ? (
-            <NoMatchCar>No matching cars found</NoMatchCar>
-          ) : visibleCars?.length > 0 ? (
-            visibleCars?.map((items) => {
-              return <CarItems key={uuid()} items={items} />;
-            })
-          ) : (
-            cars?.map((items) => {
-              return <CarItems key={uuid()} items={items} />;
-            })
-          )}
-        </CarsMenu>
-        {/* {filteredSearch && visibleCars.length > 12 && (
+        <CarsMenuWrapper>
+          <CarsMenu>
+            {visibleCars && visibleCars?.length === 0 && filteredSearch ? (
+              <NoMatchCar>No matching cars found</NoMatchCar>
+            ) : visibleCars?.length > 0 ? (
+              visibleCars?.map((items) => {
+                return <CarItems key={uuid()} items={items} />;
+              })
+            ) : (
+              cars?.map((items) => {
+                return <CarItems key={uuid()} items={items} />;
+              })
+            )}
+          </CarsMenu>
+          {cars.length > 4 && <LoadMore onLoadMoreClick={onLoadMoreClick} />}
+        </CarsMenuWrapper>
+
+        {/* {filteredSearch && visibleCars.length > 4 && (
           <LoadMore onLoadMoreClick={onLoadMoreClick} />
         )}
         {!filteredSearch && showLoadBtn && (

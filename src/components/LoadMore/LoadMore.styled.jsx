@@ -5,20 +5,25 @@ export const LoadMoreBtn = styled.button`
   border: none;
   outline: none;
   background: none;
-  padding: 1.2rem 3.2rem;
-  border-radius: 1.4rem;
-  background-color: ${(p) => p.theme.colors.accentColor};
+  border: 1px solid ${(p) => p.theme.colors.inputBgColor};
+  border-radius: 20rem;
+  padding: 1.6rem 3.2rem;
+  width: 145px;
+  height: 56px;
 
   font-family: ${primaryFont};
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainTextColor};
+  background-color: ${(p) => p.theme.colors.headerBgColor};
 
   transition: all var(--primary-transition);
 
   &:hover {
     cursor: pointer;
-    background-color: ${(p) => p.theme.colors.accentColorHover};
+    border: 1px solid ${(p) => p.theme.colors.accentColorHover};
+    /* background-color: ${(p) => p.theme.colors.accentColorHover}; */
+    /* color: ${(p) => p.theme.colors.white}; */
   }
 `;
