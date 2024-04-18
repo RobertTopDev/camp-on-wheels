@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { interFont } from "../fonts";
+import roadImg from "../../../public/images/road.jpg";
 
 export const SubscribeContainer = styled.section`
   margin: 4.8rem auto;
@@ -21,6 +22,8 @@ export const SubscribeWrapper = styled.div`
   gap: 4.8rem;
   padding: 2.4rem;
   border-radius: 1.6rem;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const SubscribeTitleWrapper = styled.div`
@@ -45,9 +48,10 @@ export const SubscribeText = styled.p`
   color: ${(p) => p.theme.colors.secondaryTextColor};
 `;
 
-export const SubscribeInputWrapper = styled.div`
+export const SubscribeInputWrapper = styled.form`
   display: flex;
   align-items: center;
+  z-index: 20;
 `;
 
 export const SubscribeInput = styled.input`
@@ -97,4 +101,17 @@ export const SubscribeButton = styled.button`
     background-color: ${(p) => p.theme.colors.accentColorHover};
     cursor: pointer;
   }
+`;
+
+export const RoadImg = styled.div`
+  position: absolute;
+  top: 0;
+  left: 33%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(${roadImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 20% center;
 `;

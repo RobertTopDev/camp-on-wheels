@@ -12,6 +12,7 @@ import {
   HeroTitleSpan,
 } from "./Home.styled";
 import Subscribe from "../../components/Subscribe/Subscribe";
+import Sponsor from "../../components/Sponsor/Sponsor";
 
 function Home() {
   return (
@@ -58,6 +59,7 @@ function Home() {
         <About />
         <Testimonials />
         <Subscribe />
+        <Sponsor />
       </HomeContainer>
     </>
   );
