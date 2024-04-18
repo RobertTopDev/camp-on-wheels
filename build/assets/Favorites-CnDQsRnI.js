@@ -1,4 +1,4 @@
-import{u as r,p as l,r as s,n as h,v as g,j as e,H as f,l as v,w as u}from"./index-Dc-XQGO0.js";import{C as x,v as y}from"./v4-ccosaRkl.js";import{h as j}from"./heroBg-BCOlliND.js";import"./StarRating-C4D-G9sI.js";const b=r.div`
+import{u as r,p as l,r as s,n as h,v as g,j as e,H as f,l as v,w as u}from"./index-Dq_t1I8A.js";import{C as x,v as y}from"./v4-BUluHChE.js";import{h as j}from"./heroBg-BCOlliND.js";import"./emailRegex-CmEoKvfZ.js";const b=r.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;

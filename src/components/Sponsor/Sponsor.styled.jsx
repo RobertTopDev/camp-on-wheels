@@ -11,14 +11,8 @@ export const SponsorWrapper = styled.section`
   gap: 4.8rem;
 `;
 
-export const SponsorWrap = styled.div`
-  padding: 1.2rem;
-  border-radius: 20rem;
-  background-color: ${(p) => p.theme.colors.mainBgColorReverseVeryLowOp};
-`;
-
 export const SponsorImg = styled.img`
-  width: 18rem;
+  width: 22rem;
   height: auto;
   object-fit: cover;
 `;

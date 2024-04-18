@@ -2,6 +2,8 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import About from "../../components/About/About";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import { motion } from "framer-motion";
+import Subscribe from "../../components/Subscribe/Subscribe";
+import Sponsor from "../../components/Sponsor/Sponsor";
 import {
   HeroWrapper,
   HomeContainer,
@@ -11,8 +13,6 @@ import {
   HeroText,
   HeroTitleSpan,
 } from "./Home.styled";
-import Subscribe from "../../components/Subscribe/Subscribe";
-import Sponsor from "../../components/Sponsor/Sponsor";
 
 function Home() {
   return (
@@ -57,8 +57,8 @@ function Home() {
           </motion.div>
         </HeroWrapper>
         <About />
-        <Testimonials />
         <Subscribe />
+        <Testimonials />
         <Sponsor />
       </HomeContainer>
     </>
