@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { fetchCars } from "../../redux/cars/operations";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CarItems from "../../components/CarItems/CarItems";
+import Filter from "../../components/Filter/Filter";
+import LoadMore from "../../components/LoadMore/LoadMore";
+import { v4 as uuid } from "uuid";
 import {
   CarsMenu,
   CarsMenuWrapper,
   CatalogContainer,
   NoMatchCar,
 } from "./Catalog.styled";
-import Filter from "../../components/Filter/Filter";
-import LoadMore from "../../components/LoadMore/LoadMore";
-import { v4 as uuid } from "uuid";
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ function Catalog() {
 
   const carsPerPage = 4;
 
-  const totalCarsOnServer = 13;
+  const totalCarsOnServer = 20;
 
   const totalCars = Math.ceil(totalCarsOnServer / carsPerPage);
 
@@ -70,8 +70,6 @@ function Catalog() {
   }
 
   const visibleCars = filteredByCars();
-
-  console.log(cars.length);
 
   return (
     <>
@@ -108,7 +106,7 @@ function Catalog() {
               })
             )}
           </CarsMenu>
-          {cars.length >= carsPerPage && (
+          {cars.length >= carsPerPage && showLoadBtn && (
             <LoadMore onLoadMoreClick={onLoadMoreClick} />
           )}
         </CarsMenuWrapper>

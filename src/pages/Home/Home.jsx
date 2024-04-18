@@ -11,6 +11,7 @@ import {
   HeroText,
   HeroTitleSpan,
 } from "./Home.styled";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 function Home() {
   return (
@@ -56,6 +57,7 @@ function Home() {
         </HeroWrapper>
         <About />
         <Testimonials />
+        <Subscribe />
       </HomeContainer>
     </>
   );

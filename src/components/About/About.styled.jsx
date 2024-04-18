@@ -5,7 +5,7 @@ import { GiFlexibleStar } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { interFont, primaryFont } from "../fonts";
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.section`
   margin: 4.8rem auto;
   padding: 2.4rem;
   width: 100%;

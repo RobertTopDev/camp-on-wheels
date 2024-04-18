@@ -44,12 +44,15 @@ export const CarImgDots = styled.div`
   background-color: ${(p) =>
     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
   padding: 0.4rem;
-  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
   cursor: pointer;
   transition: var(--primary-transition);
 
+  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
+    transform: scale(1);
   }
 `;
 
@@ -60,12 +63,15 @@ export const CarImgDotsSecond = styled.div`
   background-color: ${(p) =>
     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
   padding: 0.4rem;
-  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
   cursor: pointer;
   transition: var(--primary-transition);
 
+  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
+    transform: scale(1);
   }
 `;
 
@@ -76,12 +82,15 @@ export const CarImgDotsThird = styled.div`
   background-color: ${(p) =>
     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
   padding: 0.4rem;
-  border: 1px solid ${(p) => p.theme.colors.accentColor};
+  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
   cursor: pointer;
   transition: var(--primary-transition);
 
+  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
+    transform: scale(1);
   }
 `;
 
