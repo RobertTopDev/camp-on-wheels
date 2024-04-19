@@ -61,32 +61,30 @@ export const FormBtn = styled.button`
 `;
 
 export const ResetBtn = styled.button`
-  background: none;
   border: none;
   outline: none;
-  border-radius: 1.4rem;
-  padding: 1.4rem 4.4rem;
-  background-color: transparent;
+  background: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+
+  font-family: ${interFont};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.mainTextColor};
-  transition: all var(--primary-transition);
-  border-bottom: 1px solid transparent;
-  border-top: 1px solid transparent;
   text-decoration: underline;
+  transition: var(--primary-transition);
+  border: 0.1px solid transparent;
+
+  /* background-color: ${(p) => p.theme.colors.accentColor}; */
 
   &:hover {
+    /* background-color: ${(p) => p.theme.colors.accentColorHover}; */
     cursor: pointer;
-    color: ${(p) => p.theme.colors.accentColor};
-    border-bottom: 1px solid ${(p) => p.theme.colors.accentColor};
-    border-top: 1px solid ${(p) => p.theme.colors.accentColor};
-    text-decoration: none;
-  }
-
-  @media (min-width: 768px) {
-    padding: 1.4rem 3.2rem;
-  }
-
-  @media (min-width: 860px) {
-    padding: 1.4rem 4.4rem;
+    border: 0.1px solid ${(p) => p.theme.colors.accentColorHover};
   }
 `;
 
@@ -401,4 +399,10 @@ export const FormSearchBtn = styled.button`
     background-color: ${(p) => p.theme.colors.accentColorHover};
     cursor: pointer;
   }
+`;
+
+export const FormButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

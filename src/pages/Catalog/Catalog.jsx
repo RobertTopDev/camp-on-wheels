@@ -13,6 +13,7 @@ import {
   CatalogContainer,
   NoMatchCar,
 } from "./Catalog.styled";
+import { toCamelCase } from "../../helpers/camelCase";
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -53,23 +54,32 @@ function Catalog() {
   }, [dispatch, page, totalCars]);
 
   function filteredByCars() {
+    // const filtered = displayedCars.filter((item) => {
+    //   const location = item.location;
+    //   const equipment = item.selectedEquipment;
+    //   const type = item.selectedType;
+    //   return location && equipment && type;
+    // });
     const filtered = displayedCars.filter((item) => {
-      const brandCondition =
-        !filteredCars.brand || item.make === filteredCars.brand;
-      const priceCondition =
-        parseInt(item.rentalPrice.replace("$", "")) <= filteredCars.price;
-      const mileageCondition =
-        !filteredCars.mileageRange ||
-        (item.mileage >= filteredCars.mileageRange.min &&
-          item.mileage <= filteredCars.mileageRange.max);
-
-      return brandCondition && priceCondition && mileageCondition;
+      const locationFilter =
+        !filteredCars.location || item.location === filteredCars.location;
+      // const equipmentFilter =
+      //   !filteredCars.equipment || item.location === filteredCars.location;
+      console.log(toCamelCase(filteredCars.type));
+      console.log(item.form);
+      const typeFilter =
+        !toCamelCase(filteredCars.type) ||
+        item.form === toCamelCase(filteredCars.type);
+      return locationFilter && typeFilter;
     });
 
+    // console.log(filtered);
     return filtered;
   }
 
   const visibleCars = filteredByCars();
+
+  console.log(visibleCars);
 
   return (
     <>

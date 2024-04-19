@@ -11,11 +11,7 @@ import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { LuShowerHead } from "react-icons/lu";
 import { TbCamper } from "react-icons/tb";
-import {
-  setBrandFilter,
-  setMileageRangeFilter,
-  setPriceFilter,
-} from "../../redux/cars/slice";
+import { setLocation, setEquipment, setType } from "../../redux/cars/slice";
 import {
   FormBtn,
   FormLabel,
@@ -40,21 +36,19 @@ import {
   SelectedFilterEquipmentWrap,
   FormSearchBtn,
   SelectedFilterTypeWrapper,
+  FormButtonsWrapper,
 } from "./Filter.styled";
 
 // eslint-disable-next-line react/prop-types
 function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   // const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
-  // const [selectedPrice, setSelectedPrice] = useState("");
-  // const [mileageFrom, setMileageFrom] = useState("");
-  // const [mileageTo, setMileageTo] = useState("");
+  const [selectedEquipment, setSelectedEquipment] = useState("");
+  const [selectedType, setSelectedType] = useState("");
   const locationRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
   // const [isOpenPrice, setIsOpenPrice] = useState(false);
-  const [selectedEquipment, setSelectedEquipment] = useState("");
-  const [selectedType, setSelectedType] = useState("");
 
   const dispatch = useDispatch();
 
@@ -69,33 +63,23 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   };
 
   const handleOptionClick = (location) => {
-    // setSelectedBrand(brand);
     setSelectedLocation(location);
     setIsOpen(false);
   };
 
-  // const handleOptionPriceClick = (price) => {
-  //   setSelectedPrice(price);
-  //   setIsOpenPrice(false);
-  // };
-
   const resetFilters = async () => {
+    setSelectedLocation("");
     setSelectedEquipment("");
     setSelectedType("");
-    setSelectedLocation("");
-    // setSelectedBrand("");
-    // setSelectedPrice("");
-    // setMileageFrom("");
-    // setMileageTo("");
 
-    // const allCarsResponse = await dispatch(fetchAllCars());
-    // setDisplayedCars(allCarsResponse.payload);
+    const allCarsResponse = await dispatch(fetchAllCars());
+    setDisplayedCars(allCarsResponse.payload);
 
-    // dispatch(setBrandFilter(""));
-    // dispatch(setPriceFilter(""));
-    // dispatch(setMileageRangeFilter({ min: "", max: "" }));
+    dispatch(setSelectedLocation(""));
+    dispatch(setSelectedEquipment(""));
+    dispatch(setSelectedType(""));
 
-    // setFilteredSearch(false);
+    setFilteredSearch(false);
   };
 
   const handleReset = () => {
@@ -109,23 +93,10 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     const locationValue = locationRef.current.innerText;
 
     const formData = {
+      location: locationValue,
       selectedEquipment: selectedEquipment,
       selectedType: selectedType,
     };
-
-    // if (
-    //   selectedBrand.length === 0 &&
-    //   !selectedPrice &&
-    //   mileageFrom.length === 0 &&
-    //   mileageTo.length === 0
-    // ) {
-    //   toast.warning(
-    //     "Please choose a brand, price, or mileage range to refine your search.",
-    //     commonToastOptions
-    //   );
-
-    //   return;
-    // }
 
     // const filters = {
     //   brand: selectedBrand,
@@ -136,21 +107,16 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     //   },
     // };
 
-    // const allCarsResponse = await dispatch(fetchAllCars());
-    // setDisplayedCars(allCarsResponse.payload);
+    const allCarsResponse = await dispatch(fetchAllCars());
+    setDisplayedCars(allCarsResponse.payload);
 
-    // setFilteredSearch(true);
+    setFilteredSearch(true);
 
-    // dispatch(setBrandFilter(filters.brand));
-    // dispatch(setPriceFilter(filters.price));
-    // dispatch(
-    //   setMileageRangeFilter({
-    //     min: filters.mileage.from,
-    //     max: filters.mileage.to,
-    //   })
-    // );
+    dispatch(setLocation(formData.location));
+    dispatch(setEquipment(formData.selectedEquipment));
+    dispatch(setType(formData.selectedType));
 
-    // handlePage();
+    handlePage();
     handleReset();
   }
 
@@ -256,7 +222,12 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
           </SelectedFilterTypeWrapper>
         </SelectedFilterEquipmentWrap>
       </FiltersWrapper>
-      <FormSearchBtn>Search</FormSearchBtn>
+      <FormButtonsWrapper>
+        <FormSearchBtn type="submit">Search</FormSearchBtn>
+        <ResetBtn onClick={handleReset} type="button">
+          Reset
+        </ResetBtn>
+      </FormButtonsWrapper>
     </FormWrapper>
   );
 }

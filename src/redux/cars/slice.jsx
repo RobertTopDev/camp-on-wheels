@@ -8,23 +8,25 @@ const initialState = {
     isLoading: false,
     error: null,
   },
+  filter: {
+    location: "",
+    equipment: "",
+    type: "",
+  },
 };
 
 const carsSlice = createSlice({
   name: "cars",
   initialState,
   reducers: {
-    setBrandFilter(state, action) {
-      state.filter.brand = action.payload;
+    setLocation(state, action) {
+      state.filter.location = action.payload;
     },
-    setPriceFilter(state, action) {
-      state.filter.price = action.payload;
+    setEquipment(state, action) {
+      state.filter.equipment = action.payload;
     },
-    setMileageRangeFilter(state, action) {
-      state.filter.mileageRange = action.payload;
-    },
-    toggleFavorite(state, action) {
-      state.cars.favorites = [...state.cars.favorites, action.payload];
+    setType(state, action) {
+      state.filter.type = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -61,9 +63,4 @@ const carsSlice = createSlice({
 });
 
 export const carsReducer = carsSlice.reducer;
-export const {
-  setBrandFilter,
-  setPriceFilter,
-  setMileageRangeFilter,
-  toggleFavorite,
-} = carsSlice.actions;
+export const { setLocation, setEquipment, setType } = carsSlice.actions;
