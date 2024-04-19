@@ -95,7 +95,7 @@ export const ButtonsWrapper = styled.div`
     font-size: 1.4rem;
   }
 
-  @media (max-width: 530px) {
+  /* @media (max-width: 530px) {
     display: none;
-  }
+  } */
 `;

@@ -14,16 +14,23 @@ export const SubscribeContainer = styled.section`
 `;
 
 export const SubscribeWrapper = styled.div`
-  width: 94rem;
+  max-width: 94rem;
+  width: 100%;
   background-color: ${(p) => p.theme.colors.headerBgColor};
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
   gap: 4.8rem;
   padding: 2.4rem;
   border-radius: 1.6rem;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 820px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
 `;
 
 export const SubscribeTitleWrapper = styled.div`
