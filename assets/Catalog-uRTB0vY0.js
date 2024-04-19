@@ -1,4 +1,4 @@
-import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T as S,s as I,H as G,l as K,t as N}from"./index-DwbDhD2H.js";import{M as Z,C as z,v as B}from"./v4-Bqf4ux1Y.js";import{d as J}from"./emailRegex-C1BNfobX.js";const Q=e=>e.cars.cars.items,U=e=>e.cars.filter,L=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function X(e){return M({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const Y=r.form`
+import{G as P,u as t,i as C,p as d,m as D,r as a,n as M,j as o,o as G,q as K,T as F,s as H,t as N,v as Z,w as J,x as E,H as U,l as Q,y as X}from"./index-CLYMN5kz.js";import{M as Y,C as q,v as O}from"./v4-Bvxq41k2.js";import{d as _}from"./emailRegex-TuPp45K5.js";const ee=e=>e.cars.cars.items,oe=e=>e.cars.filter,I=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function te(e){return P({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const re=t.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
@@ -10,21 +10,21 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 1440px) {
     gap: 6.4rem;
   }
-`,_=r.div`
+`,ne=t.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-`,H=r.div`
+`,A=t.div`
   background-color: ${e=>e.theme.colors.filtersLine};
   width: 100%;
   height: 2px;
   margin: 1rem 0 1rem;
-`,ee=r.div`
+`,ie=t.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   position: relative;
-`;r.button`
+`;t.button`
   background: none;
   border: none;
   outline: none;
@@ -46,35 +46,33 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 840px) {
     padding: 1.4rem 4.4rem;
   }
-`;r.button`
-  background: none;
+`;const le=t.button`
   border: none;
   outline: none;
-  border-radius: 1.4rem;
-  padding: 1.4rem 4.4rem;
-  background-color: transparent;
+  background: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+
+  font-family: ${C};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: ${e=>e.theme.colors.mainTextColor};
-  transition: all var(--primary-transition);
-  border-bottom: 1px solid transparent;
-  border-top: 1px solid transparent;
   text-decoration: underline;
+  transition: var(--primary-transition);
+  border: 0.1px solid transparent;
+
+  /* background-color: ${e=>e.theme.colors.accentColor}; */
 
   &:hover {
+    /* background-color: ${e=>e.theme.colors.accentColorHover}; */
     cursor: pointer;
-    color: ${e=>e.theme.colors.accentColor};
-    border-bottom: 1px solid ${e=>e.theme.colors.accentColor};
-    border-top: 1px solid ${e=>e.theme.colors.accentColor};
-    text-decoration: none;
+    border: 0.1px solid ${e=>e.theme.colors.accentColorHover};
   }
-
-  @media (min-width: 768px) {
-    padding: 1.4rem 3.2rem;
-  }
-
-  @media (min-width: 860px) {
-    padding: 1.4rem 4.4rem;
-  }
-`;const oe=r.div`
+`,se=t.div`
   position: relative;
   border: none;
   outline: none;
@@ -90,7 +88,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   align-items: center;
   gap: 0.8rem;
 
-  font-family: ${s};
+  font-family: ${d};
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
@@ -117,7 +115,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 1000px) {
     width: 22.4rem;
   } */
-`,re=r.div`
+`,ae=t.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -153,8 +151,8 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-`,te=r.span`
-  font-family: ${s};
+`,ce=t.span`
+  font-family: ${d};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -165,46 +163,46 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
     cursor: pointer;
     color: ${e=>e.theme.colors.mainTextColor};
   }
-`,ne=r.div`
+`,de=t.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.8rem;
   width: 362px;
-`,ie=r.div`
+`,he=t.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.8rem;
   width: 362px;
-`,O=r.div`
+`,V=t.div`
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-`,E=r.h3`
+`,W=t.h3`
   font-family: ${C};
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   color: ${e=>e.theme.colors.mainTextColor};
-`,le=r.span`
+`,me=t.span`
   font-family: ${C};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.secondaryTextColor};
-`,c=r.span`
+`,m=t.span`
   font-family: ${C};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
   color: ${e=>e.theme.colors.mainTextColor};
-`,d=r.span`
+`,p=t.span`
   font-size: 3.2rem;
   color: ${e=>e.theme.colors.mainTextColor};
   pointer-events: none;
-`,m=r.div`
+`,x=t.div`
   border: 1px solid
     ${e=>e!=null&&e.$active?e.theme.colors.accentColor:e.theme.colors.borderFilterItem};
   border-radius: 10px;
@@ -223,16 +221,16 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
     border: 1px solid ${e=>e.theme.colors.accentColor};
     cursor: pointer;
   }
-`,ae=r.label`
-  font-family: ${s};
+`,pe=t.label`
+  font-family: ${d};
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28571;
   color: ${e=>e.theme.colors.mainTextColorLowOp};
-`;r.div`
+`;t.div`
   display: flex;
   max-width: 32rem;
-`;r.input`
+`;t.input`
   border: none;
   outline: none;
   background: none;
@@ -242,7 +240,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   background-color: ${e=>e.theme.colors.inputBgColor};
   padding: 1.4rem 2.4rem;
 
-  font-family: ${s};
+  font-family: ${d};
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
@@ -255,7 +253,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   }
 
   &::placeholder {
-    font-family: ${s};
+    font-family: ${d};
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.11111;
@@ -270,7 +268,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 1440px) {
     width: 16rem;
   }
-`;r.input`
+`;t.input`
   border: none;
   outline: none;
   background: none;
@@ -281,7 +279,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   background-color: ${e=>e.theme.colors.inputBgColor};
   padding: 1.4rem 2.4rem;
 
-  font-family: ${s};
+  font-family: ${d};
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
@@ -294,7 +292,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   }
 
   &::placeholder {
-    font-family: ${s};
+    font-family: ${d};
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.11111;
@@ -309,12 +307,12 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 1440px) {
     width: 16rem;
   }
-`;r.p`
+`;t.p`
   font-size: 1.6rem;
   position: absolute;
   bottom: 0;
   left: 0;
-`;const se=r(P)`
+`;const xe=t(D)`
   font-size: 1.8rem;
   color: ${e=>e.theme.colors.mainTextColor};
 
@@ -325,7 +323,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   @media (min-width: 1440px) {
     right: 1.2rem;
   }
-`,ce=r.button`
+`,ue=t.button`
   border: none;
   outline: none;
   background: none;
@@ -348,7 +346,11 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
     background-color: ${e=>e.theme.colors.accentColorHover};
     cursor: pointer;
   }
-`;function de({handlePage:e,setDisplayedCars:x,setFilteredSearch:T}){const[$,p]=a.useState(""),u=a.useRef(null),[g,f]=a.useState(!1),[h,b]=a.useState(""),[i,w]=a.useState("");q();const v=t=>{const l=t.target.innerText;b(l)},j=t=>{const l=t.target.innerText;w(l)},F=t=>{p(t),f(!1)},y=async()=>{b(""),w(""),p("")},k=()=>{y(),e()};async function n(t){t.preventDefault(),u.current.innerText,k()}return o.jsxs(Y,{onSubmit:n,children:[o.jsxs(_,{children:[o.jsxs(ee,{children:[o.jsx(ae,{htmlFor:"location",children:"Location"}),o.jsxs(oe,{ref:u,onClick:()=>f(!g),children:[o.jsx(se,{}),o.jsx("span",{children:$||"Location"})]}),g&&o.jsx(re,{children:L==null?void 0:L.map(t=>o.jsx(te,{onClick:()=>F(t),children:t},t))})]}),o.jsxs(O,{children:[o.jsx(le,{children:"Filters"}),o.jsx(E,{children:"Vehicle equipment"}),o.jsx(H,{}),o.jsxs(ne,{onClick:v,children:[o.jsxs(m,{$active:h==="AC",children:[o.jsx(d,{children:o.jsx(Z,{})}),o.jsx(c,{children:"AC"})]}),o.jsxs(m,{$active:h==="Automatic",children:[o.jsx(d,{children:o.jsx(R,{})}),o.jsx(c,{children:"Automatic"})]}),o.jsxs(m,{$active:h==="Kitchen",children:[o.jsx(d,{children:o.jsx(D,{})}),o.jsx(c,{children:"Kitchen"})]}),o.jsxs(m,{$active:h==="TV",children:[o.jsx(d,{children:o.jsx(X,{})}),o.jsx(c,{children:"TV"})]}),o.jsxs(m,{$active:h==="Shower/WC",children:[o.jsx(d,{children:o.jsx(J,{})}),o.jsx(c,{children:"Shower/WC"})]})]})]}),o.jsxs(O,{children:[o.jsx(E,{children:"Vehicle type"}),o.jsx(H,{}),o.jsxs(ie,{onClick:j,children:[o.jsxs(m,{$active:i==="Van",children:[o.jsx(d,{children:o.jsx(S,{})}),o.jsx(c,{children:"Van"})]}),o.jsxs(m,{$active:i==="Fully Integrated",children:[o.jsx(d,{children:o.jsx(S,{})}),o.jsx(c,{children:"Fully Integrated"})]}),o.jsxs(m,{$active:i==="Alcove",children:[o.jsx(d,{children:o.jsx(S,{})}),o.jsx(c,{children:"Alcove"})]})]})]})]}),o.jsx(ce,{children:"Search"})]})}const me=r.button`
+`,ge=t.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;function fe({handlePage:e,setDisplayedCars:i,setFilteredSearch:g}){const[L,u]=a.useState(""),[c,w]=a.useState(""),[f,y]=a.useState(""),v=a.useRef(null),[h,$]=a.useState(!1),l=M(),k=r=>{const b=r.target.innerText;w(b)},z=r=>{const b=r.target.innerText;y(b)},S=r=>{u(r),$(!1)},T=async()=>{u(""),w(""),y("");const r=await l(H());i(r.payload),l(u("")),l(w("")),l(y("")),g(!1)},n=()=>{T(),e()};async function s(r){r.preventDefault();const j={location:v.current.innerText,selectedEquipment:c,selectedType:f},R=await l(H());i(R.payload),g(!0),l(N(j.location)),l(Z(j.selectedEquipment)),l(J(j.selectedType)),e(),n()}return o.jsxs(re,{onSubmit:s,children:[o.jsxs(ne,{children:[o.jsxs(ie,{children:[o.jsx(pe,{htmlFor:"location",children:"Location"}),o.jsxs(se,{ref:v,onClick:()=>$(!h),children:[o.jsx(xe,{}),o.jsx("span",{children:L||"Location"})]}),h&&o.jsx(ae,{children:I==null?void 0:I.map(r=>o.jsx(ce,{onClick:()=>S(r),children:r},r))})]}),o.jsxs(V,{children:[o.jsx(me,{children:"Filters"}),o.jsx(W,{children:"Vehicle equipment"}),o.jsx(A,{}),o.jsxs(de,{onClick:k,children:[o.jsxs(x,{$active:c==="AC",children:[o.jsx(p,{children:o.jsx(Y,{})}),o.jsx(m,{children:"AC"})]}),o.jsxs(x,{$active:c==="Automatic",children:[o.jsx(p,{children:o.jsx(G,{})}),o.jsx(m,{children:"Automatic"})]}),o.jsxs(x,{$active:c==="Kitchen",children:[o.jsx(p,{children:o.jsx(K,{})}),o.jsx(m,{children:"Kitchen"})]}),o.jsxs(x,{$active:c==="TV",children:[o.jsx(p,{children:o.jsx(te,{})}),o.jsx(m,{children:"TV"})]}),o.jsxs(x,{$active:c==="Shower/WC",children:[o.jsx(p,{children:o.jsx(_,{})}),o.jsx(m,{children:"Shower/WC"})]})]})]}),o.jsxs(V,{children:[o.jsx(W,{children:"Vehicle type"}),o.jsx(A,{}),o.jsxs(he,{onClick:z,children:[o.jsxs(x,{$active:f==="Van",children:[o.jsx(p,{children:o.jsx(F,{})}),o.jsx(m,{children:"Van"})]}),o.jsxs(x,{$active:f==="Fully Integrated",children:[o.jsx(p,{children:o.jsx(F,{})}),o.jsx(m,{children:"Fully Integrated"})]}),o.jsxs(x,{$active:f==="Alcove",children:[o.jsx(p,{children:o.jsx(F,{})}),o.jsx(m,{children:"Alcove"})]})]})]})]}),o.jsxs(ge,{children:[o.jsx(ue,{type:"submit",children:"Search"}),o.jsx(le,{onClick:n,type:"button",children:"Reset"})]})]})}const be=t.button`
   border: none;
   outline: none;
   background: none;
@@ -358,7 +360,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   width: 145px;
   height: 56px;
 
-  font-family: ${s};
+  font-family: ${d};
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
@@ -371,7 +373,7 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
     cursor: pointer;
     border: 1px solid ${e=>e.theme.colors.accentColorHover};
   }
-`;function he({onLoadMoreClick:e}){return o.jsx(me,{onClick:e,children:"Load More"})}const pe=r.div`
+`;function we({onLoadMoreClick:e}){return o.jsx(be,{onClick:e,children:"Load More"})}const ye=t.div`
   display: flex;
   gap: 6.4rem;
   align-items: start;
@@ -380,12 +382,12 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
   /* @media (min-width: 1440px) {
     padding: 9.6rem 12.8rem;
   } */
-`,xe=r.div`
+`,je=t.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
   align-items: center;
-`,ue=r.ul`
+`,Ce=t.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,10 +415,10 @@ import{G as M,u as r,p as s,i as C,m as P,r as a,n as q,j as o,o as R,q as D,T a
     row-gap: 5rem;
     column-gap: 2.4rem;
   } */
-`,ge=r.li`
-  font-family: ${s};
+`,ve=t.li`
+  font-family: ${d};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.mainTextColor};
-`;function je(){const e=q(),x=I(Q),[T,$]=a.useState(!1),[p,u]=a.useState(1),[g,f]=a.useState(!0),[h,b]=a.useState([]),i=I(U);function w(){u(t=>t+1)}function v(){u(1)}const j=4,y=Math.ceil(20/j);a.useEffect(()=>{async function t(){try{f(p<y),await e(N(p)).unwrap()}catch(l){console.log(l.message)}}t()},[e,p,y]);function k(){return h.filter(l=>{const A=!i.brand||l.make===i.brand,V=parseInt(l.rentalPrice.replace("$",""))<=i.price,W=!i.mileageRange||l.mileage>=i.mileageRange.min&&l.mileage<=i.mileageRange.max;return A&&V&&W})}const n=k();return o.jsxs(o.Fragment,{children:[o.jsx(G,{children:o.jsxs(K,{children:[o.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),o.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."}),o.jsx("meta",{name:"keywords",content:"car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),o.jsxs(pe,{children:[o.jsx(de,{handlePage:v,setDisplayedCars:b,setFilteredSearch:$}),o.jsxs(xe,{children:[o.jsx(ue,{children:n&&(n==null?void 0:n.length)===0&&T?o.jsx(ge,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(t=>o.jsx(z,{items:t},B())):x==null?void 0:x.map(t=>o.jsx(z,{items:t},B()))}),x.length>=j&&g&&o.jsx(he,{onLoadMoreClick:w})]})]})]})}export{je as default};
+`;function B(e){return e.toLowerCase().split(" ").map((i,g)=>g===0?i:i.charAt(0).toUpperCase()+i.slice(1)).join("")}function Le(){const e=M(),i=E(ee),[g,L]=a.useState(!1),[u,c]=a.useState(1),[w,f]=a.useState(!0),[y,v]=a.useState([]),h=E(oe);function $(){c(s=>s+1)}function l(){c(1)}const k=4,S=Math.ceil(20/k);a.useEffect(()=>{async function s(){try{f(u<S),await e(X(u)).unwrap()}catch(r){console.log(r.message)}}s()},[e,u,S]);function T(){return y.filter(r=>{const b=!h.location||r.location===h.location;console.log(B(h.type)),console.log(r.form);const j=!B(h.type)||r.form===B(h.type);return b&&j})}const n=T();return console.log(n),o.jsxs(o.Fragment,{children:[o.jsx(U,{children:o.jsxs(Q,{children:[o.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),o.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."}),o.jsx("meta",{name:"keywords",content:"car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"})]})}),o.jsxs(ye,{children:[o.jsx(fe,{handlePage:l,setDisplayedCars:v,setFilteredSearch:L}),o.jsxs(je,{children:[o.jsx(Ce,{children:n&&(n==null?void 0:n.length)===0&&g?o.jsx(ve,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(s=>o.jsx(q,{items:s},O())):i==null?void 0:i.map(s=>o.jsx(q,{items:s},O()))}),i.length>=k&&w&&o.jsx(we,{onLoadMoreClick:$})]})]})]})}export{Le as default};
