@@ -10,7 +10,8 @@ export const FormWrapper = styled.form`
   max-width: 362px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 448px) {
+    width: 362px;
   }
 
   @media (min-width: 1440px) {
@@ -36,30 +37,6 @@ export const OptionWrapper = styled.div`
   flex-direction: column;
   gap: 0.8rem;
   position: relative;
-`;
-
-export const FormBtn = styled.button`
-  background: none;
-  border: none;
-  outline: none;
-  border-radius: 1.4rem;
-  padding: 1.4rem 4.4rem;
-  background-color: ${(p) => p.theme.colors.accentColor};
-  color: ${(p) => p.theme.colors.white};
-  transition: all var(--primary-transition);
-
-  &:hover {
-    cursor: pointer;
-    background-color: ${(p) => p.theme.colors.accentColorHover};
-  }
-
-  @media (min-width: 768px) {
-    padding: 1.4rem 3.2rem;
-  }
-
-  @media (min-width: 840px) {
-    padding: 1.4rem 4.4rem;
-  }
 `;
 
 export const ResetBtn = styled.button`
@@ -101,6 +78,7 @@ export const SelectInput = styled.div`
   height: 4.8rem;
   width: 100%;
   max-width: 360px;
+  /* width: 360px; */
 
   display: flex;
   align-items: center;
@@ -199,6 +177,10 @@ export const SelectedFilterEquipmentWrapper = styled.div`
   @media (min-width: 410px) {
     justify-content: start;
   }
+
+  @media (min-width: 768px) {
+    width: 362px;
+  }
 `;
 
 export const SelectedFilterTypeWrapper = styled.div`
@@ -282,92 +264,6 @@ export const FormLabel = styled.label`
   font-size: 14px;
   line-height: 1.28571;
   color: ${(p) => p.theme.colors.mainTextColorLowOp};
-`;
-
-export const FormInputMileageWrapper = styled.div`
-  display: flex;
-  max-width: 32rem;
-`;
-
-export const FormInputRight = styled.input`
-  border: none;
-  outline: none;
-  background: none;
-  width: 100%;
-  height: 4.8rem;
-  border-radius: 0 14px 14px 0;
-  background-color: ${(p) => p.theme.colors.inputBgColor};
-  padding: 1.4rem 2.4rem;
-
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.11111;
-  color: ${(p) => p.theme.colors.black};
-
-  transition: all var(--primary-transition);
-
-  &:hover {
-    background-color: ${(p) => p.theme.colors.inputBgColorHover};
-  }
-
-  &::placeholder {
-    font-family: ${primaryFont};
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.11111;
-    color: ${(p) => p.theme.colors.black};
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 16rem;
-  }
-`;
-
-export const FormInputLeft = styled.input`
-  border: none;
-  outline: none;
-  background: none;
-  border-right: 1px solid rgba(138, 138, 137, 0.2);
-  border-radius: 14px 0 0 14px;
-  width: 100%;
-  height: 4.8rem;
-  background-color: ${(p) => p.theme.colors.inputBgColor};
-  padding: 1.4rem 2.4rem;
-
-  font-family: ${primaryFont};
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.11111;
-  color: ${(p) => p.theme.colors.black};
-
-  transition: all var(--primary-transition);
-
-  &:hover {
-    background-color: ${(p) => p.theme.colors.inputBgColorHover};
-  }
-
-  &::placeholder {
-    font-family: ${primaryFont};
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.11111;
-    color: ${(p) => p.theme.colors.black};
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: ${(p) => p.theme.colors.boxFocus} 0px 7px 29px 0px;
-  }
-
-  @media (min-width: 1440px) {
-    width: 16rem;
-  }
 `;
 
 export const ErrorMessage = styled.p`

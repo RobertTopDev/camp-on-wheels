@@ -13,16 +13,12 @@ import { LuShowerHead } from "react-icons/lu";
 import { TbCamper } from "react-icons/tb";
 import { setLocation, setEquipment, setType } from "../../redux/cars/slice";
 import {
-  FormBtn,
   FormLabel,
   FormWrapper,
   OptionWrapper,
-  FormInputLeft,
-  FormInputRight,
   SelectInput,
   SelectedOption,
   SelectedOptionText,
-  FormInputMileageWrapper,
   ResetBtn,
   LocationIcon,
   FiltersWrapper,

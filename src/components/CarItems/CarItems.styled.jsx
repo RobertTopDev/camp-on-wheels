@@ -1,29 +1,38 @@
 import styled from "styled-components";
-import { interFont, primaryFont } from "../fonts";
+import { interFont } from "../fonts";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 
 export const CarItem = styled.li`
   border-radius: 1.4rem;
   display: flex;
+  flex-direction: column;
   gap: 2.4rem;
   overflow: hidden;
-  height: 100%;
-
   background-color: ${(p) => p.theme.colors.headerBgColor};
-
-  /* border: 1px solid rgba(16, 24, 40, 0.2); */
+  background-color: red;
+  margin: 0 auto;
   border-radius: 20px;
-  padding: 24px;
-  height: 358px;
+  padding: 2.4rem;
+  height: 100%;
   width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const CarImgWrapper = styled.div`
   position: relative;
   border-radius: 10px;
-  width: 290px;
-  height: 310px;
+
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 290px;
+    max-height: 310px;
+  }
 `;
 
 export const CarImgDotsWrapper = styled.div`
@@ -95,13 +104,18 @@ export const CarImgDotsThird = styled.div`
 `;
 
 export const CarImg = styled.img`
+  /* max-width: 290px; */
+  /* max-height: 310px; */
   width: 100%;
-  width: 290px;
   height: 100%;
-  height: 310px;
   border-radius: 10px;
   object-position: 65%;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    height: 310px;
+    width: 290px;
+  }
 `;
 
 // export const CarImgWrapper = styled.div`
@@ -136,7 +150,12 @@ export const CardInfoWrapper = styled.div`
 
 export const CartItemTitleWrap = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: 620px) {
+    flex-direction: row;
+  }
 `;
 
 export const CartItemTitle = styled.h2`
@@ -162,8 +181,14 @@ export const CartItemPrice = styled.span`
 
 export const CardItemRatingWrapper = styled.div`
   display: flex;
-  gap: 1.6rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  @media (min-width: 360px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+  }
 `;
 
 export const CardItemRatingWrap = styled.div`
@@ -216,7 +241,23 @@ export const CardItemLocation = styled.span`
 export const ReadMoreWrapper = styled.div`
   max-height: 8rem;
   height: 100%;
-  width: 526px;
+  width: 100%;
+
+  /* @media (min-width: 340px) {
+    width: 264px;
+  }
+
+  @media (min-width: 380px) {
+    width: 282px;
+  }
+  @media (min-width: 400px) {
+    width: 302px;
+    width: 100%;
+  } */
+
+  /* @media (min-width: 768px) {
+    width: 526px;
+  } */
 `;
 
 export const CardItemFeaturesWrapper = styled.div`
@@ -257,12 +298,19 @@ export const CardItemTextDescr = styled.p`
   font-family: ${interFont};
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.2;
   color: ${(p) => p.theme.colors.secondaryTextColor};
 
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media (min-width: 768px) {
+    /* white-space: nowrap; */
+    -webkit-line-clamp: 2;
+  }
 `;
 
 export const CardBtn = styled.button`
@@ -271,8 +319,9 @@ export const CardBtn = styled.button`
   background: none;
   border-radius: 20rem;
   padding: 16px 40px;
-  width: 166px;
+  width: 100%;
   height: 56px;
+  margin: 0 auto;
 
   font-family: ${interFont};
   font-weight: 500;
@@ -287,6 +336,14 @@ export const CardBtn = styled.button`
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
     cursor: pointer;
+  }
+
+  @media (min-width: 360px) {
+    width: 166px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
   }
 `;
 
