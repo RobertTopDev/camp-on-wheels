@@ -109,111 +109,106 @@ export const FavoritesEmptyText = styled.p`
 //
 //
 
-import styled from "styled-components";
-import { interFont, primaryFont } from "../fonts";
-import { FaRegHeart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
+// export const CarItem = styled.li`
+//   border-radius: 1.4rem;
+//   display: flex;
+//   gap: 2.4rem;
+//   overflow: hidden;
+//   height: 100%;
 
-export const CarItem = styled.li`
-  border-radius: 1.4rem;
-  display: flex;
-  gap: 2.4rem;
-  overflow: hidden;
-  height: 100%;
+//   background-color: ${(p) => p.theme.colors.headerBgColor};
 
-  background-color: ${(p) => p.theme.colors.headerBgColor};
+//   /* border: 1px solid rgba(16, 24, 40, 0.2); */
+//   border-radius: 20px;
+//   padding: 24px;
+//   height: 358px;
+//   width: 100%;
+// `;
 
-  /* border: 1px solid rgba(16, 24, 40, 0.2); */
-  border-radius: 20px;
-  padding: 24px;
-  height: 358px;
-  width: 100%;
-`;
+// export const CarImgWrapper = styled.div`
+//   position: relative;
+//   border-radius: 10px;
+//   width: 290px;
+//   height: 310px;
+// `;
 
-export const CarImgWrapper = styled.div`
-  position: relative;
-  border-radius: 10px;
-  width: 290px;
-  height: 310px;
-`;
+// export const CarImgDotsWrapper = styled.div`
+//   position: absolute;
+//   bottom: 2.4rem;
+//   left: 50%;
+//   transform: translateX(-50%);
 
-export const CarImgDotsWrapper = styled.div`
-  position: absolute;
-  bottom: 2.4rem;
-  left: 50%;
-  transform: translateX(-50%);
+//   display: flex;
+//   align-items: center;
+//   gap: 1.2rem;
+// `;
 
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-`;
+// export const CarImgDots = styled.div`
+//   border-radius: 20rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   background-color: ${(p) =>
+//     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+//   padding: 0.4rem;
+//   /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
+//   cursor: pointer;
+//   transition: var(--primary-transition);
 
-export const CarImgDots = styled.div`
-  border-radius: 20rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: ${(p) =>
-    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
-  padding: 0.4rem;
-  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
-  cursor: pointer;
-  transition: var(--primary-transition);
+//   transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
 
-  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+//   &:hover {
+//     background-color: ${(p) => p.theme.colors.accentColorHover};
+//     transform: scale(1);
+//   }
+// `;
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.accentColorHover};
-    transform: scale(1);
-  }
-`;
+// export const CarImgDotsSecond = styled.div`
+//   border-radius: 20rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   background-color: ${(p) =>
+//     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+//   padding: 0.4rem;
+//   /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
+//   cursor: pointer;
+//   transition: var(--primary-transition);
 
-export const CarImgDotsSecond = styled.div`
-  border-radius: 20rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: ${(p) =>
-    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
-  padding: 0.4rem;
-  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
-  cursor: pointer;
-  transition: var(--primary-transition);
+//   transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
 
-  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+//   &:hover {
+//     background-color: ${(p) => p.theme.colors.accentColorHover};
+//     transform: scale(1);
+//   }
+// `;
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.accentColorHover};
-    transform: scale(1);
-  }
-`;
+// export const CarImgDotsThird = styled.div`
+//   border-radius: 20rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   background-color: ${(p) =>
+//     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
+//   padding: 0.4rem;
+//   /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
+//   cursor: pointer;
+//   transition: var(--primary-transition);
 
-export const CarImgDotsThird = styled.div`
-  border-radius: 20rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: ${(p) =>
-    p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
-  padding: 0.4rem;
-  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
-  cursor: pointer;
-  transition: var(--primary-transition);
+//   transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
 
-  transform: scale(${(p) => (p?.$active ? 1 : 0.8)});
+//   &:hover {
+//     background-color: ${(p) => p.theme.colors.accentColorHover};
+//     transform: scale(1);
+//   }
+// `;
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.accentColorHover};
-    transform: scale(1);
-  }
-`;
-
-export const CarImg = styled.img`
-  width: 100%;
-  width: 290px;
-  height: 100%;
-  height: 310px;
-  border-radius: 10px;
-  object-position: 65%;
-  object-fit: cover;
-`;
+// export const CarImg = styled.img`
+//   width: 100%;
+//   width: 290px;
+//   height: 100%;
+//   height: 310px;
+//   border-radius: 10px;
+//   object-position: 65%;
+//   object-fit: cover;
+// `;
 
 // export const CarImgWrapper = styled.div`
 //   position: relative;
