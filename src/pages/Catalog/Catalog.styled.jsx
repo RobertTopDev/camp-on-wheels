@@ -3,13 +3,16 @@ import { primaryFont } from "../../components/fonts";
 
 export const CatalogContainer = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 6.4rem;
   align-items: start;
-  padding: 10rem 6.4rem;
+  padding: 6.4rem 2.4rem;
 
-  /* @media (min-width: 1440px) {
-    padding: 9.6rem 12.8rem;
-  } */
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    padding: 10rem 6.4rem;
+    /* padding: 9.6rem 12.8rem; */
+  }
 `;
 
 export const CarsMenuWrapper = styled.div`

@@ -6,7 +6,9 @@ export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  width: 362px;
+  margin: 0 auto;
+  max-width: 362px;
+  width: 100%;
 
   @media (min-width: 768px) {
   }
@@ -98,7 +100,7 @@ export const SelectInput = styled.div`
   padding: 1.4rem 1.8rem;
   height: 4.8rem;
   width: 100%;
-  width: 360px;
+  max-width: 360px;
 
   display: flex;
   align-items: center;
@@ -190,7 +192,13 @@ export const SelectedFilterEquipmentWrapper = styled.div`
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.8rem;
-  width: 362px;
+  max-width: 362px;
+  width: 100%;
+  justify-content: center;
+
+  @media (min-width: 410px) {
+    justify-content: start;
+  }
 `;
 
 export const SelectedFilterTypeWrapper = styled.div`
@@ -198,7 +206,13 @@ export const SelectedFilterTypeWrapper = styled.div`
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.8rem;
-  width: 362px;
+  max-width: 362px;
+  width: 100%;
+  justify-content: center;
+
+  @media (min-width: 410px) {
+    justify-content: start;
+  }
 `;
 
 export const SelectedFilterEquipmentWrap = styled.div`
@@ -403,6 +417,11 @@ export const FormSearchBtn = styled.button`
 
 export const FormButtonsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 354px) {
+    flex-direction: row;
+  }
 `;
