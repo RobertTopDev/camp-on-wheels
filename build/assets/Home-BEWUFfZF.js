@@ -1,4 +1,4 @@
-import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-CLYMN5kz.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-TuPp45K5.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
+import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-Dae_NAH0.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-D2pdpUGr.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
  * @license React
  * react-is.production.min.js
  *
@@ -1460,9 +1460,9 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
     font-size: 1.4rem;
   }
 
-  @media (max-width: 530px) {
+  /* @media (max-width: 530px) {
     display: none;
-  }
+  } */
 `;var Rm={dots:!0,infinite:!0,speed:500,slidesToShow:3,slidesToScroll:1,initialSlide:0,arrows:!1,responsive:[{breakpoint:990,settings:{slidesToShow:2,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:600,settings:{slidesToShow:2,slidesToScroll:1,initialSlide:2}},{breakpoint:530,settings:{slidesToShow:1,slidesToScroll:1}}]};const Lm=()=>{const e=k.useRef(null);return S.jsxs(km,{children:[S.jsxs(ec,{direction:"left",children:[S.jsx(Em,{children:"TESTIMONIALS"}),S.jsx(Mm,{children:"WHAT CLIENTS SAY"})]}),S.jsxs(jm,{children:[S.jsx(bm,{ref:e,...Rm,children:Cm.map((t,n)=>S.jsx(Om,{item:t},n))}),S.jsxs(Am,{children:[S.jsx("button",{onClick:()=>e.current.slickPrev(),children:S.jsx(Ha,{})}),S.jsx("button",{onClick:()=>e.current.slickNext(),children:S.jsx(Ua,{})})]})]})]})},_m="/camp-on-wheels/assets/road-DW9O-MhS.jpg",Dm=V.section`
   margin: 4.8rem auto;
   padding: 2.4rem;
@@ -1473,16 +1473,23 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   align-items: center;
   gap: 6.4rem;
 `,Vm=V.div`
-  width: 94rem;
+  max-width: 94rem;
+  width: 100%;
   background-color: ${e=>e.theme.colors.headerBgColor};
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
   gap: 4.8rem;
   padding: 2.4rem;
   border-radius: 1.6rem;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 820px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
 `,Im=V.div`
   display: flex;
   flex-direction: column;
@@ -1565,13 +1572,41 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   width: 100%;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4.8rem;
+
+  @media (min-width: 385px) {
+    flex-direction: row;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 802px) {
+    flex-direction: row;
+    gap: 4.8rem;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 910px) {
+    flex-direction: row;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    gap: 4.8rem;
+  }
 `,Gt=V.img`
-  width: 22rem;
+  width: 18rem;
   height: auto;
   object-fit: cover;
+
+  @media (min-width: 1440px) {
+    width: 22rem;
+  }
 `;function Xm(){return S.jsxs(Ym,{children:[S.jsx(Gt,{src:"images/sponsor2.png",alt:"sponsor1",width:"20rem",height:"20rem"}),S.jsx(Gt,{src:"images/sponsor.png",alt:"sponsor1",width:"20rem",height:"20rem"}),S.jsx(Gt,{src:"images/sponsor1.png",alt:"sponsor1",width:"20rem",height:"20rem"}),S.jsx(Gt,{src:"images/sponsor3.png",alt:"sponsor1",width:"20rem",height:"20rem"}),S.jsx(Gt,{src:"images/sponsor4.png",alt:"sponsor1",width:"20rem",height:"20rem"})]})}const Qm=V.div`
   min-height: calc(100vh - 6rem);
   height: 100%;
