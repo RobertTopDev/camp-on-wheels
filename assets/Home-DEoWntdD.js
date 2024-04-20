@@ -1,4 +1,4 @@
-import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-Dae_NAH0.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-D2pdpUGr.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
+import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-w-57UBoE.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-D1MvEPmf.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
  * @license React
  * react-is.production.min.js
  *
@@ -1475,6 +1475,7 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
 `,Vm=V.div`
   max-width: 94rem;
   width: 100%;
+  height: 100%;
   background-color: ${e=>e.theme.colors.headerBgColor};
   display: flex;
   flex-direction: column;
@@ -1485,7 +1486,7 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   position: relative;
   overflow: hidden;
 
-  @media (min-width: 820px) {
+  @media (min-width: 720px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -1493,7 +1494,12 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
 `,Im=V.div`
   display: flex;
   flex-direction: column;
-  gap: 4.8rem;
+  gap: 2.4rem;
+  z-index: 5;
+
+  @media (min-width: 720px) {
+    gap: 4.2rem;
+  }
 `,zm=V.h3`
   font-family: ${zt};
   font-weight: 600;
@@ -1501,23 +1507,40 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   line-height: 1.25;
   color: ${e=>e.theme.colors.mainTextColor};
 `,Fm=V.p`
+  width: 100%;
   font-family: ${zt};
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.secondaryTextColor};
+
+  @media (min-width: 600px) {
+    width: 75%;
+    color: ${e=>e.theme.colors.mainTextColor};
+  }
+  @media (min-width: 720px) {
+    width: 100%;
+    color: ${e=>e.theme.colors.secondaryTextColor};
+  }
 `,Bm=V.form`
   display: flex;
   align-items: center;
+  flex-direction: column;
   z-index: 20;
+
+  gap: 1.2rem;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+    gap: 0;
+  }
 `,$m=V.input`
   width: 100%;
   background: none;
   outline: none;
   border: none;
   background-color: ${e=>e.theme.colors.mainBgColor};
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 1rem;
   padding: 18px;
   height: 56px;
   color: ${e=>e.theme.colors.mainTextColor};
@@ -1525,6 +1548,13 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
+
+  @media (min-width: 480px) {
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 
   &::placeholder {
     font-family: ${zt};
@@ -1534,14 +1564,13 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
     color: ${e=>e.theme.colors.inputTextColor};
   }
 `,Nm=V.button`
+  align-self: flex-end;
   background: none;
   outline: none;
   border: none;
   background-color: ${e=>e.theme.colors.accentColor};
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  /* padding: 16px 60px; */
-  width: 160px;
+  border-radius: 1rem;
+  width: 100%;
   height: 56px;
   font-family: ${zt};
   font-weight: 500;
@@ -1551,21 +1580,44 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   color: ${e=>e.theme.colors.white};
   transition: var(--primary-transition);
 
+  @media (min-width: 326px) {
+    width: 160px;
+  }
+
+  @media (min-width: 480px) {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
   &:hover {
     background-color: ${e=>e.theme.colors.accentColorHover};
     cursor: pointer;
   }
 `,Wm=V.div`
   position: absolute;
-  top: 0;
-  left: 33%;
+  /* top: 55%; */
+  bottom: -55%;
+  left: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
   background: url(${_m});
   background-size: cover;
+  background-position: bottom 15rem center;
   background-repeat: no-repeat;
-  background-position: bottom 20% center;
+
+  @media (min-width: 480px) {
+    bottom: -60%;
+    background-position: bottom 12rem center;
+  }
+
+  @media (min-width: 600px) {
+    top: 0;
+    left: 33%;
+    background-position: bottom 20% center;
+    background-size: cover;
+  }
 `;var Hm={VITE_EMAIL_ID:"service_9sd1qyt",VITE_EMAIL_TEMPLATE_ID:"template_gbgmy3a",VITE_EMAIL_API_KEY:"W3hCufqEP-eqyffFb",BASE_URL:"/camp-on-wheels/",MODE:"production",DEV:!1,PROD:!0,SSR:!1};const{VITE_EMAIL_ID:Um,VITE_EMAIL_TEMPLATE_ID:Km,VITE_EMAIL_API_KEY:qm}=Hm;function Gm(){const e=k.useRef(),t=async n=>{n.preventDefault();const i=n.target.email.value.trim(),r=el.test(i);if(i.length===0){de.warning("Email field cannot be empty. Please enter your email address.",he);return}if(!r){de.warning("The email address you entered is not valid. Please check and try again.",he);return}try{await Ja(i),await tl.sendForm(Um,Km,e.current,{publicKey:qm}),de.success("Successfully subscribed! We'll keep you updated with regular deals and fresh trip ideas. Thank you!",he),n.target.email.value=""}catch{de.error("Error subscribing. Please try again later.",he)}};return S.jsx(Dm,{children:S.jsxs(Vm,{children:[S.jsxs(Im,{children:[S.jsxs(zm,{children:["MORE TRIPS.",S.jsx("br",{})," EXCLUSIVE DEALS."]}),S.jsx(Fm,{children:"Receive fresh trip ideas, curated itineraries, and exclusive deals delivered to your inbox every month."})]}),S.jsxs(Bm,{ref:e,onSubmit:t,children:[S.jsx($m,{type:"text",name:"email",placeholder:"Enter your Email"}),S.jsx(Nm,{type:"submit",children:"Subscribe"})]}),S.jsx(Wm,{})]})})}const Ym=V.section`
   margin: 4.8rem auto;
   padding: 2.4rem;
