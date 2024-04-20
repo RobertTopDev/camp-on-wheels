@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { interFont } from "../fonts";
+import { interFont, primaryFont } from "../fonts";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 
