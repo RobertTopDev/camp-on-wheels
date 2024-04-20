@@ -1,4 +1,4 @@
-import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-w-57UBoE.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-D1MvEPmf.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
+import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as V,i as zt,p as xt,T as Ba,b as fe,g as $a,d as Na,I as Wa,e as Ha,f as Ua,B as de,L as Ka,H as qa,l as Ga}from"./index-Bd7lNlqc.js";import{L as Ya,a as Xa,B as Qa,S as Za,c as he,f as Ja,e as tl,b as el}from"./emailRegex-C-lkDcqn.js";import{h as nl}from"./heroBg-BCOlliND.js";var rl=S.Fragment;function q(e,t,n){return Da.call(t,"css")?S.jsx(Va,Ia(e,t),n):S.jsx(e,t,n)}var il=Object.defineProperty,ol=(e,t,n)=>t in e?il(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,pe=(e,t,n)=>(ol(e,typeof t!="symbol"?t+"":t,n),n),Fn=new Map,me=new WeakMap,Kr=0,sl=void 0;function al(e){return e?(me.has(e)||(Kr+=1,me.set(e,Kr.toString())),me.get(e)):"0"}function ll(e){return Object.keys(e).sort().filter(t=>e[t]!==void 0).map(t=>`${t}_${t==="root"?al(e.root):e[t]}`).toString()}function cl(e){const t=ll(e);let n=Fn.get(t);if(!n){const i=new Map;let r;const s=new IntersectionObserver(o=>{o.forEach(a=>{var l;const c=a.isIntersecting&&r.some(u=>a.intersectionRatio>=u);e.trackVisibility&&typeof a.isVisible>"u"&&(a.isVisible=c),(l=i.get(a.target))==null||l.forEach(u=>{u(c,a)})})},e);r=s.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),n={id:t,observer:s,elements:i},Fn.set(t,n)}return n}function Oo(e,t,n={},i=sl){if(typeof window.IntersectionObserver>"u"&&i!==void 0){const l=e.getBoundingClientRect();return t(i,{isIntersecting:i,target:e,intersectionRatio:typeof n.threshold=="number"?n.threshold:0,time:0,boundingClientRect:l,intersectionRect:l,rootBounds:l}),()=>{}}const{id:r,observer:s,elements:o}=cl(n),a=o.get(e)||[];return o.has(e)||o.set(e,a),a.push(t),s.observe(e),function(){a.splice(a.indexOf(t),1),a.length===0&&(o.delete(e),s.unobserve(e)),o.size===0&&(s.disconnect(),Fn.delete(r))}}function ul(e){return typeof e.children!="function"}var qr=class extends k.Component{constructor(e){super(e),pe(this,"node",null),pe(this,"_unobserveCb",null),pe(this,"handleNode",t=>{this.node&&(this.unobserve(),!t&&!this.props.triggerOnce&&!this.props.skip&&this.setState({inView:!!this.props.initialInView,entry:void 0})),this.node=t||null,this.observeNode()}),pe(this,"handleChange",(t,n)=>{t&&this.props.triggerOnce&&this.unobserve(),ul(this.props)||this.setState({inView:t,entry:n}),this.props.onChange&&this.props.onChange(t,n)}),this.state={inView:!!e.initialInView,entry:void 0}}componentDidMount(){this.unobserve(),this.observeNode()}componentDidUpdate(e){(e.rootMargin!==this.props.rootMargin||e.root!==this.props.root||e.threshold!==this.props.threshold||e.skip!==this.props.skip||e.trackVisibility!==this.props.trackVisibility||e.delay!==this.props.delay)&&(this.unobserve(),this.observeNode())}componentWillUnmount(){this.unobserve()}observeNode(){if(!this.node||this.props.skip)return;const{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r,fallbackInView:s}=this.props;this._unobserveCb=Oo(this.node,this.handleChange,{threshold:e,root:t,rootMargin:n,trackVisibility:i,delay:r},s)}unobserve(){this._unobserveCb&&(this._unobserveCb(),this._unobserveCb=null)}render(){const{children:e}=this.props;if(typeof e=="function"){const{inView:p,entry:m}=this.state;return e({inView:p,entry:m,ref:this.handleNode})}const{as:t,triggerOnce:n,threshold:i,root:r,rootMargin:s,onChange:o,skip:a,trackVisibility:l,delay:c,initialInView:u,fallbackInView:f,...d}=this.props;return k.createElement(t||"div",{ref:this.handleNode,...d},e)}};function Co({threshold:e,delay:t,trackVisibility:n,rootMargin:i,root:r,triggerOnce:s,skip:o,initialInView:a,fallbackInView:l,onChange:c}={}){var u;const[f,d]=k.useState(null),p=k.useRef(),[m,h]=k.useState({inView:!!a,entry:void 0});p.current=c,k.useEffect(()=>{if(o||!f)return;let y;return y=Oo(f,(w,C)=>{h({inView:w,entry:C}),p.current&&p.current(w,C),C.isIntersecting&&s&&y&&(y(),y=void 0)},{root:r,rootMargin:i,threshold:e,trackVisibility:n,delay:t},l),()=>{y&&y()}},[Array.isArray(e)?e.toString():e,f,r,i,s,o,n,l,t]);const v=(u=m.entry)==null?void 0:u.target,b=k.useRef();!f&&v&&!s&&!o&&b.current!==v&&(b.current=v,h({inView:!!a,entry:void 0}));const g=[d,m.inView,m.entry];return g.ref=g[0],g.inView=g[1],g.entry=g[2],g}var ko={exports:{}},B={};/**
  * @license React
  * react-is.production.min.js
  *
@@ -1240,13 +1240,7 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   @media (min-width: 1200px) {
     width: 100%;
   }
-`,yh=V.span`
-  position: absolute;
-  top: 0;
-  right: -4.4rem;
-  font-size: 3.2rem;
-  color: ${e=>e.theme.colors.mainTextColor};
-`,vh=V.h2`
+`,yh=V.h2`
   position: relative;
   text-align: center;
   font-family: ${zt};
@@ -1254,6 +1248,17 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   font-size: 3.2rem;
   line-height: 1.33333;
   color: ${e=>e.theme.colors.mainTextColor};
+`,vh=V.span`
+  position: absolute;
+  top: -3.6rem;
+  right: 0;
+  font-size: 3.2rem;
+  color: ${e=>e.theme.colors.mainTextColor};
+
+  @media (min-width: 640px) {
+    top: 0;
+    right: -4.4rem;
+  }
 `,bh=V.strong`
   color: ${e=>e.theme.colors.accentColor};
 `,Sh=V.ul`
@@ -1329,7 +1334,7 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
 `,Ph=V(Qa)`
   font-size: 3.2rem;
   color: ${e=>e.theme.colors.accentColor};
-`;function Oh(){return S.jsx(Zs.div,{initial:{opacity:0},whileInView:{opacity:1},transition:{duration:1},children:S.jsxs(gh,{children:[S.jsxs(vh,{children:[S.jsx(Ul,{direction:"left",duration:"2000",children:S.jsx(yh,{children:S.jsx(Ba,{})})}),"Why Rent with"," ",S.jsx(bh,{children:"Camp On Wheels?"})]}),S.jsxs(Sh,{children:[S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(xh,{})}),S.jsx(Se,{children:"Explore Nature"}),S.jsx(xe,{children:"Discover the great outdoors with our wide range of campers. Perfect for adventurous souls seeking a unique getaway."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(wh,{})}),S.jsx(Se,{children:"Comfort on Wheels"}),S.jsx(xe,{children:"Experience the convenience of a home away from home. Our campers are equipped with all the amenities you need for a comfortable trip."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(Th,{})}),S.jsx(Se,{children:"Flexible Rentals"}),S.jsx(xe,{children:"Whether you're planning a weekend escape or a month-long adventure, we offer flexible rental options to suit your needs."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(Ph,{})}),S.jsx(Se,{children:"Expert Support"}),S.jsx(xe,{children:"Our team is dedicated to ensuring you have a seamless and enjoyable camping experience. From booking to drop-off, we're here to assist you every step of the way."})]})]})]})})}var Js={},ta={},cn={},ea={};(function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var t={animating:!1,autoplaying:null,currentDirection:0,currentLeft:null,currentSlide:0,direction:1,dragging:!1,edgeDragged:!1,initialized:!1,lazyLoadedList:[],listHeight:null,listWidth:null,scrolling:!1,slideCount:null,slideHeight:null,slideWidth:null,swipeLeft:null,swiped:!1,swiping:!1,touchObject:{startX:0,startY:0,curX:0,curY:0},trackStyle:{},trackWidth:0,targetSlide:0};e.default=t})(ea);var Ch="Expected a function",eo=NaN,kh="[object Symbol]",Eh=/^\s+|\s+$/g,Mh=/^[-+]0x[0-9a-f]+$/i,jh=/^0b[01]+$/i,Ah=/^0o[0-7]+$/i,Rh=parseInt,Lh=typeof fe=="object"&&fe&&fe.Object===Object&&fe,_h=typeof self=="object"&&self&&self.Object===Object&&self,Dh=Lh||_h||Function("return this")(),Vh=Object.prototype,Ih=Vh.toString,zh=Math.max,Fh=Math.min,Mn=function(){return Dh.Date.now()};function Bh(e,t,n){var i,r,s,o,a,l,c=0,u=!1,f=!1,d=!0;if(typeof e!="function")throw new TypeError(Ch);t=no(t)||0,er(n)&&(u=!!n.leading,f="maxWait"in n,s=f?zh(no(n.maxWait)||0,t):s,d="trailing"in n?!!n.trailing:d);function p(E){var F=i,R=r;return i=r=void 0,c=E,o=e.apply(R,F),o}function m(E){return c=E,a=setTimeout(b,t),u?p(E):o}function h(E){var F=E-l,R=E-c,T=t-F;return f?Fh(T,s-R):T}function v(E){var F=E-l,R=E-c;return l===void 0||F>=t||F<0||f&&R>=s}function b(){var E=Mn();if(v(E))return g(E);a=setTimeout(b,h(E))}function g(E){return a=void 0,d&&i?p(E):(i=r=void 0,o)}function y(){a!==void 0&&clearTimeout(a),c=0,i=l=r=a=void 0}function w(){return a===void 0?o:g(Mn())}function C(){var E=Mn(),F=v(E);if(i=arguments,r=this,l=E,F){if(a===void 0)return m(l);if(f)return a=setTimeout(b,t),p(l)}return a===void 0&&(a=setTimeout(b,t)),o}return C.cancel=y,C.flush=w,C}function er(e){var t=typeof e;return!!e&&(t=="object"||t=="function")}function $h(e){return!!e&&typeof e=="object"}function Nh(e){return typeof e=="symbol"||$h(e)&&Ih.call(e)==kh}function no(e){if(typeof e=="number")return e;if(Nh(e))return eo;if(er(e)){var t=typeof e.valueOf=="function"?e.valueOf():e;e=er(t)?t+"":t}if(typeof e!="string")return e===0?e:+e;e=e.replace(Eh,"");var n=jh.test(e);return n||Ah.test(e)?Rh(e.slice(2),n?2:8):Mh.test(e)?eo:+e}var Wh=Bh,na={exports:{}};/*!
+`;function Oh(){return S.jsx(Zs.div,{initial:{opacity:0},whileInView:{opacity:1},transition:{duration:1.5},children:S.jsxs(gh,{children:[S.jsxs(yh,{children:[S.jsx(vh,{children:S.jsx(Ul,{direction:"left",duration:"2000",children:S.jsx(Ba,{})})}),"Why Rent with"," ",S.jsx(bh,{children:"Camp On Wheels?"})]}),S.jsxs(Sh,{children:[S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(xh,{})}),S.jsx(Se,{children:"Explore Nature"}),S.jsx(xe,{children:"Discover the great outdoors with our wide range of campers. Perfect for adventurous souls seeking a unique getaway."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(wh,{})}),S.jsx(Se,{children:"Comfort on Wheels"}),S.jsx(xe,{children:"Experience the convenience of a home away from home. Our campers are equipped with all the amenities you need for a comfortable trip."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(Th,{})}),S.jsx(Se,{children:"Flexible Rentals"}),S.jsx(xe,{children:"Whether you're planning a weekend escape or a month-long adventure, we offer flexible rental options to suit your needs."})]}),S.jsxs(be,{children:[S.jsx(we,{children:S.jsx(Ph,{})}),S.jsx(Se,{children:"Expert Support"}),S.jsx(xe,{children:"Our team is dedicated to ensuring you have a seamless and enjoyable camping experience. From booking to drop-off, we're here to assist you every step of the way."})]})]})]})})}var Js={},ta={},cn={},ea={};(function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var t={animating:!1,autoplaying:null,currentDirection:0,currentLeft:null,currentSlide:0,direction:1,dragging:!1,edgeDragged:!1,initialized:!1,lazyLoadedList:[],listHeight:null,listWidth:null,scrolling:!1,slideCount:null,slideHeight:null,slideWidth:null,swipeLeft:null,swiped:!1,swiping:!1,touchObject:{startX:0,startY:0,curX:0,curY:0},trackStyle:{},trackWidth:0,targetSlide:0};e.default=t})(ea);var Ch="Expected a function",eo=NaN,kh="[object Symbol]",Eh=/^\s+|\s+$/g,Mh=/^[-+]0x[0-9a-f]+$/i,jh=/^0b[01]+$/i,Ah=/^0o[0-7]+$/i,Rh=parseInt,Lh=typeof fe=="object"&&fe&&fe.Object===Object&&fe,_h=typeof self=="object"&&self&&self.Object===Object&&self,Dh=Lh||_h||Function("return this")(),Vh=Object.prototype,Ih=Vh.toString,zh=Math.max,Fh=Math.min,Mn=function(){return Dh.Date.now()};function Bh(e,t,n){var i,r,s,o,a,l,c=0,u=!1,f=!1,d=!0;if(typeof e!="function")throw new TypeError(Ch);t=no(t)||0,er(n)&&(u=!!n.leading,f="maxWait"in n,s=f?zh(no(n.maxWait)||0,t):s,d="trailing"in n?!!n.trailing:d);function p(E){var F=i,R=r;return i=r=void 0,c=E,o=e.apply(R,F),o}function m(E){return c=E,a=setTimeout(b,t),u?p(E):o}function h(E){var F=E-l,R=E-c,T=t-F;return f?Fh(T,s-R):T}function v(E){var F=E-l,R=E-c;return l===void 0||F>=t||F<0||f&&R>=s}function b(){var E=Mn();if(v(E))return g(E);a=setTimeout(b,h(E))}function g(E){return a=void 0,d&&i?p(E):(i=r=void 0,o)}function y(){a!==void 0&&clearTimeout(a),c=0,i=l=r=a=void 0}function w(){return a===void 0?o:g(Mn())}function C(){var E=Mn(),F=v(E);if(i=arguments,r=this,l=E,F){if(a===void 0)return m(l);if(f)return a=setTimeout(b,t),p(l)}return a===void 0&&(a=setTimeout(b,t)),o}return C.cancel=y,C.flush=w,C}function er(e){var t=typeof e;return!!e&&(t=="object"||t=="function")}function $h(e){return!!e&&typeof e=="object"}function Nh(e){return typeof e=="symbol"||$h(e)&&Ih.call(e)==kh}function no(e){if(typeof e=="number")return e;if(Nh(e))return eo;if(er(e)){var t=typeof e.valueOf=="function"?e.valueOf():e;e=er(t)?t+"":t}if(typeof e!="string")return e===0?e:+e;e=e.replace(Eh,"");var n=jh.test(e);return n||Ah.test(e)?Rh(e.slice(2),n?2:8):Mh.test(e)?eo:+e}var Wh=Bh,na={exports:{}};/*!
 	Copyright (c) 2018 Jed Watson.
 	Licensed under the MIT License (MIT), see
 	http://jedwatson.github.io/classnames
@@ -1672,12 +1677,12 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   background-repeat: no-repeat;
   background-position: left;
   z-index: 1;
-  padding: 1.2rem 0 1.2rem 1.2rem;
+  padding: 1.2rem;
   overflow: hidden;
 
   display: flex;
   justify-content: center;
-  align-items: end;
+  /* align-items: center; */
 
   &::before {
     content: "";
@@ -1695,14 +1700,9 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
     padding: 1.2rem;
   }
 
-  @media (min-width: 620px) {
-    align-items: end;
-  }
-
   @media (min-width: 768px) {
     padding: 3.2rem;
     overflow: visible;
-    justify-content: end;
   }
 
   @media (min-width: 1440px) {
@@ -1716,21 +1716,20 @@ import{h as Da,j as S,E as Va,c as Ia,r as k,k as x,C as mn,a as za,G as Fa,u as
   flex-direction: column;
   gap: 3.2rem;
   padding: 2.4rem;
-  margin-bottom: 4.8rem;
-  width: 60rem;
-  height: 100%;
+  margin-top: 4.8rem;
+  max-width: 60rem;
+  width: 100%;
 
   background-color: ${e=>e.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
   @media (min-width: 768px) {
-    margin-bottom: 0;
-    /* width: 82.6rem; */
+    margin-top: 0;
   }
 
-  @media (min-width: 1440px) {
-    width: 82.6rem;
+  @media (min-width: 1220px) {
+    max-width: 82.6rem;
   }
 `,t0=V.h1`
   font-family: ${xt};
