@@ -65,8 +65,6 @@ function Catalog() {
         !filteredCars.location || item.location === filteredCars.location;
       // const equipmentFilter =
       //   !filteredCars.equipment || item.location === filteredCars.location;
-      console.log(toCamelCase(filteredCars.type));
-      console.log(item.form);
       const typeFilter =
         !toCamelCase(filteredCars.type) ||
         item.form === toCamelCase(filteredCars.type);

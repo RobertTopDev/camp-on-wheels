@@ -18,12 +18,12 @@ export const HeroWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: left;
   z-index: 1;
-  padding: 1.2rem 0 1.2rem 1.2rem;
+  padding: 1.2rem;
   overflow: hidden;
 
   display: flex;
   justify-content: center;
-  align-items: end;
+  /* align-items: center; */
 
   &::before {
     content: "";
@@ -41,14 +41,9 @@ export const HeroWrapper = styled.div`
     padding: 1.2rem;
   }
 
-  @media (min-width: 620px) {
-    align-items: end;
-  }
-
   @media (min-width: 768px) {
     padding: 3.2rem;
     overflow: visible;
-    justify-content: end;
   }
 
   @media (min-width: 1440px) {
@@ -64,21 +59,20 @@ export const HeroTextWrapper = styled.div`
   flex-direction: column;
   gap: 3.2rem;
   padding: 2.4rem;
-  margin-bottom: 4.8rem;
-  width: 60rem;
-  height: 100%;
+  margin-top: 4.8rem;
+  max-width: 60rem;
+  width: 100%;
 
   background-color: ${(p) => p.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
   backdrop-filter: blur(5px);
 
   @media (min-width: 768px) {
-    margin-bottom: 0;
-    /* width: 82.6rem; */
+    margin-top: 0;
   }
 
-  @media (min-width: 1440px) {
-    width: 82.6rem;
+  @media (min-width: 1220px) {
+    max-width: 82.6rem;
   }
 `;
 

@@ -22,15 +22,15 @@ function About() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
     >
       <AboutContainer>
         <AboutHeadingTitle>
-          <Fade direction="left" duration="2000">
-            <AboutIcon>
+          <AboutIcon>
+            <Fade direction="left" duration="2000">
               <TbCamper />
-            </AboutIcon>
-          </Fade>
+            </Fade>
+          </AboutIcon>
           Why Rent with{" "}
           <AboutHeadingTitleAccent>Camp On Wheels?</AboutHeadingTitleAccent>
         </AboutHeadingTitle>

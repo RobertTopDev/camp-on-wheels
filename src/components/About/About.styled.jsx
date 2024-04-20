@@ -23,13 +23,6 @@ export const AboutContainer = styled.section`
     width: 100%;
   }
 `;
-export const AboutIcon = styled.span`
-  position: absolute;
-  top: 0;
-  right: -4.4rem;
-  font-size: 3.2rem;
-  color: ${(p) => p.theme.colors.mainTextColor};
-`;
 
 export const AboutHeadingTitle = styled.h2`
   position: relative;
@@ -39,6 +32,19 @@ export const AboutHeadingTitle = styled.h2`
   font-size: 3.2rem;
   line-height: 1.33333;
   color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const AboutIcon = styled.span`
+  position: absolute;
+  top: -3.6rem;
+  right: 0;
+  font-size: 3.2rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+
+  @media (min-width: 640px) {
+    top: 0;
+    right: -4.4rem;
+  }
 `;
 
 export const AboutHeadingTitleAccent = styled.strong`
