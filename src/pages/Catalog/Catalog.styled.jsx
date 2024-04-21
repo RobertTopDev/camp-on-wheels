@@ -8,7 +8,7 @@ export const CatalogContainer = styled.div`
   align-items: start;
   padding: 6.4rem 2.4rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 920px) {
     flex-direction: row;
     gap: 3.2rem;
     /* padding: 10rem 6.4rem; */

@@ -10,7 +10,6 @@ export const CarItem = styled.li`
   gap: 2.4rem;
   overflow: hidden;
   background-color: ${(p) => p.theme.colors.headerBgColor};
-  background-color: red;
   margin: 0 auto;
   border-radius: 20px;
   padding: 2.4rem;
@@ -18,6 +17,14 @@ export const CarItem = styled.li`
   width: 100%;
 
   @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 920px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1200px) {
     flex-direction: row;
   }
 `;
@@ -30,8 +37,18 @@ export const CarImgWrapper = styled.div`
   height: 100%;
 
   @media (min-width: 768px) {
-    max-width: 290px;
-    max-height: 310px;
+    height: 310px;
+    width: 290px;
+  }
+
+  @media (min-width: 920px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    height: 310px;
+    width: 290px;
   }
 `;
 
@@ -104,8 +121,6 @@ export const CarImgDotsThird = styled.div`
 `;
 
 export const CarImg = styled.img`
-  /* max-width: 290px; */
-  /* max-height: 310px; */
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -116,24 +131,17 @@ export const CarImg = styled.img`
     height: 310px;
     width: 290px;
   }
+
+  @media (min-width: 920px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    height: 310px;
+    width: 290px;
+  }
 `;
-
-// export const CarImgWrapper = styled.div`
-//   position: relative;
-//   border-radius: 10px;
-//   width: 290px;
-//   height: 310px;
-//   overflow: hidden;
-// `;
-
-// export const CarImg = styled.img`
-//   width: 100%;
-//   width: 290px;
-//   height: 310px;
-//   height: 100%;
-//   object-fit: contain;
-//   object-position: right;
-// `;
 
 export const CardInfoContainer = styled.div`
   display: flex;
@@ -154,6 +162,14 @@ export const CartItemTitleWrap = styled.div`
   justify-content: space-between;
 
   @media (min-width: 620px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 920px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1320px) {
     flex-direction: row;
   }
 `;
@@ -242,22 +258,6 @@ export const ReadMoreWrapper = styled.div`
   max-height: 8rem;
   height: 100%;
   width: 100%;
-
-  /* @media (min-width: 340px) {
-    width: 264px;
-  }
-
-  @media (min-width: 380px) {
-    width: 282px;
-  }
-  @media (min-width: 400px) {
-    width: 302px;
-    width: 100%;
-  } */
-
-  /* @media (min-width: 768px) {
-    width: 526px;
-  } */
 `;
 
 export const CardItemFeaturesWrapper = styled.div`
@@ -308,7 +308,6 @@ export const CardItemTextDescr = styled.p`
   text-overflow: ellipsis;
 
   @media (min-width: 768px) {
-    /* white-space: nowrap; */
     -webkit-line-clamp: 2;
   }
 `;

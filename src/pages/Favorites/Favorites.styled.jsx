@@ -10,7 +10,11 @@ export const FavoritesContainer = styled.div`
 
   padding: 2.4rem;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 920px) {
+    padding: 5.4rem 9.6rem;
+  }
+
+  @media (min-width: 1020px) {
     padding: 9.6rem 12.8rem;
   }
 `;
