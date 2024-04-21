@@ -1,4 +1,4 @@
-import{u as r,p as l,r as s,n as h,z as g,j as e,H as f,l as u,s as v}from"./index-D1LLFa6S.js";import{C as x,v as y}from"./v4-BcKsgxrL.js";import{h as j}from"./heroBg-BCOlliND.js";import"./emailRegex-CUeL72y3.js";const b=r.div`
+import{u as r,p as l,r as s,n as h,z as g,j as e,H as f,l as u,s as v}from"./index-BRv30aj8.js";import{C as x,v as y}from"./v4-xCcLDhvT.js";import{h as j}from"./heroBg-BCOlliND.js";import"./emailRegex-DVsNPEXT.js";const b=r.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -6,7 +6,11 @@ import{u as r,p as l,r as s,n as h,z as g,j as e,H as f,l as u,s as v}from"./ind
 
   padding: 2.4rem;
 
-  @media (min-width: 1440px) {
+  @media (min-width: 920px) {
+    padding: 5.4rem 9.6rem;
+  }
+
+  @media (min-width: 1020px) {
     padding: 9.6rem 12.8rem;
   }
 `,w=r.ul`

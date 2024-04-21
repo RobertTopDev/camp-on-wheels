@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
 import ModalPopUp from "../Modal/Modal";
+import { IoLocationOutline } from "react-icons/io5";
+import { IoPeopleOutline } from "react-icons/io5";
+import { TbGasStation } from "react-icons/tb";
+import { LiaBedSolid } from "react-icons/lia";
+import { MdOutlineAir } from "react-icons/md";
+import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
+import { FaStar } from "react-icons/fa6";
+import { formatPrice } from "../../helpers/formatPrice";
 import {
   CarImg,
   CarItem,
@@ -13,7 +21,6 @@ import {
   FavoriteHeartIcon,
   CarImgWrapper,
   HeartIconWrapper,
-  CartItemTitleModel,
   CartItemPrice,
   CardItemRating,
   CardItemRatingWrapper,
@@ -33,21 +40,11 @@ import {
   CarImgDotsSecond,
   CarImgDotsThird,
 } from "./CarItems.styled";
-import { IoLocationOutline } from "react-icons/io5";
-import ReadMoreText from "../ReadMore/ReadMore";
-import { IoPeopleOutline } from "react-icons/io5";
-import { TbGasStation } from "react-icons/tb";
-import { LiaBedSolid } from "react-icons/lia";
-import { MdOutlineAir } from "react-icons/md";
-import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
-import { FaStar } from "react-icons/fa6";
-import { formatPrice } from "../../helpers/formatPrice";
 
 /* eslint-disable react/prop-types */
 function CarItems({ items }) {
   const [favorite, setFavorite] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
-  const [activeImg, setActiveImg] = useState(false);
 
   useEffect(() => {
     const favoritesFromStorage =

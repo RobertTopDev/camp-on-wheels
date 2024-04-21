@@ -3,15 +3,8 @@ import { toast } from "react-toastify";
 import { useRef, useState } from "react";
 import defaultCar from "../../../public/images/default-car.jpg";
 import defaultUser from "../../../public/images/default_user.jpg";
-import { FaStar } from "react-icons/fa6";
-import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
 import ReadMoreText from "../ReadMore/ReadMore";
 import { ModalBottomline } from "../ReadMore/ReadMore.styled";
-import { FcCalendar } from "react-icons/fc";
-import { LiaBedSolid } from "react-icons/lia";
-import { LuDisc3 } from "react-icons/lu";
-import { BiRadio } from "react-icons/bi";
-import { MdOutlineMicrowave, MdOutlineAir } from "react-icons/md";
 import StarRating from "../StarRating/StarRating";
 import CustomDatePicker from "../Calendar/Calendar";
 import emailRegex from "../../regex/emailRegex";
@@ -19,11 +12,23 @@ import { commonToastOptions } from "../../helpers/toastOptions";
 import { formatPrice } from "../../helpers/formatPrice";
 import { fetchEmailDB } from "../../services/emailPost";
 import emailjs from "@emailjs/browser";
+import { FcCalendar } from "react-icons/fc";
+import { LiaBedSolid } from "react-icons/lia";
+import { LuDisc3 } from "react-icons/lu";
+import { BiRadio } from "react-icons/bi";
+import { FaStar } from "react-icons/fa6";
+import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
 import {
   TbAutomaticGearbox,
   TbGasStation,
   TbToolsKitchen2,
 } from "react-icons/tb";
+import {
+  MdOutlineMicrowave,
+  MdOutlineAir,
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 import {
   CardBtn,
   CardItemFeaturesIcon,
@@ -74,6 +79,10 @@ import {
   ModalItemReviewsItems,
   ModalItemReviewsImg,
   ModalItemReviewsImgWrapper,
+  ModalReviewsBtn,
+  ModalReviewsBtnLine,
+  ModalFeaturesBtnIconUp,
+  ModalFeaturesBtnIconDown,
 } from "./Modal.styled";
 
 const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
@@ -83,7 +92,7 @@ function ModalPopUp({ items }) {
   const form = useRef();
   const [modalIsOpen, setIsOpen] = useState(false);
   const [featuresIsOpen, setFeaturesIsOpen] = useState(false);
-  const [featuresContent, setFeaturesContent] = useState("Features");
+  const [reviewsIsOpen, setReviewsIsOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const datePickerRef = useRef(null);
   const [startDate, setStartDate] = useState(new Date());
@@ -178,13 +187,17 @@ function ModalPopUp({ items }) {
   function closeModal() {
     setIsOpen(false);
     setFeaturesIsOpen(false);
-    setFeaturesContent("Features");
+    setReviewsIsOpen(false);
+    // setFeaturesContent("");
+  }
+  function featuresOpen() {
+    setFeaturesIsOpen((prevState) => !prevState);
+    setReviewsIsOpen(false);
   }
 
-  function featuresOpen(e) {
-    setFeaturesIsOpen(true);
-    const content = e.target.textContent;
-    setFeaturesContent(content);
+  function reviewsOpen() {
+    setReviewsIsOpen((prevState) => !prevState);
+    setFeaturesIsOpen(false);
   }
 
   return (
@@ -242,137 +255,141 @@ function ModalPopUp({ items }) {
             {items.description}
           </ReadMoreText>
           <ModalBtnWrapper>
-            <ModalFeaturesBtn onClick={(e) => featuresOpen(e)}>
+            <ModalFeaturesBtn onClick={featuresOpen}>
               Features
+              {featuresIsOpen ? (
+                <ModalFeaturesBtnIconUp />
+              ) : (
+                <ModalFeaturesBtnIconDown />
+              )}
+              <ModalFeaturesBtnLine $active={featuresIsOpen} />
             </ModalFeaturesBtn>
-            <ModalFeaturesBtn onClick={(e) => featuresOpen(e)}>
+            <ModalReviewsBtn onClick={reviewsOpen}>
               Reviews
-            </ModalFeaturesBtn>
-            <ModalFeaturesBtnLine $content={featuresContent} />
+              {reviewsIsOpen ? (
+                <ModalFeaturesBtnIconUp />
+              ) : (
+                <ModalFeaturesBtnIconDown />
+              )}
+              <ModalReviewsBtnLine $active={reviewsIsOpen} />
+            </ModalReviewsBtn>
           </ModalBtnWrapper>
           <ModalBottomline />
           {featuresIsOpen && (
             <ModalFormWrapper>
-              {featuresContent === "Features" ? (
-                <ModalItemFeaturesContainer>
-                  <ModalItemFeaturesWrapper>
-                    <ModalFeatures>
+              <ModalItemFeaturesContainer>
+                <ModalItemFeaturesWrapper>
+                  <ModalFeatures>
+                    <CardItemFeaturesIcon>
+                      <IoPeopleOutline />
+                    </CardItemFeaturesIcon>
+                    <CardItemFeaturesText>
+                      {items.adults} adults
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesIcon>
+                      <TbAutomaticGearbox />
+                    </CardItemFeaturesIcon>
+                    <CardItemFeaturesText>
+                      {items.transmission}
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesIcon>
+                      <MdOutlineAir />
+                    </CardItemFeaturesIcon>
+                    <CardItemFeaturesText>AC</CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesIcon>
+                      <TbGasStation />
+                    </CardItemFeaturesIcon>
+                    <CardItemFeaturesText>{items.engine}</CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesIcon>
+                      <TbToolsKitchen2 />
+                    </CardItemFeaturesIcon>
+                    <CardItemFeaturesText>Kitchen</CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesText>
                       <CardItemFeaturesIcon>
-                        <IoPeopleOutline />
-                      </CardItemFeaturesIcon>
-                      <CardItemFeaturesText>
-                        {items.adults} adults
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
+                        <LiaBedSolid />
+                      </CardItemFeaturesIcon>{" "}
+                      {items?.details?.beds} beds
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesText>
                       <CardItemFeaturesIcon>
-                        <TbAutomaticGearbox />
-                      </CardItemFeaturesIcon>
-                      <CardItemFeaturesText>
-                        {items.transmission}
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
+                        <LuDisc3 />
+                      </CardItemFeaturesIcon>{" "}
+                      {items?.details?.cd} CD
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesText>
                       <CardItemFeaturesIcon>
-                        <MdOutlineAir />
-                      </CardItemFeaturesIcon>
-                      <CardItemFeaturesText>AC</CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
+                        <BiRadio />
+                      </CardItemFeaturesIcon>{" "}
+                      {items?.details?.radio} Radio
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                  <ModalFeatures>
+                    <CardItemFeaturesText>
                       <CardItemFeaturesIcon>
-                        <TbGasStation />
-                      </CardItemFeaturesIcon>
-                      <CardItemFeaturesText>
-                        {items.engine}
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
-                      <CardItemFeaturesIcon>
-                        <TbToolsKitchen2 />
-                      </CardItemFeaturesIcon>
-                      <CardItemFeaturesText>Kitchen</CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
-                      <CardItemFeaturesText>
-                        <CardItemFeaturesIcon>
-                          <LiaBedSolid />
-                        </CardItemFeaturesIcon>{" "}
-                        {items?.details?.beds} beds
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
-                      <CardItemFeaturesText>
-                        <CardItemFeaturesIcon>
-                          <LuDisc3 />
-                        </CardItemFeaturesIcon>{" "}
-                        {items?.details?.cd} CD
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
-                      <CardItemFeaturesText>
-                        <CardItemFeaturesIcon>
-                          <BiRadio />
-                        </CardItemFeaturesIcon>{" "}
-                        {items?.details?.radio} Radio
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                    <ModalFeatures>
-                      <CardItemFeaturesText>
-                        <CardItemFeaturesIcon>
-                          <MdOutlineMicrowave />
-                        </CardItemFeaturesIcon>{" "}
-                        {items?.details?.hob} hob
-                      </CardItemFeaturesText>
-                    </ModalFeatures>
-                  </ModalItemFeaturesWrapper>
-                  <ModalDetailsWrapper>
-                    <ModalDetailsTitle>Vehicle details</ModalDetailsTitle>
-                    <ModalDetailsLine />
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>Form</ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.form}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>
-                        Length
-                      </ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.length}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>Width</ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.width}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>
-                        Height
-                      </ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.height}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>Tank</ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.tank}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                    <ModalDetailsFeatures>
-                      <ModalDetailsFeaturesText>
-                        Consumption
-                      </ModalDetailsFeaturesText>
-                      <ModalDetailsFeaturesText>
-                        {items?.consumption}
-                      </ModalDetailsFeaturesText>
-                    </ModalDetailsFeatures>
-                  </ModalDetailsWrapper>
-                </ModalItemFeaturesContainer>
-              ) : (
+                        <MdOutlineMicrowave />
+                      </CardItemFeaturesIcon>{" "}
+                      {items?.details?.hob} hob
+                    </CardItemFeaturesText>
+                  </ModalFeatures>
+                </ModalItemFeaturesWrapper>
+                <ModalDetailsWrapper>
+                  <ModalDetailsTitle>Vehicle details</ModalDetailsTitle>
+                  <ModalDetailsLine />
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>Form</ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.form}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>Length</ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.length}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>Width</ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.width}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>Height</ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.height}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>Tank</ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.tank}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                  <ModalDetailsFeatures>
+                    <ModalDetailsFeaturesText>
+                      Consumption
+                    </ModalDetailsFeaturesText>
+                    <ModalDetailsFeaturesText>
+                      {items?.consumption}
+                    </ModalDetailsFeaturesText>
+                  </ModalDetailsFeatures>
+                </ModalDetailsWrapper>
+              </ModalItemFeaturesContainer>
+              {/* {featuresIsOpen && featuresContent === "Reviews" && (
                 <ModalItemReviewsWrapper>
                   {items?.reviews.map((item) => (
                     <ModalItemReviewsItems key={item?.reviewer_name}>
@@ -394,7 +411,60 @@ function ModalPopUp({ items }) {
                     </ModalItemReviewsItems>
                   ))}
                 </ModalItemReviewsWrapper>
-              )}
+              )} */}
+              <ModalForm ref={form} onSubmit={handleSubmitForm}>
+                <ModalFormTitleWrapper>
+                  <ModalFormTitle>Book your campervan now</ModalFormTitle>
+                  <ModalFormSubTitle>
+                    Stay connected! We are always ready to help you.
+                  </ModalFormSubTitle>
+                </ModalFormTitleWrapper>
+                <ModalFormInput type="text" name="name" placeholder="Name" />
+                <ModalFormInput type="text" name="email" placeholder="Email" />
+                <ModalCalendar>
+                  <CustomDatePicker
+                    setSelectedDate={setSelectedDate}
+                    openDatePicker={openDatePicker}
+                    datePickerRef={datePickerRef}
+                    startDate={startDate}
+                    setStartDate={setStartDate}
+                    name="date"
+                  />
+                  <ModalCalendarIcon onClick={openDatePicker}>
+                    <FcCalendar />
+                  </ModalCalendarIcon>
+                </ModalCalendar>
+                <ModalTextArea
+                  name="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Comment"
+                ></ModalTextArea>
+                <ModalFormBtn type="submit">Send</ModalFormBtn>
+              </ModalForm>
+            </ModalFormWrapper>
+          )}
+          {reviewsIsOpen && (
+            <ModalFormWrapper>
+              <ModalItemReviewsWrapper>
+                {items?.reviews.map((item) => (
+                  <ModalItemReviewsItems key={item?.reviewer_name}>
+                    <ModalItemReviewsImgWrapper>
+                      <ModalItemReviewsImg
+                        src={defaultUser}
+                        alt={item?.reviewer_name}
+                      />
+                      <div>
+                        <ModalItemReviewsTitle>
+                          {item?.reviewer_name}
+                        </ModalItemReviewsTitle>
+                        <StarRating stars={item?.reviewer_rating} />
+                      </div>
+                    </ModalItemReviewsImgWrapper>
+                    <ModalItemReviewsText>{item?.comment}</ModalItemReviewsText>
+                  </ModalItemReviewsItems>
+                ))}
+              </ModalItemReviewsWrapper>
               <ModalForm ref={form} onSubmit={handleSubmitForm}>
                 <ModalFormTitleWrapper>
                   <ModalFormTitle>Book your campervan now</ModalFormTitle>

@@ -11,7 +11,6 @@ export const CatalogContainer = styled.div`
   @media (min-width: 920px) {
     flex-direction: row;
     gap: 3.2rem;
-    /* padding: 10rem 6.4rem; */
   }
 `;
 
@@ -31,25 +30,6 @@ export const CarsMenu = styled.ul`
   width: 100%;
 
   position: relative;
-
-  /* @media (min-width: 520px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
-    gap: 2.4rem;
-  }
-
-  @media (min-width: 1000px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: 1440px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 5rem;
-    column-gap: 2.4rem;
-  } */
 `;
 
 export const NoMatchCar = styled.li`

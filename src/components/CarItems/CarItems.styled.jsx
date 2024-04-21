@@ -108,7 +108,6 @@ export const CarImgDotsThird = styled.div`
   background-color: ${(p) =>
     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
   padding: 0.4rem;
-  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
   cursor: pointer;
   transition: var(--primary-transition);
 
@@ -181,10 +180,6 @@ export const CartItemTitle = styled.h2`
   font-size: 24px;
   line-height: 1.25;
   color: ${(p) => p.theme.colors.mainTextColor};
-`;
-
-export const CartItemTitleModel = styled.span`
-  color: ${(p) => p.theme.colors.accentColor};
 `;
 
 export const CartItemPrice = styled.span`

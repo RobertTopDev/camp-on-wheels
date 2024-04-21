@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { interFont } from "../fonts";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 
 export const ModalDiv = styled(Modal)`
   position: absolute;
@@ -10,11 +14,11 @@ export const ModalDiv = styled(Modal)`
   margin: 0 auto;
   transform: translate(-50%, -50%);
   border-radius: 2rem;
-  padding: 4rem;
+  padding: 1.2rem;
   max-width: 982px;
-  width: 100%;
   max-height: 720px;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: ${(p) => p.theme.colors.mainBgColor};
 
   overflow-y: scroll;
@@ -26,6 +30,8 @@ export const ModalDiv = styled(Modal)`
 
   @media (min-width: 768px) {
     padding: 4rem;
+    /* width: 100%; */
+    /* height: 100%; */
   }
 `;
 
@@ -33,6 +39,11 @@ export const ModalTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  padding-top: 2.4rem;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
 `;
 
 export const ModalWrapper = styled.div`
@@ -46,18 +57,34 @@ export const ModalWrapper = styled.div`
 
 export const ModalImgContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
   gap: 1.6rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    /* flex-wrap: nowrap; */
+  }
 `;
 
 export const ModalImg = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
-  width: 290px;
-  height: 310px;
   object-fit: contain;
   object-position: 75%;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    max-width: 290px;
+    max-height: 310px;
+  }
+
+  @media (min-width: 1092px) {
+    width: 290px;
+    height: 310px;
+  }
 `;
 
 export const CloseModal = styled(IoClose)`
@@ -74,6 +101,10 @@ export const CloseModal = styled(IoClose)`
     color: ${(p) => p.theme.colors.accentColor};
     cursor: pointer;
   }
+
+  @media (min-width: 768px) {
+    top: 0;
+  }
 `;
 
 export const ModalBtnWrapper = styled.div`
@@ -83,29 +114,84 @@ export const ModalBtnWrapper = styled.div`
   position: relative;
 `;
 
+export const ModalFeaturesBtnLine = styled.div`
+  display: ${(p) => (p?.$active ? "block" : "none")};
+  position: absolute;
+  bottom: -2.4rem;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #e44848;
+`;
+
+export const ModalReviewsBtnLine = styled.div`
+  display: ${(p) => (p?.$active ? "block" : "none")};
+  position: absolute;
+  bottom: -2.4rem;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #e44848;
+`;
+
+export const ModalFeaturesBtnIconUp = styled(MdOutlineKeyboardArrowUp)`
+  font-size: 2.4rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
+export const ModalFeaturesBtnIconDown = styled(MdOutlineKeyboardArrowDown)`
+  font-size: 2.4rem;
+  color: ${(p) => p.theme.colors.mainTextColor};
+`;
+
 export const ModalFeaturesBtn = styled.button`
+  position: relative;
   font-family: ${interFont};
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   color: ${(p) => p.theme.colors.mainTextColor};
-
+  transition: var(--primary-transition);
   border: none;
   outline: none;
   background: none;
 
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
   &:hover {
     cursor: pointer;
   }
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentColor};
+  }
 `;
 
-export const ModalFeaturesBtnLine = styled.div`
-  position: absolute;
-  bottom: -2.4rem;
-  left: ${(p) => (p?.$content === "Features" ? "0" : "12.2rem")};
-  height: 5px;
-  width: 8.6rem;
-  background-color: #e44848;
+export const ModalReviewsBtn = styled.button`
+  position: relative;
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  transition: var(--primary-transition);
+  border: none;
+  outline: none;
+  background: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: ${(p) => p.theme.colors.accentColor};
+  }
 `;
 
 export const ModalItemFeaturesContainer = styled.div`
@@ -209,8 +295,12 @@ export const ModalDetailsFeaturesText = styled.span`
 
 export const ModalFormWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2.4rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const ModalForm = styled.form`

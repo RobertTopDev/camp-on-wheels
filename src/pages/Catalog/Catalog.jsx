@@ -7,13 +7,13 @@ import CarItems from "../../components/CarItems/CarItems";
 import Filter from "../../components/Filter/Filter";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
+import { toCamelCase } from "../../helpers/camelCase";
 import {
   CarsMenu,
   CarsMenuWrapper,
   CatalogContainer,
   NoMatchCar,
 } from "./Catalog.styled";
-import { toCamelCase } from "../../helpers/camelCase";
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -84,11 +84,11 @@ function Catalog() {
           <title>Cruise Wheels - Explore the Catalog</title>
           <meta
             name="description"
-            content="Browse through our diverse catalog of stylish and comfortable cars at Cruise Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium car rentals."
+            content="Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."
           />
           <meta
             name="keywords"
-            content="car catalog, car rental, stylish cars, comfortable journeys, Cruise Wheels, premium rental services"
+            content="car catalog, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"
           />
         </Helmet>
       </HelmetProvider>
