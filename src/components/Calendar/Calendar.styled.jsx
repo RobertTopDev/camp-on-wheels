@@ -26,18 +26,24 @@ export const CustomDatePickerWrapper = styled.div`
     color: ${(p) => p.theme.colors.inputTextColor};
     font-family: ${interFont};
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.25;
     transition: var(--primary-transition);
     caret-color: transparent;
     pointer-events: none;
+    width: 18rem;
 
     &::placeholder {
       font-family: ${interFont};
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.25;
       color: ${(p) => p.theme.colors.inputTextColor};
+    }
+
+    @media (min-width: 400px) {
+      font-size: 16px;
+      width: 20.5rem;
     }
   }
 
