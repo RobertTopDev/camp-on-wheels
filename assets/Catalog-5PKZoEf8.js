@@ -1,4 +1,4 @@
-import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s as O,t as z,v as A,w as E,x as q,H as J,l as U,y as Q}from"./index-B6bConxl.js";import{M as X,C as B,v as W}from"./v4-BQMVIErc.js";import{d as Y}from"./emailRegex-qyUw2IiR.js";const _=e=>e.cars.cars.items,ee=e=>e.cars.filter,T=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function te(e){return G({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const oe=o.form`
+import{G as D,u as o,i as w,p as j,m as G,r as l,n as P,j as t,o as K,q as Z,T as L,s as O,t as z,v as A,w as E,x as q,H as N,l as J,y as U}from"./index-Bo19QmG3.js";import{M as Q,C as B,v as W}from"./v4-C3HVNQrq.js";import{d as X}from"./emailRegex-YM-bEEoN.js";const Y=e=>e.cars.cars.items,_=e=>e.cars.filter,T=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function ee(e){return D({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const te=o.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
@@ -13,7 +13,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   @media (min-width: 1440px) {
     gap: 6.4rem;
   }
-`,re=o.div`
+`,oe=o.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -22,12 +22,12 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   width: 100%;
   height: 2px;
   margin: 1rem 0 1rem;
-`,ne=o.div`
+`,re=o.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   position: relative;
-`,ie=o.button`
+`,ne=o.button`
   border: none;
   outline: none;
   background: none;
@@ -53,7 +53,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     cursor: pointer;
     border: 0.1px solid ${e=>e.theme.colors.accentColorHover};
   }
-`,se=o.div`
+`,ie=o.div`
   position: relative;
   border: none;
   outline: none;
@@ -97,7 +97,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   @media (min-width: 1000px) {
     width: 22.4rem;
   } */
-`,le=o.div`
+`,se=o.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -145,7 +145,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     cursor: pointer;
     color: ${e=>e.theme.colors.mainTextColor};
   }
-`,ce=o.div`
+`,le=o.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
@@ -161,7 +161,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   @media (min-width: 768px) {
     width: 362px;
   }
-`,de=o.div`
+`,ce=o.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
@@ -183,7 +183,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   font-size: 20px;
   line-height: 1.2;
   color: ${e=>e.theme.colors.mainTextColor};
-`,he=o.span`
+`,de=o.span`
   font-family: ${w};
   font-weight: 500;
   font-size: 16px;
@@ -219,7 +219,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     border: 1px solid ${e=>e.theme.colors.accentColor};
     cursor: pointer;
   }
-`,pe=o.label`
+`,he=o.label`
   font-family: ${j};
   font-weight: 500;
   font-size: 14px;
@@ -230,7 +230,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   position: absolute;
   bottom: 0;
   left: 0;
-`;const me=o(K)`
+`;const pe=o(G)`
   font-size: 1.8rem;
   color: ${e=>e.theme.colors.mainTextColor};
 
@@ -241,7 +241,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   @media (min-width: 1440px) {
     right: 1.2rem;
   }
-`,xe=o.button`
+`,me=o.button`
   border: none;
   outline: none;
   background: none;
@@ -264,7 +264,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     background-color: ${e=>e.theme.colors.accentColorHover};
     cursor: pointer;
   }
-`,ue=o.div`
+`,xe=o.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,7 +273,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
   @media (min-width: 354px) {
     flex-direction: row;
   }
-`;function fe({handlePage:e,setDisplayedCars:p,setFilteredSearch:m}){const[x,f]=a.useState(""),[l,y]=a.useState(""),[g,b]=a.useState(""),[C,u]=a.useState(!1),s=R(),$=r=>{const i=r.target.innerText;y(i)},F=r=>{const i=r.target.innerText;b(i)},I=r=>{f(r),u(!1)},v=async()=>{f(""),y(""),b("");const r=await s(O());p(r.payload),s(z("")),s(A("")),s(E("")),m(!1)},S=()=>{v(),e()};async function n(r){r.preventDefault();const i={location:x,selectedEquipment:l,selectedType:g},k=await s(O());p(k.payload),m(!0),s(z(i.location)),s(A(i.selectedEquipment)),s(E(i.selectedType)),e()}return t.jsxs(oe,{onSubmit:n,children:[t.jsxs(re,{children:[t.jsxs(ne,{children:[t.jsx(pe,{htmlFor:"location",children:"Location"}),t.jsxs(se,{onClick:()=>u(!C),children:[t.jsx(me,{}),t.jsx("span",{children:x||"Location"})]}),C&&t.jsx(le,{children:T==null?void 0:T.map(r=>t.jsx(ae,{onClick:()=>I(r),children:r},r))})]}),t.jsxs(V,{children:[t.jsx(he,{children:"Filters"}),t.jsx(M,{children:"Vehicle equipment"}),t.jsx(H,{}),t.jsxs(ce,{onClick:$,children:[t.jsxs(h,{$active:l==="AC",children:[t.jsx(d,{children:t.jsx(X,{})}),t.jsx(c,{children:"AC"})]}),t.jsxs(h,{$active:l==="Automatic",children:[t.jsx(d,{children:t.jsx(Z,{})}),t.jsx(c,{children:"Automatic"})]}),t.jsxs(h,{$active:l==="Kitchen",children:[t.jsx(d,{children:t.jsx(N,{})}),t.jsx(c,{children:"Kitchen"})]}),t.jsxs(h,{$active:l==="TV",children:[t.jsx(d,{children:t.jsx(te,{})}),t.jsx(c,{children:"TV"})]}),t.jsxs(h,{$active:l==="Shower/WC",children:[t.jsx(d,{children:t.jsx(Y,{})}),t.jsx(c,{children:"Shower/WC"})]})]})]}),t.jsxs(V,{children:[t.jsx(M,{children:"Vehicle type"}),t.jsx(H,{}),t.jsxs(de,{onClick:F,children:[t.jsxs(h,{$active:g==="Van",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Van"})]}),t.jsxs(h,{$active:g==="Fully Integrated",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Fully Integrated"})]}),t.jsxs(h,{$active:g==="Alcove",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Alcove"})]})]})]})]}),t.jsxs(ue,{children:[t.jsx(xe,{type:"submit",children:"Search"}),t.jsx(ie,{onClick:S,type:"button",children:"Reset"})]})]})}const ge=o.button`
+`;function ue({handlePage:e,setDisplayedCars:p,setFilteredSearch:u}){const[m,f]=l.useState(""),[a,y]=l.useState(""),[g,b]=l.useState(""),[C,x]=l.useState(!1),s=P(),$=r=>{const i=r.target.innerText;y(i)},F=r=>{const i=r.target.innerText;b(i)},I=r=>{f(r),x(!1)},v=async()=>{f(""),y(""),b("");const r=await s(O());p(r.payload),s(z("")),s(A("")),s(E("")),u(!1)},S=()=>{v(),e()};async function n(r){r.preventDefault();const i={location:m,selectedEquipment:a,selectedType:g},k=await s(O());p(k.payload),u(!0),s(z(i.location)),s(A(i.selectedEquipment)),s(E(i.selectedType)),e()}return t.jsxs(te,{onSubmit:n,children:[t.jsxs(oe,{children:[t.jsxs(re,{children:[t.jsx(he,{htmlFor:"location",children:"Location"}),t.jsxs(ie,{onClick:()=>x(!C),children:[t.jsx(pe,{}),t.jsx("span",{children:m||"Location"})]}),C&&t.jsx(se,{children:T==null?void 0:T.map(r=>t.jsx(ae,{onClick:()=>I(r),children:r},r))})]}),t.jsxs(V,{children:[t.jsx(de,{children:"Filters"}),t.jsx(M,{children:"Vehicle equipment"}),t.jsx(H,{}),t.jsxs(le,{onClick:$,children:[t.jsxs(h,{$active:a==="AC",children:[t.jsx(d,{children:t.jsx(Q,{})}),t.jsx(c,{children:"AC"})]}),t.jsxs(h,{$active:a==="Automatic",children:[t.jsx(d,{children:t.jsx(K,{})}),t.jsx(c,{children:"Automatic"})]}),t.jsxs(h,{$active:a==="Kitchen",children:[t.jsx(d,{children:t.jsx(Z,{})}),t.jsx(c,{children:"Kitchen"})]}),t.jsxs(h,{$active:a==="TV",children:[t.jsx(d,{children:t.jsx(ee,{})}),t.jsx(c,{children:"TV"})]}),t.jsxs(h,{$active:a==="Shower/WC",children:[t.jsx(d,{children:t.jsx(X,{})}),t.jsx(c,{children:"Shower/WC"})]})]})]}),t.jsxs(V,{children:[t.jsx(M,{children:"Vehicle type"}),t.jsx(H,{}),t.jsxs(ce,{onClick:F,children:[t.jsxs(h,{$active:g==="Van",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Van"})]}),t.jsxs(h,{$active:g==="Fully Integrated",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Fully Integrated"})]}),t.jsxs(h,{$active:g==="Alcove",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Alcove"})]})]})]})]}),t.jsxs(xe,{children:[t.jsx(me,{type:"submit",children:"Search"}),t.jsx(ne,{onClick:S,type:"button",children:"Reset"})]})]})}const fe=o.button`
   border: none;
   outline: none;
   background: none;
@@ -296,7 +296,7 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     cursor: pointer;
     border: 1px solid ${e=>e.theme.colors.accentColorHover};
   }
-`;function P({onLoadMoreClick:e}){return t.jsx(ge,{onClick:e,children:"Load More"})}function we(e){return e.split(/(?=[A-Z])/).map(x=>x.charAt(0).toUpperCase()+x.slice(1)).join(" ")}const je=o.div`
+`;function ge({onLoadMoreClick:e}){return t.jsx(fe,{onClick:e,children:"Load More"})}function we(e){return e.split(/(?=[A-Z])/).map(m=>m.charAt(0).toUpperCase()+m.slice(1)).join(" ")}const je=o.div`
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
@@ -337,4 +337,4 @@ import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s
     padding-top: 9.6rem;
     width: 100%;
   }
-`;function ke(){const e=R(),p=q(_),[m,x]=a.useState(!1),[f,l]=a.useState(1),[y,g]=a.useState(!0),[b,C]=a.useState([]),u=q(ee);function s(){l(r=>r+1)}function $(){l(1)}const v=Math.ceil(20/4);a.useEffect(()=>{async function r(){try{g(f<v),await e(Q(f)).unwrap()}catch(i){console.log(i.message)}}r()},[e,f,v]);function S(){return b.filter(i=>{const k=!u.location||i.location===u.location,D=!u.type||we(i.form)===u.type;return k&&D})}const n=S();return t.jsxs(t.Fragment,{children:[t.jsx(J,{children:t.jsxs(U,{children:[t.jsx("title",{children:"Camp On Wheels - Explore the Catalog"}),t.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."}),t.jsx("meta",{name:"keywords",content:"car catalog, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"})]})}),t.jsxs(je,{children:[t.jsx(fe,{handlePage:$,setDisplayedCars:C,setFilteredSearch:x}),t.jsxs(ye,{children:[t.jsx(be,{children:n&&(n==null?void 0:n.length)===0&&m?t.jsx(Ce,{children:"No camper cars match your search filters. Please try adjusting your filters or exploring other options."}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(r=>t.jsx(B,{items:r},W())):p==null?void 0:p.map(r=>t.jsx(B,{items:r},W()))}),m&&n.length>4&&t.jsx(P,{onLoadMoreClick:s}),!m&&y&&t.jsx(P,{onLoadMoreClick:s})]})]})]})}export{ke as default};
+`;function ke(){const e=P(),p=q(Y),[u,m]=l.useState(!1),[f,a]=l.useState(1),[y,g]=l.useState(!0),[b,C]=l.useState([]),x=q(_);function s(){a(r=>r+1)}function $(){a(1)}const v=Math.ceil(20/4);l.useEffect(()=>{async function r(){try{g(f<v),await e(U(f)).unwrap()}catch(i){console.log(i.message)}}r()},[e,f,v]);function S(){return b.filter(i=>{const k=!x.location||i.location===x.location,R=!x.type||we(i.form)===x.type;return k&&R})}const n=S();return t.jsxs(t.Fragment,{children:[t.jsx(N,{children:t.jsxs(J,{children:[t.jsx("title",{children:"Camp On Wheels - Explore the Catalog"}),t.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."}),t.jsx("meta",{name:"keywords",content:"car catalog, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"})]})}),t.jsxs(je,{children:[t.jsx(ue,{handlePage:$,setDisplayedCars:C,setFilteredSearch:m}),t.jsxs(ye,{children:[t.jsx(be,{children:n&&(n==null?void 0:n.length)===0&&u?t.jsx(Ce,{children:"No camper cars match your search filters. Please try adjusting your filters or exploring other options."}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(r=>t.jsx(B,{items:r},W())):p==null?void 0:p.map(r=>t.jsx(B,{items:r},W()))}),!u&&y&&t.jsx(ge,{onLoadMoreClick:s})]})]})]})}export{ke as default};
