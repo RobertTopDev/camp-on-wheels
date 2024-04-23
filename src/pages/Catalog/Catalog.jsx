@@ -106,9 +106,6 @@ function Catalog() {
               })
             )}
           </CarsMenu>
-          {filteredSearch && visibleCars.length > 4 && (
-            <LoadMore onLoadMoreClick={onLoadMoreClick} />
-          )}
           {!filteredSearch && showLoadBtn && (
             <LoadMore onLoadMoreClick={onLoadMoreClick} />
           )}
