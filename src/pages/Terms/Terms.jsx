@@ -111,7 +111,15 @@ function Terms({ scrollToTop }) {
                 If you have any questions or concerns about these Terms of
                 Service, please contact us at{" "}
                 <PrivacyText style={{ display: "inline-block" }}>
-                  alexsmagin1@gmail.com
+                  <a
+                    href="mailto:alexsmagin1@gmail.com"
+                    aria-label="Send us an email"
+                    title="Send us an email"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    alexsmagin1@gmail.com
+                  </a>
                 </PrivacyText>
               </PrivacySubText>
             </PrivacyRulesWrapper>

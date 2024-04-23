@@ -92,6 +92,10 @@ export const ButtonsWrapper = styled.div`
     border: none;
     color: ${(p) => p.theme.colors.accentColor};
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1200px) {
+    bottom: -2.8rem;
   }
 `;
