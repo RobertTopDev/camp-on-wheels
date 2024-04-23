@@ -10,8 +10,13 @@ Discover the Freedom of Mobile Exploration with Camp On Wheels.
 [![Axios](https://img.shields.io/badge/Axios-1.6.4-5300D8.svg)](https://github.com/axios/axios)
 [![Vite](https://img.shields.io/badge/Vite-5.0.8-6868F2)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.2.0-51CAEF.svg)](https://reactjs.org/)
+[![Redux](https://img.shields.io/badge/Redux-9.1.0-764ABC.svg)](https://redux.js.org/)
 [![Styled Components](https://img.shields.io/badge/Styled_Components-6.1.6-D664C0.svg)](https://styled-components.com/)
-[![React Icons](https://img.shields.io/badge/React_Icons-4.12.0-E10051.svg)](https://react-icons.github.io/react-icons/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.1.1-00ADD8.svg)](https://www.framer.com/motion/)
+[![React Icons](https://img.shields.io/badge/React_Icons-5.0.1-E10051.svg)](https://react-icons.github.io/react-icons/)
+[![Figma](https://img.shields.io/badge/Figma-2022.2-FF7262.svg)](https://www.figma.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-10.8.1-FFCA28.svg)](https://firebase.google.com/)
+[![Git](https://img.shields.io/badge/Git-2.35.1-F05032.svg)](https://git-scm.com/)
 
 ## Overview
 
