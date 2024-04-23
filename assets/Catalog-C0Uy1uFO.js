@@ -1,4 +1,4 @@
-import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T as F,s as E,t as N,v as Z,w as J,x as q,H as U,l as Q,y as X}from"./index-BQmWILqG.js";import{M as Y,C as B,v as z}from"./v4--SUnWCcf.js";import{d as _}from"./emailRegex-B25ZGXgx.js";const ee=e=>e.cars.cars.items,te=e=>e.cars.filter,I=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function oe(e){return P({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const re=o.form`
+import{G,u as o,i as w,p as j,m as K,r as a,n as R,j as t,o as Z,q as N,T as L,s as O,t as z,v as A,w as E,x as q,H as J,l as U,y as Q}from"./index-B6bConxl.js";import{M as X,C as B,v as W}from"./v4-BQMVIErc.js";import{d as Y}from"./emailRegex-qyUw2IiR.js";const _=e=>e.cars.cars.items,ee=e=>e.cars.filter,T=["Chicago, IL","Aurora, IL","Rosemont, IL","Schaumburg, IL","Joliet, IL","Rockford, IL","Oak Park, IL","Bolingbrook, IL","Orland Park, IL","Skokie, IL","Peoria, IL"];function te(e){return G({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M216,64H147.31l34.35-34.34a8,8,0,1,0-11.32-11.32L128,60.69,85.66,18.34A8,8,0,0,0,74.34,29.66L108.69,64H40A16,16,0,0,0,24,80V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm0,136H40V80H216V200Z"},child:[]}]})(e)}const oe=o.form`
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
@@ -13,21 +13,21 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 1440px) {
     gap: 6.4rem;
   }
-`,ne=o.div`
+`,re=o.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-`,A=o.div`
+`,H=o.div`
   background-color: ${e=>e.theme.colors.filtersLine};
   width: 100%;
   height: 2px;
   margin: 1rem 0 1rem;
-`,ie=o.div`
+`,ne=o.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   position: relative;
-`,se=o.button`
+`,ie=o.button`
   border: none;
   outline: none;
   background: none;
@@ -36,7 +36,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   width: 173px;
   height: 56px;
 
-  font-family: ${b};
+  font-family: ${w};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -53,7 +53,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     cursor: pointer;
     border: 0.1px solid ${e=>e.theme.colors.accentColorHover};
   }
-`,le=o.div`
+`,se=o.div`
   position: relative;
   border: none;
   outline: none;
@@ -70,7 +70,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   align-items: center;
   gap: 0.8rem;
 
-  font-family: ${C};
+  font-family: ${j};
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.11111;
@@ -97,7 +97,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 1000px) {
     width: 22.4rem;
   } */
-`,ae=o.div`
+`,le=o.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -133,8 +133,8 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-`,ce=o.span`
-  font-family: ${C};
+`,ae=o.span`
+  font-family: ${j};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -145,7 +145,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     cursor: pointer;
     color: ${e=>e.theme.colors.mainTextColor};
   }
-`,de=o.div`
+`,ce=o.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
@@ -161,7 +161,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 768px) {
     width: 362px;
   }
-`,he=o.div`
+`,de=o.div`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
@@ -173,34 +173,34 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 410px) {
     justify-content: start;
   }
-`,H=o.div`
+`,V=o.div`
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-`,V=o.h3`
-  font-family: ${b};
+`,M=o.h3`
+  font-family: ${w};
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   color: ${e=>e.theme.colors.mainTextColor};
-`,pe=o.span`
-  font-family: ${b};
+`,he=o.span`
+  font-family: ${w};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.secondaryTextColor};
-`,d=o.span`
-  font-family: ${b};
+`,c=o.span`
+  font-family: ${w};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
   color: ${e=>e.theme.colors.mainTextColor};
-`,h=o.span`
+`,d=o.span`
   font-size: 3.2rem;
   color: ${e=>e.theme.colors.mainTextColor};
   pointer-events: none;
-`,p=o.div`
+`,h=o.div`
   border: 1px solid
     ${e=>e!=null&&e.$active?e.theme.colors.accentColor:e.theme.colors.borderFilterItem};
   border-radius: 10px;
@@ -219,8 +219,8 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     border: 1px solid ${e=>e.theme.colors.accentColor};
     cursor: pointer;
   }
-`,me=o.label`
-  font-family: ${C};
+`,pe=o.label`
+  font-family: ${j};
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28571;
@@ -230,7 +230,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   position: absolute;
   bottom: 0;
   left: 0;
-`;const xe=o(D)`
+`;const me=o(K)`
   font-size: 1.8rem;
   color: ${e=>e.theme.colors.mainTextColor};
 
@@ -241,7 +241,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 1440px) {
     right: 1.2rem;
   }
-`,ue=o.button`
+`,xe=o.button`
   border: none;
   outline: none;
   background: none;
@@ -250,7 +250,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   width: 173px;
   height: 56px;
 
-  font-family: ${b};
+  font-family: ${w};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -264,7 +264,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     background-color: ${e=>e.theme.colors.accentColorHover};
     cursor: pointer;
   }
-`,fe=o.div`
+`,ue=o.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,7 +273,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   @media (min-width: 354px) {
     flex-direction: row;
   }
-`;function ge({handlePage:e,setDisplayedCars:i,setFilteredSearch:u}){const[L,m]=a.useState(""),[c,j]=a.useState(""),[f,w]=a.useState(""),v=a.useRef(null),[x,$]=a.useState(!1),s=M(),S=r=>{const g=r.target.innerText;j(g)},O=r=>{const g=r.target.innerText;w(g)},k=r=>{m(r),$(!1)},T=async()=>{m(""),j(""),w("");const r=await s(E());i(r.payload),s(m("")),s(j("")),s(w("")),u(!1)},n=()=>{T(),e()};async function l(r){r.preventDefault();const y={location:v.current.innerText,selectedEquipment:c,selectedType:f},R=await s(E());i(R.payload),u(!0),s(N(y.location)),s(Z(y.selectedEquipment)),s(J(y.selectedType)),e(),n()}return t.jsxs(re,{onSubmit:l,children:[t.jsxs(ne,{children:[t.jsxs(ie,{children:[t.jsx(me,{htmlFor:"location",children:"Location"}),t.jsxs(le,{ref:v,onClick:()=>$(!x),children:[t.jsx(xe,{}),t.jsx("span",{children:L||"Location"})]}),x&&t.jsx(ae,{children:I==null?void 0:I.map(r=>t.jsx(ce,{onClick:()=>k(r),children:r},r))})]}),t.jsxs(H,{children:[t.jsx(pe,{children:"Filters"}),t.jsx(V,{children:"Vehicle equipment"}),t.jsx(A,{}),t.jsxs(de,{onClick:S,children:[t.jsxs(p,{$active:c==="AC",children:[t.jsx(h,{children:t.jsx(Y,{})}),t.jsx(d,{children:"AC"})]}),t.jsxs(p,{$active:c==="Automatic",children:[t.jsx(h,{children:t.jsx(G,{})}),t.jsx(d,{children:"Automatic"})]}),t.jsxs(p,{$active:c==="Kitchen",children:[t.jsx(h,{children:t.jsx(K,{})}),t.jsx(d,{children:"Kitchen"})]}),t.jsxs(p,{$active:c==="TV",children:[t.jsx(h,{children:t.jsx(oe,{})}),t.jsx(d,{children:"TV"})]}),t.jsxs(p,{$active:c==="Shower/WC",children:[t.jsx(h,{children:t.jsx(_,{})}),t.jsx(d,{children:"Shower/WC"})]})]})]}),t.jsxs(H,{children:[t.jsx(V,{children:"Vehicle type"}),t.jsx(A,{}),t.jsxs(he,{onClick:O,children:[t.jsxs(p,{$active:f==="Van",children:[t.jsx(h,{children:t.jsx(F,{})}),t.jsx(d,{children:"Van"})]}),t.jsxs(p,{$active:f==="Fully Integrated",children:[t.jsx(h,{children:t.jsx(F,{})}),t.jsx(d,{children:"Fully Integrated"})]}),t.jsxs(p,{$active:f==="Alcove",children:[t.jsx(h,{children:t.jsx(F,{})}),t.jsx(d,{children:"Alcove"})]})]})]})]}),t.jsxs(fe,{children:[t.jsx(ue,{type:"submit",children:"Search"}),t.jsx(se,{onClick:n,type:"button",children:"Reset"})]})]})}const je=o.button`
+`;function fe({handlePage:e,setDisplayedCars:p,setFilteredSearch:m}){const[x,f]=a.useState(""),[l,y]=a.useState(""),[g,b]=a.useState(""),[C,u]=a.useState(!1),s=R(),$=r=>{const i=r.target.innerText;y(i)},F=r=>{const i=r.target.innerText;b(i)},I=r=>{f(r),u(!1)},v=async()=>{f(""),y(""),b("");const r=await s(O());p(r.payload),s(z("")),s(A("")),s(E("")),m(!1)},S=()=>{v(),e()};async function n(r){r.preventDefault();const i={location:x,selectedEquipment:l,selectedType:g},k=await s(O());p(k.payload),m(!0),s(z(i.location)),s(A(i.selectedEquipment)),s(E(i.selectedType)),e()}return t.jsxs(oe,{onSubmit:n,children:[t.jsxs(re,{children:[t.jsxs(ne,{children:[t.jsx(pe,{htmlFor:"location",children:"Location"}),t.jsxs(se,{onClick:()=>u(!C),children:[t.jsx(me,{}),t.jsx("span",{children:x||"Location"})]}),C&&t.jsx(le,{children:T==null?void 0:T.map(r=>t.jsx(ae,{onClick:()=>I(r),children:r},r))})]}),t.jsxs(V,{children:[t.jsx(he,{children:"Filters"}),t.jsx(M,{children:"Vehicle equipment"}),t.jsx(H,{}),t.jsxs(ce,{onClick:$,children:[t.jsxs(h,{$active:l==="AC",children:[t.jsx(d,{children:t.jsx(X,{})}),t.jsx(c,{children:"AC"})]}),t.jsxs(h,{$active:l==="Automatic",children:[t.jsx(d,{children:t.jsx(Z,{})}),t.jsx(c,{children:"Automatic"})]}),t.jsxs(h,{$active:l==="Kitchen",children:[t.jsx(d,{children:t.jsx(N,{})}),t.jsx(c,{children:"Kitchen"})]}),t.jsxs(h,{$active:l==="TV",children:[t.jsx(d,{children:t.jsx(te,{})}),t.jsx(c,{children:"TV"})]}),t.jsxs(h,{$active:l==="Shower/WC",children:[t.jsx(d,{children:t.jsx(Y,{})}),t.jsx(c,{children:"Shower/WC"})]})]})]}),t.jsxs(V,{children:[t.jsx(M,{children:"Vehicle type"}),t.jsx(H,{}),t.jsxs(de,{onClick:F,children:[t.jsxs(h,{$active:g==="Van",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Van"})]}),t.jsxs(h,{$active:g==="Fully Integrated",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Fully Integrated"})]}),t.jsxs(h,{$active:g==="Alcove",children:[t.jsx(d,{children:t.jsx(L,{})}),t.jsx(c,{children:"Alcove"})]})]})]})]}),t.jsxs(ue,{children:[t.jsx(xe,{type:"submit",children:"Search"}),t.jsx(ie,{onClick:S,type:"button",children:"Reset"})]})]})}const ge=o.button`
   border: none;
   outline: none;
   background: none;
@@ -283,7 +283,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   width: 145px;
   height: 56px;
 
-  font-family: ${C};
+  font-family: ${j};
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
@@ -296,7 +296,7 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     cursor: pointer;
     border: 1px solid ${e=>e.theme.colors.accentColorHover};
   }
-`;function we({onLoadMoreClick:e}){return t.jsx(je,{onClick:e,children:"Load More"})}function W(e){return e.toLowerCase().split(" ").map((i,u)=>u===0?i:i.charAt(0).toUpperCase()+i.slice(1)).join("")}const ye=o.div`
+`;function P({onLoadMoreClick:e}){return t.jsx(ge,{onClick:e,children:"Load More"})}function we(e){return e.split(/(?=[A-Z])/).map(x=>x.charAt(0).toUpperCase()+x.slice(1)).join(" ")}const je=o.div`
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
@@ -307,12 +307,13 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
     flex-direction: row;
     gap: 3.2rem;
   }
-`,be=o.div`
+`,ye=o.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
   align-items: center;
-`,Ce=o.ul`
+  width: 100%;
+`,be=o.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,10 +322,19 @@ import{G as P,u as o,i as b,p as C,m as D,r as a,n as M,j as t,o as G,q as K,T a
   width: 100%;
 
   position: relative;
-`,ve=o.li`
-  font-family: ${C};
+`,Ce=o.li`
+  font-family: ${j};
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.mainTextColor};
-`;function Le(){const e=M(),i=q(ee),[u,L]=a.useState(!1),[m,c]=a.useState(1),[j,f]=a.useState(!0),[w,v]=a.useState([]),x=q(te);function $(){c(l=>l+1)}function s(){c(1)}const S=4,k=Math.ceil(20/S);a.useEffect(()=>{async function l(){try{f(m<k),await e(X(m)).unwrap()}catch(r){console.log(r.message)}}l()},[e,m,k]);function T(){return w.filter(r=>{const g=!x.location||r.location===x.location,y=!W(x.type)||r.form===W(x.type);return g&&y})}const n=T();return t.jsxs(t.Fragment,{children:[t.jsx(U,{children:t.jsxs(Q,{children:[t.jsx("title",{children:"Cruise Wheels - Explore the Catalog"}),t.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."}),t.jsx("meta",{name:"keywords",content:"car catalog, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"})]})}),t.jsxs(ye,{children:[t.jsx(ge,{handlePage:s,setDisplayedCars:v,setFilteredSearch:L}),t.jsxs(be,{children:[t.jsx(Ce,{children:n&&(n==null?void 0:n.length)===0&&u?t.jsx(ve,{children:"No matching cars found"}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(l=>t.jsx(B,{items:l},z())):i==null?void 0:i.map(l=>t.jsx(B,{items:l},z()))}),i.length>=S&&j&&t.jsx(we,{onLoadMoreClick:$})]})]})]})}export{Le as default};
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 920px) {
+    padding-top: 9.6rem;
+    width: 100%;
+  }
+`;function ke(){const e=R(),p=q(_),[m,x]=a.useState(!1),[f,l]=a.useState(1),[y,g]=a.useState(!0),[b,C]=a.useState([]),u=q(ee);function s(){l(r=>r+1)}function $(){l(1)}const v=Math.ceil(20/4);a.useEffect(()=>{async function r(){try{g(f<v),await e(Q(f)).unwrap()}catch(i){console.log(i.message)}}r()},[e,f,v]);function S(){return b.filter(i=>{const k=!u.location||i.location===u.location,D=!u.type||we(i.form)===u.type;return k&&D})}const n=S();return t.jsxs(t.Fragment,{children:[t.jsx(J,{children:t.jsxs(U,{children:[t.jsx("title",{children:"Camp On Wheels - Explore the Catalog"}),t.jsx("meta",{name:"description",content:"Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."}),t.jsx("meta",{name:"keywords",content:"car catalog, camping car rental, stylish cars, comfortable journeys, Camp On Wheels, premium rental services"})]})}),t.jsxs(je,{children:[t.jsx(fe,{handlePage:$,setDisplayedCars:C,setFilteredSearch:x}),t.jsxs(ye,{children:[t.jsx(be,{children:n&&(n==null?void 0:n.length)===0&&m?t.jsx(Ce,{children:"No camper cars match your search filters. Please try adjusting your filters or exploring other options."}):(n==null?void 0:n.length)>0?n==null?void 0:n.map(r=>t.jsx(B,{items:r},W())):p==null?void 0:p.map(r=>t.jsx(B,{items:r},W()))}),m&&n.length>4&&t.jsx(P,{onLoadMoreClick:s}),!m&&y&&t.jsx(P,{onLoadMoreClick:s})]})]})]})}export{ke as default};
