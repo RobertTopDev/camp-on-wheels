@@ -106,8 +106,8 @@ function CarItems({ items }) {
         <CardInfoWrapper>
           <div>
             <CartItemTitleWrap>
-              <CartItemTitle>{items.name}</CartItemTitle>
-              <CartItemPrice>${formatPrice(items.price)}</CartItemPrice>
+              <CartItemTitle>{items?.name}</CartItemTitle>
+              <CartItemPrice>${formatPrice(items?.price)}</CartItemPrice>
             </CartItemTitleWrap>
             <CardItemRatingWrapper>
               <CardItemRatingWrap>
@@ -115,36 +115,38 @@ function CarItems({ items }) {
                   <CardItemStarIcon>
                     <FaStar />
                   </CardItemStarIcon>
-                  <CardItemRating>{items.rating}</CardItemRating>
+                  <CardItemRating>{items?.rating}</CardItemRating>
                 </CardItemStarRatingWrap>
                 <CardItemRating>
-                  ({items.reviews.length} Reviews)
+                  ({items?.reviews.length} Reviews)
                 </CardItemRating>
               </CardItemRatingWrap>
               <CardItemLocationWrapper>
                 <CardItemLocationIcon>
                   <IoLocationOutline />
                 </CardItemLocationIcon>
-                <CardItemLocation>{items.location}</CardItemLocation>
+                <CardItemLocation>{items?.location}</CardItemLocation>
               </CardItemLocationWrapper>
             </CardItemRatingWrapper>
           </div>
           <ReadMoreWrapper>
-            <CardItemTextDescr>{items.description}</CardItemTextDescr>
+            <CardItemTextDescr>{items?.description}</CardItemTextDescr>
           </ReadMoreWrapper>
           <CardItemFeaturesWrapper>
             <CardItemFeatures>
               <CardItemFeaturesIcon>
                 <IoPeopleOutline />
               </CardItemFeaturesIcon>
-              <CardItemFeaturesText>{items.adults} Adults</CardItemFeaturesText>
+              <CardItemFeaturesText>
+                {items?.adults} Adults
+              </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
               <CardItemFeaturesIcon>
                 <TbAutomaticGearbox />
               </CardItemFeaturesIcon>
               <CardItemFeaturesText>
-                {capitalizeText(items.transmission)}
+                {capitalizeText(items?.transmission)}
               </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
@@ -152,7 +154,7 @@ function CarItems({ items }) {
                 <TbGasStation />
               </CardItemFeaturesIcon>
               <CardItemFeaturesText>
-                {capitalizeText(items.engine)}
+                {capitalizeText(items?.engine)}
               </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
@@ -166,7 +168,7 @@ function CarItems({ items }) {
                 <LiaBedSolid />
               </CardItemFeaturesIcon>
               <CardItemFeaturesText>
-                {items.details.beds} Beds
+                {items?.details?.beds} Beds
               </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
