@@ -12,7 +12,20 @@ import {
   HeroTitle,
   HeroText,
   HeroTitleSpan,
+  AnimatedText,
 } from "./Home.styled";
+
+const textAnimate = {
+  initial: { x: 0 },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 20,
+    },
+  },
+};
 
 function Home() {
   return (
@@ -55,6 +68,15 @@ function Home() {
               </div>
             </HeroTextWrapper>
           </motion.div>
+          <AnimatedText>
+            <motion.div
+              variants={textAnimate}
+              initial="initial"
+              animate="animate"
+            >
+              Camp On Wheels
+            </motion.div>
+          </AnimatedText>
         </HeroWrapper>
         <About />
         <Subscribe />

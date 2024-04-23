@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import heroImg from "@/assets/heroBg.jpg";
-import { primaryFont } from "../../components/fonts";
+import { interFont, primaryFont } from "../../components/fonts";
 import { Link } from "react-router-dom";
 
 export const HomeContainer = styled.div`
@@ -23,7 +23,6 @@ export const HeroWrapper = styled.div`
 
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 
   &::before {
     content: "";
@@ -134,5 +133,28 @@ export const CatalogBtn = styled(Link)`
 
   &:hover {
     background-color: ${(p) => p.theme.colors.accentColorHover};
+  }
+`;
+
+export const AnimatedText = styled.div`
+  position: absolute;
+  bottom: 2.4rem;
+  width: 130%;
+  font-family: ${interFont};
+  font-weight: 600;
+  font-size: 22.4rem;
+  white-space: nowrap;
+  line-height: 1.25;
+  color: ${(p) => p.theme.colors.mainTextColorLowOp};
+
+  @media (min-width: 620px) {
+    font-size: 32.4rem;
+    width: 120%;
+  }
+
+  @media (min-width: 1220px) {
+    font-size: 26.4rem;
+    width: 50%;
+    bottom: 0;
   }
 `;
