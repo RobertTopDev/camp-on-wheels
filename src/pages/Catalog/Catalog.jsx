@@ -7,7 +7,7 @@ import CarItems from "../../components/CarItems/CarItems";
 import Filter from "../../components/Filter/Filter";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import { v4 as uuid } from "uuid";
-import { toCamelCase } from "../../helpers/camelCase";
+import splitAndCapitalize from "../../helpers/camelCase";
 import {
   CarsMenu,
   CarsMenuWrapper,
@@ -54,24 +54,15 @@ function Catalog() {
   }, [dispatch, page, totalCars]);
 
   function filteredByCars() {
-    // const filtered = displayedCars.filter((item) => {
-    //   const location = item.location;
-    //   const equipment = item.selectedEquipment;
-    //   const type = item.selectedType;
-    //   return location && equipment && type;
-    // });
     const filtered = displayedCars.filter((item) => {
       const locationFilter =
         !filteredCars.location || item.location === filteredCars.location;
-      // const equipmentFilter =
-      //   !filteredCars.equipment || item.location === filteredCars.location;
       const typeFilter =
-        !toCamelCase(filteredCars.type) ||
-        item.form === toCamelCase(filteredCars.type);
+        !filteredCars.type ||
+        splitAndCapitalize(item.form) === filteredCars.type;
       return locationFilter && typeFilter;
     });
 
-    // console.log(filtered);
     return filtered;
   }
 
@@ -81,7 +72,7 @@ function Catalog() {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Cruise Wheels - Explore the Catalog</title>
+          <title>Camp On Wheels - Explore the Catalog</title>
           <meta
             name="description"
             content="Browse through our diverse catalog of stylish and comfortable camping cars at Camp On Wheels. Find the perfect vehicle for your next adventure and experience the joy of premium camping car rentals."
@@ -101,7 +92,10 @@ function Catalog() {
         <CarsMenuWrapper>
           <CarsMenu>
             {visibleCars && visibleCars?.length === 0 && filteredSearch ? (
-              <NoMatchCar>No matching cars found</NoMatchCar>
+              <NoMatchCar>
+                No camper cars match your search filters. Please try adjusting
+                your filters or exploring other options.
+              </NoMatchCar>
             ) : visibleCars?.length > 0 ? (
               visibleCars?.map((items) => {
                 return <CarItems key={uuid()} items={items} />;
@@ -112,17 +106,13 @@ function Catalog() {
               })
             )}
           </CarsMenu>
-          {cars.length >= carsPerPage && showLoadBtn && (
+          {filteredSearch && visibleCars.length > 4 && (
+            <LoadMore onLoadMoreClick={onLoadMoreClick} />
+          )}
+          {!filteredSearch && showLoadBtn && (
             <LoadMore onLoadMoreClick={onLoadMoreClick} />
           )}
         </CarsMenuWrapper>
-
-        {/* {filteredSearch && visibleCars.length > 4 && (
-          <LoadMore onLoadMoreClick={onLoadMoreClick} />
-        )}
-        {!filteredSearch && showLoadBtn && (
-          <LoadMore onLoadMoreClick={onLoadMoreClick} />
-        )} */}
       </CatalogContainer>
     </>
   );

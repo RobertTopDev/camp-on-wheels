@@ -19,6 +19,7 @@ export const CarsMenuWrapper = styled.div`
   flex-direction: column;
   gap: 5rem;
   align-items: center;
+  width: 100%;
 `;
 
 export const CarsMenu = styled.ul`
@@ -38,4 +39,13 @@ export const NoMatchCar = styled.li`
   font-size: 16px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.mainTextColor};
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 920px) {
+    padding-top: 9.6rem;
+    width: 100%;
+  }
 `;

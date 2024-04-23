@@ -84,6 +84,7 @@ import {
   ModalFeaturesBtnIconUp,
   ModalFeaturesBtnIconDown,
 } from "./Modal.styled";
+import capitalizeText from "../../helpers/capitalize";
 
 const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
   import.meta.env;
@@ -284,7 +285,7 @@ function ModalPopUp({ items }) {
                       <IoPeopleOutline />
                     </CardItemFeaturesIcon>
                     <CardItemFeaturesText>
-                      {items.adults} adults
+                      {items.adults} Adults
                     </CardItemFeaturesText>
                   </ModalFeatures>
                   <ModalFeatures>
@@ -292,7 +293,7 @@ function ModalPopUp({ items }) {
                       <TbAutomaticGearbox />
                     </CardItemFeaturesIcon>
                     <CardItemFeaturesText>
-                      {items.transmission}
+                      {capitalizeText(items.transmission)}
                     </CardItemFeaturesText>
                   </ModalFeatures>
                   <ModalFeatures>
@@ -305,7 +306,9 @@ function ModalPopUp({ items }) {
                     <CardItemFeaturesIcon>
                       <TbGasStation />
                     </CardItemFeaturesIcon>
-                    <CardItemFeaturesText>{items.engine}</CardItemFeaturesText>
+                    <CardItemFeaturesText>
+                      {capitalizeText(items.engine)}
+                    </CardItemFeaturesText>
                   </ModalFeatures>
                   <ModalFeatures>
                     <CardItemFeaturesIcon>
@@ -318,7 +321,7 @@ function ModalPopUp({ items }) {
                       <CardItemFeaturesIcon>
                         <LiaBedSolid />
                       </CardItemFeaturesIcon>{" "}
-                      {items?.details?.beds} beds
+                      {items?.details?.beds} Beds
                     </CardItemFeaturesText>
                   </ModalFeatures>
                   <ModalFeatures>
@@ -342,7 +345,7 @@ function ModalPopUp({ items }) {
                       <CardItemFeaturesIcon>
                         <MdOutlineMicrowave />
                       </CardItemFeaturesIcon>{" "}
-                      {items?.details?.hob} hob
+                      {items?.details?.hob} Hob
                     </CardItemFeaturesText>
                   </ModalFeatures>
                 </ModalItemFeaturesWrapper>
@@ -352,7 +355,7 @@ function ModalPopUp({ items }) {
                   <ModalDetailsFeatures>
                     <ModalDetailsFeaturesText>Form</ModalDetailsFeaturesText>
                     <ModalDetailsFeaturesText>
-                      {items?.form}
+                      {capitalizeText(items?.form)}
                     </ModalDetailsFeaturesText>
                   </ModalDetailsFeatures>
                   <ModalDetailsFeatures>

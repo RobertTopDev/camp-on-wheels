@@ -1,12 +1,8 @@
-export function toCamelCase(str) {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word, index) => {
-      if (index === 0) {
-        return word;
-      }
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join("");
+export default function splitAndCapitalize(camelCaseWord) {
+  const words = camelCaseWord.split(/(?=[A-Z])/);
+  const capitalizedWords = words
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  return capitalizedWords;
 }

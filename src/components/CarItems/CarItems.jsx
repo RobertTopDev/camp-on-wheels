@@ -9,6 +9,7 @@ import { MdOutlineAir } from "react-icons/md";
 import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
 import { FaStar } from "react-icons/fa6";
 import { formatPrice } from "../../helpers/formatPrice";
+import capitalizeText from "../../helpers/capitalize";
 import {
   CarImg,
   CarItem,
@@ -136,19 +137,23 @@ function CarItems({ items }) {
               <CardItemFeaturesIcon>
                 <IoPeopleOutline />
               </CardItemFeaturesIcon>
-              <CardItemFeaturesText>{items.adults} adults</CardItemFeaturesText>
+              <CardItemFeaturesText>{items.adults} Adults</CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
               <CardItemFeaturesIcon>
                 <TbAutomaticGearbox />
               </CardItemFeaturesIcon>
-              <CardItemFeaturesText>{items.transmission}</CardItemFeaturesText>
+              <CardItemFeaturesText>
+                {capitalizeText(items.transmission)}
+              </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
               <CardItemFeaturesIcon>
                 <TbGasStation />
               </CardItemFeaturesIcon>
-              <CardItemFeaturesText>{items.engine}</CardItemFeaturesText>
+              <CardItemFeaturesText>
+                {capitalizeText(items.engine)}
+              </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
               <CardItemFeaturesIcon>
@@ -157,11 +162,11 @@ function CarItems({ items }) {
               <CardItemFeaturesText>Kitchen</CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>
+              <CardItemFeaturesIcon>
+                <LiaBedSolid />
+              </CardItemFeaturesIcon>
               <CardItemFeaturesText>
-                <CardItemFeaturesIcon>
-                  <LiaBedSolid />
-                </CardItemFeaturesIcon>
-                {items.details.beds} beds
+                {items.details.beds} Beds
               </CardItemFeaturesText>
             </CardItemFeatures>
             <CardItemFeatures>

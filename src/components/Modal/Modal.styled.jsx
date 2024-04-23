@@ -20,7 +20,6 @@ export const ModalDiv = styled(Modal)`
   width: 90%;
   height: 90%;
   background-color: ${(p) => p.theme.colors.mainBgColor};
-
   overflow-y: scroll;
   scroll-behavior: smooth;
 

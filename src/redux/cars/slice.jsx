@@ -39,7 +39,6 @@ const carsSlice = createSlice({
         state.cars.error = null;
         const newItems = action.payload.map((item) => ({
           ...item,
-          favorite: false,
         }));
         state.cars.items = [...state.cars.items, ...newItems];
       })

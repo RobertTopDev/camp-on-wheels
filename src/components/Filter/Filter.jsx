@@ -1,11 +1,7 @@
 import locationData from "../../../location.json";
-// import makesData from "../../../makes.json";
-import { v4 as uuid } from "uuid";
 import { useDispatch } from "react-redux";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { fetchAllCars } from "../../redux/cars/operations";
-import { toast } from "react-toastify";
-import { commonToastOptions } from "../../helpers/toastOptions";
 import { MdOutlineAir } from "react-icons/md";
 import { TbAutomaticGearbox, TbToolsKitchen2 } from "react-icons/tb";
 import { PiTelevisionSimple } from "react-icons/pi";
@@ -37,14 +33,11 @@ import {
 
 // eslint-disable-next-line react/prop-types
 function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
-  // const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedEquipment, setSelectedEquipment] = useState("");
   const [selectedType, setSelectedType] = useState("");
-  const locationRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  // const [isOpenPrice, setIsOpenPrice] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -71,9 +64,9 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     const allCarsResponse = await dispatch(fetchAllCars());
     setDisplayedCars(allCarsResponse.payload);
 
-    dispatch(setSelectedLocation(""));
-    dispatch(setSelectedEquipment(""));
-    dispatch(setSelectedType(""));
+    dispatch(setLocation(""));
+    dispatch(setEquipment(""));
+    dispatch(setType(""));
 
     setFilteredSearch(false);
   };
@@ -86,22 +79,11 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const locationValue = locationRef.current.innerText;
-
     const formData = {
-      location: locationValue,
+      location: selectedLocation,
       selectedEquipment: selectedEquipment,
       selectedType: selectedType,
     };
-
-    // const filters = {
-    //   brand: selectedBrand,
-    //   price: selectedPrice || "250",
-    //   mileage: {
-    //     from: mileageFrom || "0",
-    //     to: mileageTo || "15000",
-    //   },
-    // };
 
     const allCarsResponse = await dispatch(fetchAllCars());
     setDisplayedCars(allCarsResponse.payload);
@@ -113,7 +95,6 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
     dispatch(setType(formData.selectedType));
 
     handlePage();
-    handleReset();
   }
 
   return (
@@ -121,7 +102,7 @@ function Filter({ handlePage, setDisplayedCars, setFilteredSearch }) {
       <FiltersWrapper>
         <OptionWrapper>
           <FormLabel htmlFor="location">Location</FormLabel>
-          <SelectInput ref={locationRef} onClick={() => setIsOpen(!isOpen)}>
+          <SelectInput onClick={() => setIsOpen(!isOpen)}>
             <LocationIcon />
             <span>{selectedLocation || "Location"}</span>
           </SelectInput>
