@@ -61,6 +61,7 @@ export const HeroTextWrapper = styled.div`
   margin-top: 4.8rem;
   max-width: 60rem;
   width: 100%;
+  z-index: 5;
 
   background-color: ${(p) => p.theme.colors.heroBgLowOp};
   border-radius: 1.2rem;
@@ -146,6 +147,7 @@ export const AnimatedText = styled.div`
   white-space: nowrap;
   line-height: 1.25;
   color: ${(p) => p.theme.colors.mainTextColorLowOp};
+  z-index: -1;
 
   @media (min-width: 620px) {
     font-size: 32.4rem;
