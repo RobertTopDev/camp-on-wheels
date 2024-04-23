@@ -29,8 +29,6 @@ export const ModalDiv = styled(Modal)`
 
   @media (min-width: 768px) {
     padding: 4rem;
-    /* width: 100%; */
-    /* height: 100%; */
   }
 `;
 
@@ -61,10 +59,6 @@ export const ModalImgContainer = styled.div`
   justify-content: start;
   gap: 1.6rem;
   margin: 0 auto;
-
-  @media (min-width: 768px) {
-    /* flex-wrap: nowrap; */
-  }
 `;
 
 export const ModalImg = styled.img`

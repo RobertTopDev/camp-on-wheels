@@ -2,6 +2,8 @@ import emailjs from "@emailjs/browser";
 import { fetchEmailDB } from "../../services/emailPost";
 import { toast } from "react-toastify";
 import { commonToastOptions } from "../../helpers/toastOptions";
+import { useRef } from "react";
+import emailRegex from "../../regex/emailRegex";
 import {
   RoadImg,
   SubscribeButton,
@@ -13,8 +15,6 @@ import {
   SubscribeTitleWrapper,
   SubscribeWrapper,
 } from "./Subscribe.styled";
-import { useRef } from "react";
-import emailRegex from "../../regex/emailRegex";
 
 const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
   import.meta.env;

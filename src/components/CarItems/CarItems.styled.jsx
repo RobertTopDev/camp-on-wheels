@@ -70,7 +70,6 @@ export const CarImgDots = styled.div`
   background-color: ${(p) =>
     p?.$active ? p.theme.colors.accentColor : p.theme.colors.headerBgColor};
   padding: 0.4rem;
-  /* border: 1px solid ${(p) => p.theme.colors.accentColor}; */
   cursor: pointer;
   transition: var(--primary-transition);
 

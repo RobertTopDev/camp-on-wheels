@@ -58,10 +58,7 @@ export const ResetBtn = styled.button`
   transition: var(--primary-transition);
   border: 0.1px solid transparent;
 
-  /* background-color: ${(p) => p.theme.colors.accentColor}; */
-
   &:hover {
-    /* background-color: ${(p) => p.theme.colors.accentColorHover}; */
     cursor: pointer;
     border: 0.1px solid ${(p) => p.theme.colors.accentColorHover};
   }
@@ -78,7 +75,6 @@ export const SelectInput = styled.div`
   height: 4.8rem;
   width: 100%;
   max-width: 360px;
-  /* width: 360px; */
 
   display: flex;
   align-items: center;
@@ -94,23 +90,6 @@ export const SelectInput = styled.div`
   &:hover {
     background-color: ${(p) => p.theme.colors.inputBgColorHover};
   }
-
-  /* &:focus {
-    outline: none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  } */
-
-  /* @media (min-width: 768px) {
-    width: 14rem;
-  }
-
-  @media (min-width: 840px) {
-    width: 16rem;
-  }
-
-  @media (min-width: 1000px) {
-    width: 22.4rem;
-  } */
 `;
 
 export const SelectedOption = styled.div`

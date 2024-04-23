@@ -2,7 +2,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { CustomDatePickerWrapper } from "./Calendar.styled";
-import { useRef, useState } from "react";
 
 const CustomDatePicker = ({
   setSelectedDate,
@@ -11,8 +10,6 @@ const CustomDatePicker = ({
   startDate,
   setStartDate,
 }) => {
-  // const [startDate, setStartDate] = useState(new Date());
-
   const handleDateChange = (date) => {
     setStartDate(date);
     setSelectedDate(date);
@@ -45,7 +42,6 @@ const CustomDatePicker = ({
       <DatePicker
         selected={startDate}
         ref={datePickerRef}
-        // onChange={(date) => handleDateChange(date)}
         onChange={(date) => {
           handleDateChange(date);
           openDatePicker();

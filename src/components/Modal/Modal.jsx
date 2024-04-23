@@ -12,23 +12,19 @@ import { commonToastOptions } from "../../helpers/toastOptions";
 import { formatPrice } from "../../helpers/formatPrice";
 import { fetchEmailDB } from "../../services/emailPost";
 import emailjs from "@emailjs/browser";
+import capitalizeText from "../../helpers/capitalize";
 import { FcCalendar } from "react-icons/fc";
 import { LiaBedSolid } from "react-icons/lia";
 import { LuDisc3 } from "react-icons/lu";
 import { BiRadio } from "react-icons/bi";
 import { FaStar } from "react-icons/fa6";
 import { IoLocationOutline, IoPeopleOutline } from "react-icons/io5";
+import { MdOutlineMicrowave, MdOutlineAir } from "react-icons/md";
 import {
   TbAutomaticGearbox,
   TbGasStation,
   TbToolsKitchen2,
 } from "react-icons/tb";
-import {
-  MdOutlineMicrowave,
-  MdOutlineAir,
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-} from "react-icons/md";
 import {
   CardBtn,
   CardItemFeaturesIcon,
@@ -84,7 +80,6 @@ import {
   ModalFeaturesBtnIconUp,
   ModalFeaturesBtnIconDown,
 } from "./Modal.styled";
-import capitalizeText from "../../helpers/capitalize";
 
 const { VITE_EMAIL_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_API_KEY } =
   import.meta.env;
@@ -165,8 +160,6 @@ function ModalPopUp({ items }) {
       e.target.message.value = "";
       setSelectedDate(null);
       setStartDate(new Date());
-
-      // setSendForm((prevState) => !prevState);
     } catch (error) {
       toast.error(
         "Error submitting request. Please try again later.",
@@ -189,7 +182,6 @@ function ModalPopUp({ items }) {
     setIsOpen(false);
     setFeaturesIsOpen(false);
     setReviewsIsOpen(false);
-    // setFeaturesContent("");
   }
   function featuresOpen() {
     setFeaturesIsOpen((prevState) => !prevState);
@@ -392,29 +384,6 @@ function ModalPopUp({ items }) {
                   </ModalDetailsFeatures>
                 </ModalDetailsWrapper>
               </ModalItemFeaturesContainer>
-              {/* {featuresIsOpen && featuresContent === "Reviews" && (
-                <ModalItemReviewsWrapper>
-                  {items?.reviews.map((item) => (
-                    <ModalItemReviewsItems key={item?.reviewer_name}>
-                      <ModalItemReviewsImgWrapper>
-                        <ModalItemReviewsImg
-                          src={defaultUser}
-                          alt={item?.reviewer_name}
-                        />
-                        <div>
-                          <ModalItemReviewsTitle>
-                            {item?.reviewer_name}
-                          </ModalItemReviewsTitle>
-                          <StarRating stars={item?.reviewer_rating} />
-                        </div>
-                      </ModalItemReviewsImgWrapper>
-                      <ModalItemReviewsText>
-                        {item?.comment}
-                      </ModalItemReviewsText>
-                    </ModalItemReviewsItems>
-                  ))}
-                </ModalItemReviewsWrapper>
-              )} */}
               <ModalForm ref={form} onSubmit={handleSubmitForm}>
                 <ModalFormTitleWrapper>
                   <ModalFormTitle>Book your campervan now</ModalFormTitle>

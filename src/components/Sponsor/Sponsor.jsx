@@ -11,25 +11,25 @@ function Sponsor() {
       />
       <SponsorImg
         src="images/sponsor.png"
-        alt="sponsor1"
+        alt="sponsor2"
         width="20rem"
         height="20rem"
       />
       <SponsorImg
         src="images/sponsor1.png"
-        alt="sponsor1"
+        alt="sponsor3"
         width="20rem"
         height="20rem"
       />
       <SponsorImg
         src="images/sponsor3.png"
-        alt="sponsor1"
+        alt="sponsor4"
         width="20rem"
         height="20rem"
       />
       <SponsorImg
         src="images/sponsor4.png"
-        alt="sponsor1"
+        alt="sponsor5"
         width="20rem"
         height="20rem"
       />

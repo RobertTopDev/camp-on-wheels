@@ -20,7 +20,6 @@ export const SubscribeWrapper = styled.div`
   background-color: ${(p) => p.theme.colors.headerBgColor};
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 4.8rem;
   padding: 2.4rem;
   border-radius: 1.6rem;
