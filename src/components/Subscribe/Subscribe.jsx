@@ -87,6 +87,7 @@ function Subscribe() {
             type="text"
             name="email"
             placeholder="Enter your Email"
+            required
           />
           <SubscribeButton type="submit">Subscribe</SubscribeButton>
         </SubscribeInputWrapper>

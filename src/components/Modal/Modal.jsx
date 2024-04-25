@@ -391,8 +391,18 @@ function ModalPopUp({ items }) {
                     Stay connected! We are always ready to help you.
                   </ModalFormSubTitle>
                 </ModalFormTitleWrapper>
-                <ModalFormInput type="text" name="name" placeholder="Name" />
-                <ModalFormInput type="text" name="email" placeholder="Email" />
+                <ModalFormInput
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <ModalFormInput
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
                 <ModalCalendar>
                   <CustomDatePicker
                     setSelectedDate={setSelectedDate}
@@ -411,6 +421,7 @@ function ModalPopUp({ items }) {
                   cols="30"
                   rows="10"
                   placeholder="Comment"
+                  required
                 ></ModalTextArea>
                 <ModalFormBtn type="submit">Send</ModalFormBtn>
               </ModalForm>
