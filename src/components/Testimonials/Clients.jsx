@@ -22,7 +22,7 @@ const ClientSlider = (props) => {
       </ClientsTopWrapper>
       <StarRating stars={stars} />
       <ClientsImgWrapper>
-        <img src={img_url} alt={name} />
+        <img src={img_url} alt={name} loading="lazy" />
         <div>
           <ClientsName>{name}</ClientsName>
           <ClientsText>{position}</ClientsText>

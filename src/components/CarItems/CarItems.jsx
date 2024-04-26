@@ -97,6 +97,7 @@ function CarItems({ items }) {
               : defaultCar
           }
           alt={items.name}
+          loading="lazy"
         />
         <HeartIconWrapper onClick={() => handleFavoriteBtn(items._id)}>
           {favorite ? <FavoriteHeartIcon /> : <EmptyHeartIcon />}

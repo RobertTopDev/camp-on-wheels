@@ -150,7 +150,6 @@ export const SubscribeButton = styled.button`
 
 export const RoadImg = styled.div`
   position: absolute;
-  /* top: 55%; */
   bottom: -55%;
   left: 0;
   z-index: 1;

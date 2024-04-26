@@ -1,4 +1,4 @@
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { TbCamper } from "react-icons/tb";
 import { motion } from "framer-motion";
 import {
