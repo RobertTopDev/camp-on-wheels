@@ -43,46 +43,46 @@ function Footer() {
         <FooterContactAddressContainer>
           <Tooltip title="Call Me" arrow placement="right">
             <FooterContactIconLink
-              href="tel:+17734141884"
-              aria-label="Call +1 (773) 414-1884"
+              href="tel:+3727120593"
+              aria-label="Call +372 7120593"
               rel="noopener noreferrer"
             >
               <FooterContactIcons>
                 <FaPhone color="#28a745" />
               </FooterContactIcons>
-              <FooterContactLinkText>+1 (773) 414-1884</FooterContactLinkText>
+              <FooterContactLinkText>+372 7120593</FooterContactLinkText>
             </FooterContactIconLink>
           </Tooltip>
           <Tooltip title="Email Me" arrow placement="right">
             <FooterContactIconLink
-              href="mailto:alexsmagin1@gmail.com"
-              aria-label="Email address alexsmagin1@gmail.com"
+              href="mailto:roberttanelriegler@gmail.com"
+              aria-label="Email address roberttanelriegler@gmail.com"
             >
               <FooterContactIcons>
                 <GrMailOption color="#007bff" />
               </FooterContactIcons>
               <FooterContactLinkText>
-                alexsmagin1@gmail.com
+                roberttanelriegler@gmail.com
               </FooterContactLinkText>
             </FooterContactIconLink>
           </Tooltip>
           <Tooltip title="My Location" arrow placement="right">
             <FooterContactIconLink
-              href="https://www.google.com/maps?q=Chicago,IL,USA"
+              href="https://www.google.com/maps?q=Tallinn,Estonia"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visit Google Maps for the location in Chicago, IL, USA"
+              aria-label="Visit Google Maps for the location in Tallinn, Estonia"
             >
               <FooterContactIcons>
                 <IoLocationOutline color="#dc3545" />
               </FooterContactIcons>
-              <FooterContactLinkText>Chicago, IL, USA</FooterContactLinkText>
+              <FooterContactLinkText>Tallinn, Estonia</FooterContactLinkText>
             </FooterContactIconLink>
           </Tooltip>
         </FooterContactAddressContainer>
         <FooterContactBtnWrapper>
           <FooterCallBtn
-            href="tel:+17734141884"
+            href="tel:+3727120593"
             aria-label="Call our customer support"
             title="Call our customer support"
           >
@@ -90,7 +90,7 @@ function Footer() {
             <FooterCallIcon />
           </FooterCallBtn>
           <FooterEmailBtn
-            href="mailto:alexsmagin1@gmail.com"
+            href="mailto:roberttanelriegler@gmail.com"
             aria-label="Send us an email"
             title="Send us an email"
             target="_blank"
@@ -103,7 +103,7 @@ function Footer() {
       </FooterContactBtnsWrapper>
       <FooterInfoWrapper>
         <FooterInfoText>
-          Alex Smagin &copy;Camp On Wheels{" "}
+          Robert Tanel Riegler &copy;Camp On Wheels{" "}
           <span>{new Date().getFullYear()}</span>. All rights reserved.
         </FooterInfoText>
         <FooterLinkWrapper>

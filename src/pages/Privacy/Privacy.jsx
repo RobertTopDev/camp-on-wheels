@@ -101,13 +101,13 @@ function Privacy({ scrollToTop }) {
                 please contact us at{" "}
                 <PrivacyText style={{ display: "inline-block" }}>
                   <a
-                    href="mailto:alexsmagin1@gmail.com"
+                    href="mailto:roberttanelriegler@gmail.com"
                     aria-label="Send us an email"
                     title="Send us an email"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    alexsmagin1@gmail.com
+                    roberttanelriegler@gmail.com
                   </a>
                 </PrivacyText>
               </PrivacySubText>

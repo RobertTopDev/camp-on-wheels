@@ -1,14 +1,14 @@
 {
   "name": "camponwheels",
-  "author": "Alex Smagin",
-  "homepage": "http://Alexandrbig1.github.io/camp-on-wheels",
+  "author": "Robert Tanel Riegler",
+  "homepage": "http://RobertTopDev.github.io/camp-on-wheels",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "main": "main.jsx",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alexandrbig1/camp-on-wheels"
+    "url": "https://github.com/RobertTopDev/camp-on-wheels"
   },
   "keywords": [
     "car rental",
