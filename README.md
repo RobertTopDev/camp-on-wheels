@@ -36,19 +36,16 @@ Embark on unforgettable journeys with CampOnWheels, where every road leads to ne
 ![Cruise Wheels](/public/images/screenshots/camp2.jpg) _Screenshot 2
 (Home Page Light Theme)_
 
-![Cruise Wheels](/public/images/screenshots/camp3.jpg) _Screenshot 3
-(Home Page Light Theme)_
-
-![Cruise Wheels](/public/images/screenshots/camp4.jpg) _Screenshot 4
+![Cruise Wheels](/public/images/screenshots/camp4.jpg) _Screenshot 3
 (Catalog Page Dark Theme)_
 
-![Cruise Wheels](/public/images/screenshots/camp5.jpg) _Screenshot 5
+![Cruise Wheels](/public/images/screenshots/camp5.jpg) _Screenshot 4
 (Catalog Page Modal Pop Up Light Theme)_
 
-![Cruise Wheels](/public/images/screenshots/camp6.jpg) _Screenshot 6
+![Cruise Wheels](/public/images/screenshots/camp6.jpg) _Screenshot 5
 (Catalog Page Modal Pop Up Reviews and Form Dark Theme)_
 
-![Cruise Wheels](/public/images/screenshots/camp7.jpg) _Screenshot 7
+![Cruise Wheels](/public/images/screenshots/camp7.jpg) _Screenshot 6
 (Favorites Page Light Theme Mobile Screen)_
 
 ## Features
